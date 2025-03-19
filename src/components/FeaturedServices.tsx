@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -12,7 +11,7 @@ const FeaturedServices = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/6d7cd367-1130-48e4-bc8f-c991c8bbb84d.png" 
+                src="/lovable-uploads/3f59b3bb-41a0-4f41-becc-e75be40c1911.png" 
                 alt="AI Visualization" 
                 className="w-full h-[500px] object-cover rounded-lg"
               />

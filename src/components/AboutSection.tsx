@@ -34,7 +34,7 @@ const AboutSection = () => {
             {/* Right side with abstract image and overlay text */}
             <div className="relative rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/50d23781-4daf-4098-a63c-20647a378ade.png" 
+                src="/lovable-uploads/b1beb242-d224-4a69-8218-1e47c67321c6.png" 
                 alt="Abstract AI Visualization" 
                 className="w-full h-[400px] object-cover rounded-lg"
               />

@@ -4,6 +4,51 @@ import { useState } from 'react';
 const ServicesList = () => {
   const [activeService, setActiveService] = useState(1);
   
+  const services = [
+    {
+      id: 1,
+      number: "01",
+      title: "Central algorithm",
+      color: "text-white",
+      description: "Our central algorithm is the core of our AI system, managing and optimizing all operations for maximum efficiency and intelligence."
+    },
+    {
+      id: 2,
+      number: "02",
+      title: "Networking",
+      color: "text-arolax-orange",
+      description: "Network models into existing systems or software applications whether you breath rebranding."
+    },
+    {
+      id: 3,
+      number: "03",
+      title: "Server security",
+      color: "text-white",
+      description: "Advanced server security powered by AI detects and prevents threats before they can affect your systems."
+    },
+    {
+      id: 4,
+      number: "04",
+      title: "Firewall deep prompt",
+      color: "text-white",
+      description: "Deep prompt engineering allows for sophisticated control and guidance of AI outputs, ensuring results match your exact needs."
+    },
+    {
+      id: 5,
+      number: "05",
+      title: "Data structure",
+      color: "text-white",
+      description: "Our data structure solutions organize information optimally for AI processing, improving performance and accuracy."
+    },
+    {
+      id: 6,
+      number: "06",
+      title: "Artificial Intelligence",
+      color: "text-white",
+      description: "Cutting-edge AI solutions that adapt and learn from your data to provide increasingly valuable insights and automation."
+    },
+  ];
+  
   return (
     <section className="py-20 bg-arolax-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,67 +60,26 @@ const ServicesList = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="space-y-8">
-            <div 
-              className={`flex space-x-6 py-4 cursor-pointer transition-all ${activeService === 1 ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
-              onClick={() => setActiveService(1)}
-            >
-              <span className="text-2xl font-bold text-white">01</span>
-              <div className="space-y-1">
-                <h3 className="text-5xl font-bold text-white">Central algorithm</h3>
-                <div className={`nav-indicator w-16 ${activeService === 1 ? 'opacity-100' : 'opacity-0'}`}></div>
+          <div className="space-y-6">
+            {services.slice(0, 6).map(service => (
+              <div 
+                key={service.id}
+                className={`flex space-x-6 py-4 cursor-pointer transition-all ${activeService === service.id ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
+                onClick={() => setActiveService(service.id)}
+              >
+                <span className="text-2xl font-bold text-white">{service.number}</span>
+                <div className="space-y-1">
+                  <h3 className={`text-5xl font-bold ${service.color}`}>{service.title}</h3>
+                  <div className={`nav-indicator w-16 ${activeService === service.id ? 'opacity-100' : 'opacity-0'}`}></div>
+                </div>
               </div>
-            </div>
-            
-            <div 
-              className={`flex space-x-6 py-4 cursor-pointer transition-all ${activeService === 2 ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
-              onClick={() => setActiveService(2)}
-            >
-              <span className="text-2xl font-bold text-white">02</span>
-              <div className="space-y-1">
-                <h3 className="text-5xl font-bold text-arolax-orange">Networking</h3>
-                <div className={`nav-indicator w-16 ${activeService === 2 ? 'opacity-100' : 'opacity-0'}`}></div>
-              </div>
-            </div>
-            
-            <div 
-              className={`flex space-x-6 py-4 cursor-pointer transition-all ${activeService === 3 ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
-              onClick={() => setActiveService(3)}
-            >
-              <span className="text-2xl font-bold text-white">03</span>
-              <div className="space-y-1">
-                <h3 className="text-5xl font-bold text-white">Server security</h3>
-                <div className={`nav-indicator w-16 ${activeService === 3 ? 'opacity-100' : 'opacity-0'}`}></div>
-              </div>
-            </div>
-            
-            <div 
-              className={`flex space-x-6 py-4 cursor-pointer transition-all ${activeService === 4 ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
-              onClick={() => setActiveService(4)}
-            >
-              <span className="text-2xl font-bold text-white">04</span>
-              <div className="space-y-1">
-                <h3 className="text-5xl font-bold text-white">Firewall deep prompt</h3>
-                <div className={`nav-indicator w-16 ${activeService === 4 ? 'opacity-100' : 'opacity-0'}`}></div>
-              </div>
-            </div>
-            
-            <div 
-              className={`flex space-x-6 py-4 cursor-pointer transition-all ${activeService === 5 ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
-              onClick={() => setActiveService(5)}
-            >
-              <span className="text-2xl font-bold text-white">05</span>
-              <div className="space-y-1">
-                <h3 className="text-5xl font-bold text-white">Data structure</h3>
-                <div className={`nav-indicator w-16 ${activeService === 5 ? 'opacity-100' : 'opacity-0'}`}></div>
-              </div>
-            </div>
+            ))}
           </div>
           
           <div className="lg:col-span-2 flex items-center">
             <div className="w-full h-[450px] bg-arolax-darkgray/40 rounded-lg overflow-hidden relative">
               <img 
-                src="/lovable-uploads/a1c03d43-3865-4b3e-8b46-b7527e81fbff.png" 
+                src="/lovable-uploads/9eeb8a6b-442e-4d02-980f-67bc02e6542d.png" 
                 alt="AI Service Visualization" 
                 className="w-full h-full object-cover mix-blend-luminosity opacity-50"
               />
@@ -88,19 +92,11 @@ const ServicesList = () => {
                       <div className="w-5 h-5 rounded-full bg-arolax-orange"></div>
                     </div>
                     <h4 className="text-xl font-bold text-white">
-                      {activeService === 1 && "Central Algorithm"}
-                      {activeService === 2 && "Networking"}
-                      {activeService === 3 && "Server Security"}
-                      {activeService === 4 && "Firewall Deep Prompt"}
-                      {activeService === 5 && "Data Structure"}
+                      {services.find(s => s.id === activeService)?.title}
                     </h4>
                   </div>
                   <p className="text-gray-300">
-                    {activeService === 1 && "Our central algorithm is the core of our AI system, managing and optimizing all operations for maximum efficiency and intelligence."}
-                    {activeService === 2 && "Our networking solutions integrate AI models into existing systems seamlessly, enabling powerful data flow and connectivity."}
-                    {activeService === 3 && "Advanced server security powered by AI detects and prevents threats before they can affect your systems."}
-                    {activeService === 4 && "Deep prompt engineering allows for sophisticated control and guidance of AI outputs, ensuring results match your exact needs."}
-                    {activeService === 5 && "Our data structure solutions organize information optimally for AI processing, improving performance and accuracy."}
+                    {services.find(s => s.id === activeService)?.description}
                   </p>
                 </div>
               </div>

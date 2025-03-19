@@ -16,7 +16,7 @@ const ServicesSection = () => {
               
               <div className="relative h-[400px] mt-10 rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/b152e232-e849-448d-9e67-d56eb8bf01d6.png" 
+                  src="/lovable-uploads/f40123f4-295e-40d9-9bd9-25f2ed9f9e39.png" 
                   alt="AI Hand" 
                   className="w-full h-full object-cover rounded-lg"
                 />

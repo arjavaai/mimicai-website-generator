@@ -69,7 +69,9 @@ const HeroSection = () => {
         </div>
 
         {/* Right side spacer/additional content */}
-        <div className="lg:col-span-3"></div>
+        <div className="lg:col-span-3 flex items-center">
+          <div className="bg-gradient-to-br from-arolax-orange/20 to-transparent w-32 h-32 rounded-full blur-3xl"></div>
+        </div>
       </div>
 
       {/* Scroll indicator */}

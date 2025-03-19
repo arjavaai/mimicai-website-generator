@@ -10,14 +10,14 @@ const VideoSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-[600px] rounded-lg overflow-hidden">
           <img 
-            src="/lovable-uploads/ce0161e2-e665-45e9-9b53-0e65faa0da4e.png" 
+            src="/lovable-uploads/d2bccb74-b73d-48f2-9d1f-18a0f7653570.png" 
             alt="AI Technology Video" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-arolax-black/30"></div>
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center max-w-2xl px-4">
+            <div className="text-center max-w-3xl px-4">
               <div className="flex justify-center mb-10">
                 <button 
                   onClick={() => setPlaying(!playing)}
@@ -36,7 +36,7 @@ const VideoSection = () => {
           {playing && (
             <div className="absolute inset-0 bg-arolax-black/90 flex items-center justify-center z-10">
               <div className="w-full max-w-4xl">
-                <div className="relative pb-[56.25%]"> {/* 16:9 aspect ratio */}
+                <div className="relative pb-[56.25%]">
                   <iframe 
                     className="absolute inset-0 w-full h-full rounded-lg"
                     src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
