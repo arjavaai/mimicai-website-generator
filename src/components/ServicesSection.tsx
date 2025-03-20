@@ -1,69 +1,73 @@
-
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Plus } from 'lucide-react';
+import React from 'react';
 
 const ServicesSection = () => {
+  // Service categories that appear on the left side
+  const serviceCategories = [
+    { id: 'artificial', label: 'Artificial' },
+    { id: 'localAuthority', label: 'Local Authority' },
+    { id: 'businessSurvey', label: 'Business Survey' },
+    { id: 'identity', label: 'Identity' },
+    { id: 'dataConnection', label: 'Data Connection' },
+    { id: 'publicServer', label: 'Public Server' },
+  ];
+
+  // Service descriptions - these appear on the right side
+  const services = [
+    {
+      id: 'networking',
+      title: 'Networking',
+      description: 'Network models into existing systems or software applications whether you breath rebranding.'
+    },
+    {
+      id: 'algorithm',
+      title: 'Algorithm',
+      description: 'Algorithm of architectures tailored to specific business needs and definition objectives.'
+    },
+    {
+      id: 'integration',
+      title: 'Integration',
+      description: 'General Strong AI, which possesses human-level intelligence by all the design agency.'
+    }
+  ];
+
   return (
-    <section className="py-20 bg-arolax-black relative overflow-hidden">
+    <section className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left side with heading and description */}
-          <div className="lg:col-span-5">
-            <div className="sticky top-32">
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-                Empowering business transformation in a way of unique fundamental solutions
-              </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Left side with abstract shape and service categories - 5 columns wide */}
+          <div className="relative lg:col-span-5 flex items-center">
+            <div className="relative w-full h-[600px] lg:h-[700px]">
+              {/* Fluid shape with gradient overlay */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
+                {/* This would be replaced with your actual image */}
+                <div className="relative w-full h-full">
+                  <div className="absolute w-[80%] h-[80%] left-0 top-[10%] rounded-r-full rounded-bl-full overflow-hidden bg-gradient-to-br from-blue-700 via-purple-800 to-red-500">
+                    {/* You can replace this with an actual image if available */}
+                  </div>
+                </div>
+              </div>
               
-              <div className="relative h-[400px] mt-10 rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/f40123f4-295e-40d9-9bd9-25f2ed9f9e39.png" 
-                  alt="AI Hand" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
+              {/* Service categories */}
+              <div className="absolute inset-0 flex flex-col justify-center pl-10 z-10">
+                {serviceCategories.map((category) => (
+                  <div key={category.id} className="flex items-center text-white mb-6 cursor-pointer hover:opacity-80 transition-opacity">
+                    <Plus className="h-5 w-5 mr-3 flex-shrink-0" />
+                    <span className="text-lg font-medium">{category.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
           
-          {/* Right side with service descriptions */}
-          <div className="lg:col-span-7 space-y-12">
-            <div className="space-y-6">
-              <p className="text-lg text-gray-300">
-                Artificial Intelligence refers to the development of computer systems that can perform tasks that would typically require human intelligence. It involves the creation of algorithms and models that enable machines to learn, reason, perceive, and make decisions.
-              </p>
-              <p className="text-lg text-gray-300">
-                Artificial Intelligence refers to the development of computer systems that can perform tasks that would typically require human intelligence. It involves the creation of algorithms and models that enable machines to learn, reason, perceive, and make decisions.
-              </p>
-              
-              <Button 
-                asChild
-                className="rounded-full bg-arolax-darkgray hover:bg-arolax-darkgray/90 text-white border border-white/10 mt-4 group"
-              >
-                <a href="/services">
-                  LEARN MORE
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
-              {/* Service 1 */}
-              <div className="bg-arolax-darkgray/50 border border-white/5 rounded-lg p-6 space-y-4">
-                <h3 className="text-2xl font-bold text-white">Networking</h3>
-                <p className="text-gray-400">Network models into existing systems or software applications whether you breath rebranding.</p>
+          {/* Right side with service descriptions - 7 columns wide */}
+          <div className="lg:col-span-7 space-y-24 py-12 flex flex-col justify-center">
+            {services.map((service) => (
+              <div key={service.id} className="space-y-4">
+                <h2 className="text-4xl font-bold text-white">{service.title}</h2>
+                <p className="text-gray-400 text-lg">{service.description}</p>
               </div>
-              
-              {/* Service 2 */}
-              <div className="bg-arolax-darkgray/50 border border-white/5 rounded-lg p-6 space-y-4">
-                <h3 className="text-2xl font-bold text-white">Algorithm</h3>
-                <p className="text-gray-400">Algorithm of architectures tailored to specific business needs and definition objectives.</p>
-              </div>
-              
-              {/* Service 3 */}
-              <div className="bg-arolax-darkgray/50 border border-white/5 rounded-lg p-6 space-y-4">
-                <h3 className="text-2xl font-bold text-white">Integration</h3>
-                <p className="text-gray-400">General Strong AI, which possesses human-level intelligence by all the design agency.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

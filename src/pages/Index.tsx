@@ -1,7 +1,5 @@
-
 import { useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
-import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
 import FeaturedServices from '../components/FeaturedServices';
 import ServicesList from '../components/ServicesList';
@@ -17,7 +15,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-arolax-black text-white overflow-hidden">
       <HeroSection />
-      <AboutSection />
       <ServicesSection />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
