@@ -6,24 +6,26 @@ const ServicesSection = () => {
   return (
     <section className="py-20 bg-arolax-black relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left side with heading and description */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-              Empowering business transformation in a way of unique fundamental solutions
-            </h2>
-            
-            <div className="relative h-[400px] mt-10 rounded-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/150a10d7-f892-4043-a367-d220a08277bc.png" 
-                alt="AI Hand" 
-                className="w-full h-full object-cover rounded-lg"
-              />
+          <div className="lg:col-span-5">
+            <div className="sticky top-32">
+              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+                Empowering business transformation in a way of unique fundamental solutions
+              </h2>
+              
+              <div className="relative h-[400px] mt-10 rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/f40123f4-295e-40d9-9bd9-25f2ed9f9e39.png" 
+                  alt="AI Hand" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
             </div>
           </div>
           
           {/* Right side with service descriptions */}
-          <div className="space-y-12">
+          <div className="lg:col-span-7 space-y-12">
             <div className="space-y-6">
               <p className="text-lg text-gray-300">
                 Artificial Intelligence refers to the development of computer systems that can perform tasks that would typically require human intelligence. It involves the creation of algorithms and models that enable machines to learn, reason, perceive, and make decisions.

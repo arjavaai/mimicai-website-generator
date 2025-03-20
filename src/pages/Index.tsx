@@ -7,9 +7,6 @@ import FeaturedServices from '../components/FeaturedServices';
 import ServicesList from '../components/ServicesList';
 import ServicesListSidebar from '../components/ServicesListSidebar';
 import VideoSection from '../components/VideoSection';
-import LocalServerSection from '../components/LocalServerSection';
-import ClientsSection from '../components/ClientsSection';
-import IntelligenceSection from '../components/IntelligenceSection';
 
 const Index = () => {
   // Scroll to top on page load
@@ -22,7 +19,6 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <LocalServerSection />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1">
@@ -55,8 +51,6 @@ const Index = () => {
       <FeaturedServices />
       <ServicesList />
       <VideoSection />
-      <IntelligenceSection />
-      <ClientsSection />
     </div>
   );
 };
