@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
-import FeaturedServices from '../components/FeaturedServices';
-import ServicesList from '../components/ServicesList';
-import ServicesListSidebar from '../components/ServicesListSidebar';
-import VideoSection from '../components/VideoSection';
+import ProductsSection from '../components/ProductsSection';
+import ClientSuccessStories from '../components/ClientSuccessStories';
+import FAQSection from '../components/FAQSection';
+import CtaBanner from '../components/CtaBanner';
+import AnimatedSection from '../components/AnimatedSection';
 
 const Index = () => {
   // Scroll to top on page load
@@ -12,43 +14,45 @@ const Index = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-arolax-black text-white overflow-hidden">
+    <motion.div 
+      className="min-h-screen bg-[#121212] text-white overflow-hidden"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <HeroSection />
-      <ServicesSection />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-1">
-            <ServicesListSidebar />
-          </div>
-          <div className="lg:col-span-4">
-            <div className="space-y-12">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Networking</h2>
-                <p className="text-gray-300">
-                  Network models into existing systems or software applications whether you breath rebranding.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Algorithm</h2>
-                <p className="text-gray-300">
-                  Algorithm of architectures tailored to specific business needs and definition objectives.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Integration</h2>
-                <p className="text-gray-300">
-                  General Strong AI, which possesses human-level intelligence by all the design agency.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <FeaturedServices />
-      <ServicesList />
-      <VideoSection />
-    </div>
+      
+      <AnimatedSection delay={0.2}>
+        <ServicesSection />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.3}>
+        <ClientSuccessStories />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.4}>
+        <ProductsSection />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.5}>
+        <FAQSection />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.6}>
+        <CtaBanner />
+      </AnimatedSection>
+    </motion.div>
   );
 };
 

@@ -1,76 +1,177 @@
-import { Plus } from 'lucide-react';
-import React from 'react';
+import { motion } from 'framer-motion';
+import SpotlightCard from './SpotlightCard';
+import FlowingMenu from './FlowingMenu';
+import { ArrowRight } from 'lucide-react';
+import { 
+  Globe, 
+  Video, 
+  Bot, 
+  Workflow, 
+  Database, 
+  Code, 
+  Brain, 
+  Settings,
+  Camera
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const services = [
+  {
+    title: "Static & Dynamic Websites",
+    description: "Custom web development solutions tailored to your needs",
+    icon: Globe,
+    link: "/services/website-development"
+  },
+  {
+    title: "AI Ads [Video Ads]",
+    description: "AI-powered video advertisement creation and optimization",
+    icon: Video,
+    link: "/services/ai-video-ads"
+  },
+  {
+    title: "Content Automation",
+    description: "Streamline your content creation process with AI",
+    icon: Bot,
+    link: "/services/content-automation"
+  },
+  {
+    title: "AI Product Photography",
+    description: "AI-powered product photo shoots and image generation",
+    icon: Camera,
+    link: "/services/ai-product-photography"
+  },
+  {
+    title: "AI Agents",
+    description: "Custom AI agents for task automation and assistance",
+    icon: Settings,
+    link: "/services/ai-agents"
+  },
+  {
+    title: "AI Workflows",
+    description: "Automated AI-powered workflow solutions",
+    icon: Workflow,
+    link: "/services/ai-workflows"
+  },
+  {
+    title: "SaaS Products",
+    description: "Custom SaaS development and implementation",
+    icon: Code,
+    link: "/services/saas-products"
+  },
+  {
+    title: "RAG Implementation",
+    description: "Retrieval-Augmented Generation solutions",
+    icon: Database,
+    link: "/services/rag-implementation"
+  },
+  {
+    title: "LLM Finetune",
+    description: "Custom language model fine-tuning services",
+    icon: Brain,
+    link: "/services/llm-finetune"
+  }
+];
+
+const flowingMenuItems = [
+  { 
+    link: '#', 
+    text: 'AI Innovation', 
+    image: '/images/flowing-menu/ai-innovation.webp'
+  },
+  { 
+    link: '#', 
+    text: 'Digital Solutions', 
+    image: '/images/flowing-menu/digital-solutions.webp'
+  },
+  { 
+    link: '#', 
+    text: 'Future Tech', 
+    image: '/images/flowing-menu/future-tech.webp'
+  },
+  { 
+    link: '#', 
+    text: 'Smart Automation', 
+    image: '/images/flowing-menu/smart-automation.webp'
+  }
+];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
 
 const ServicesSection = () => {
-  // Service categories that appear on the left side
-  const serviceCategories = [
-    { id: 'artificial', label: 'Artificial' },
-    { id: 'localAuthority', label: 'Local Authority' },
-    { id: 'businessSurvey', label: 'Business Survey' },
-    { id: 'identity', label: 'Identity' },
-    { id: 'dataConnection', label: 'Data Connection' },
-    { id: 'publicServer', label: 'Public Server' },
-  ];
-
-  // Service descriptions - these appear on the right side
-  const services = [
-    {
-      id: 'networking',
-      title: 'Networking',
-      description: 'Network models into existing systems or software applications whether you breath rebranding.'
-    },
-    {
-      id: 'algorithm',
-      title: 'Algorithm',
-      description: 'Algorithm of architectures tailored to specific business needs and definition objectives.'
-    },
-    {
-      id: 'integration',
-      title: 'Integration',
-      description: 'General Strong AI, which possesses human-level intelligence by all the design agency.'
-    }
-  ];
-
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left side with abstract shape and service categories - 5 columns wide */}
-          <div className="relative lg:col-span-5 flex items-center">
-            <div className="relative w-full h-[600px] lg:h-[700px]">
-              {/* Fluid shape with gradient overlay */}
-              <div className="absolute inset-0 w-full h-full overflow-hidden">
-                {/* This would be replaced with your actual image */}
-                <div className="relative w-full h-full">
-                  <div className="absolute w-[80%] h-[80%] left-0 top-[10%] rounded-r-full rounded-bl-full overflow-hidden bg-gradient-to-br from-blue-700 via-purple-800 to-red-500">
-                    {/* You can replace this with an actual image if available */}
+    <section className="py-20 bg-black rounded-t-[50px]">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-cal text-white mb-4">Our Services</h2>
+          <p className="text-gray-400 mb-12 font-matter">
+            Discover our comprehensive range of AI and web development solutions
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
+              transition={{ delay: index * 0.1 }}
+            >
+              <SpotlightCard 
+                className="group cursor-pointer transition-all duration-300"
+                spotlightColor="rgba(255, 255, 255, 0.15)"
+              >
+                <div className="relative z-10">
+                  <div className="mb-6">
+                    <service.icon className="w-8 h-8 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                   </div>
+                  <h3 className="text-xl font-cal text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-400 mb-6 font-matter">{service.description}</p>
+                  <Link to={service.link} className="flex items-center bg-zinc-900 hover:bg-zinc-800 text-orange-400 px-4 py-2 rounded-full font-matter transition-all duration-300 border border-zinc-800 hover:border-orange-500/50">
+                    Learn more <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-              </div>
-              
-              {/* Service categories */}
-              <div className="absolute inset-0 flex flex-col justify-center pl-10 z-10">
-                {serviceCategories.map((category) => (
-                  <div key={category.id} className="flex items-center text-white mb-6 cursor-pointer hover:opacity-80 transition-opacity">
-                    <Plus className="h-5 w-5 mr-3 flex-shrink-0" />
-                    <span className="text-lg font-medium">{category.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          {/* Right side with service descriptions - 7 columns wide */}
-          <div className="lg:col-span-7 space-y-24 py-12 flex flex-col justify-center">
-            {services.map((service) => (
-              <div key={service.id} className="space-y-4">
-                <h2 className="text-4xl font-bold text-white">{service.title}</h2>
-                <p className="text-gray-400 text-lg">{service.description}</p>
-              </div>
-            ))}
-          </div>
+              </SpotlightCard>
+            </motion.div>
+          ))}
         </div>
       </div>
+
+      {/* Flowing Menu Section */}
+      <motion.section 
+        className="bg-black mt-32"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-cal text-white mb-8 text-center">
+            Explore Our Solutions
+          </h2>
+          <div className="h-[600px] relative">
+            <FlowingMenu items={flowingMenuItems} />
+          </div>
+        </div>
+      </motion.section>
     </section>
   );
 };

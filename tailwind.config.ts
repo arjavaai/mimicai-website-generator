@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,16 +62,14 @@ export default {
 					teal: '#4ECDC4',
 				}
 			},
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
-			},
-			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				heading: ['Syne', 'sans-serif'],
+			translate: {
+				'101': '101%',
 			},
 			keyframes: {
+				marquee: {
+					'from': { transform: 'translateX(0%)' },
+					'to': { transform: 'translateX(-50%)' }
+				},
 				'accordion-down': {
 					from: { height: '0' },
 					to: { height: 'var(--radix-accordion-content-height)' },
@@ -116,6 +113,16 @@ export default {
 				'pulse-slow': 'pulse-slow 3s infinite ease-in-out',
 				'float': 'float 6s infinite ease-in-out',
 				'wave': 'wave 8s infinite linear',
+				marquee: 'marquee 15s linear infinite'
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Syne', 'sans-serif'],
 			},
 		},
 	},
