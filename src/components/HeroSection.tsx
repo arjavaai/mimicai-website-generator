@@ -25,61 +25,94 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      {/* Wave effect */}
-      <div className="absolute left-0 right-0 bottom-0 h-64 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-arolax-orange/10 via-arolax-orange/5 to-transparent"></div>
+      {/* Main content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left side content */}
+          <div className="space-y-12">
+            <article className="bg-arolax-darkgray/40 rounded-lg p-6 border border-white/5 relative overflow-hidden">
+              <div className="flex items-center space-x-4 mb-4">
+                <img 
+                  src="/lovable-uploads/150a10d7-f892-4043-a367-d220a08277bc.png" 
+                  alt="Person working" 
+                  className="w-20 h-14 object-cover rounded"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">How to overcome a shortage of software developers</h3>
+              <p className="text-gray-400 text-sm mb-4">Using machine learning, artificial intelligence (AI) and other technologies to help us to achieve more.</p>
+              <p className="text-gray-500 text-xs">SEP 01, 2023</p>
+            </article>
+            
+            <article className="bg-arolax-darkgray/40 rounded-lg p-6 border border-white/5 relative overflow-hidden">
+              <div className="flex items-center space-x-4 mb-4">
+                <img 
+                  src="/lovable-uploads/150a10d7-f892-4043-a367-d220a08277bc.png" 
+                  alt="Tech image" 
+                  className="w-20 h-14 object-cover rounded"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">How to bring AI to your agency and give amazing results</h3>
+              <p className="text-gray-400 text-sm mb-4">When it comes to new solutions, ideas, and agency-level challenges, we can tackle those problems.</p>
+              <p className="text-gray-500 text-xs">SEP 01, 2023</p>
+            </article>
+          </div>
+          
+          {/* Right side content */}
+          <div className="space-y-12">
+            <article className="bg-arolax-darkgray/40 rounded-lg p-6 border border-white/5 relative overflow-hidden">
+              <div className="flex items-center space-x-4 mb-4">
+                <img 
+                  src="/lovable-uploads/150a10d7-f892-4043-a367-d220a08277bc.png" 
+                  alt="Tech image" 
+                  className="w-20 h-14 object-cover rounded"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">How to build AI to your agency and marketing resources</h3>
+              <p className="text-gray-400 text-sm mb-4">Revolutionize your marketing with AI-powered insights and automation for maximum impact.</p>
+              <p className="text-gray-500 text-xs">SEP 01, 2023</p>
+            </article>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
-        {/* Client avatars section */}
-        <div className="lg:col-span-3 flex flex-col justify-center">
-          <div 
-            className={`transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}
-          >
-            <div className="flex -space-x-3 mb-4">
-              <div className="w-12 h-12 rounded-full border-2 border-arolax-black overflow-hidden">
-                <img src="/lovable-uploads/bb198ef3-d7fe-41f5-bb95-64dbde5bc0d3.png" alt="Client 1" className="w-full h-full object-cover" />
-              </div>
-              <div className="w-12 h-12 rounded-full border-2 border-arolax-black overflow-hidden">
-                <img src="/lovable-uploads/43efa4ab-c28a-4efc-b8a9-5883c06baa70.png" alt="Client 2" className="w-full h-full object-cover" />
-              </div>
-              <div className="w-12 h-12 rounded-full border-2 border-arolax-black overflow-hidden">
-                <img src="/lovable-uploads/16b136d6-9e3c-439d-b3a8-da0f5fcb88e5.png" alt="Client 3" className="w-full h-full object-cover" />
-              </div>
-              <div className="w-12 h-12 rounded-full border-2 border-arolax-black bg-arolax-darkgray flex items-center justify-center text-white">
-                <span>+</span>
-              </div>
+            <div className="bg-arolax-darkgray/40 rounded-lg p-6 border border-white/5">
+              <h2 className="text-xl font-bold text-white mb-4">Have a project?</h2>
+              <p className="text-gray-400 text-sm mb-6">Let's create something amazing together. Our team is ready to bring your vision to life.</p>
+              <Button 
+                asChild
+                className="rounded-full bg-arolax-orange hover:bg-arolax-orange/90 text-white"
+              >
+                <a href="/contact">
+                  GET IN TOUCH
+                </a>
+              </Button>
             </div>
-            <h3 className="text-xl font-bold text-white">We have 18k+</h3>
-            <p className="text-gray-400">customers world-wide</p>
           </div>
         </div>
-
-        {/* Main hero content */}
-        <div className="lg:col-span-6 flex flex-col justify-center text-center">
-          <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-              Unlock the ultimate power of
-              <span className="text-white"> AI,</span> in your real life
-            </h1>
-            <div className="w-14 h-14 mx-auto relative">
-              <div className="absolute inset-0 rounded-full border border-white/30 flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-arolax-orange animate-pulse"></div>
-              </div>
+        
+        {/* Main hero banner */}
+        <div className="mt-20 relative">
+          <div className="relative h-[500px] rounded-lg overflow-hidden">
+            <img 
+              src="/lovable-uploads/150a10d7-f892-4043-a367-d220a08277bc.png" 
+              alt="AI Technology" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-arolax-black to-transparent"></div>
+            
+            <div className="absolute bottom-0 left-0 right-0 p-10">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Using local server is a fundamental<br />component of Artificial<br />Intelligence (AI) systems
+              </h1>
+              <Button 
+                asChild
+                className="rounded-full bg-arolax-orange hover:bg-arolax-orange/90 text-white mt-6 group"
+              >
+                <a href="/services">
+                  DISCOVER MORE
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
-
-        {/* Right side spacer/additional content */}
-        <div className="lg:col-span-3 flex items-center">
-          <div className="bg-gradient-to-br from-arolax-orange/20 to-transparent w-32 h-32 rounded-full blur-3xl"></div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <div className="w-1 h-10 relative mb-2">
-          <div className="absolute inset-0 bg-gradient-to-b from-arolax-orange to-transparent animate-pulse"></div>
-        </div>
-        <span className="text-sm text-gray-400">Scroll Down</span>
       </div>
     </section>
   );
