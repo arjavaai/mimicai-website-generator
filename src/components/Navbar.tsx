@@ -134,12 +134,15 @@ const Navbar = () => {
               </div>
             </div>
             
-            <button 
-              onClick={() => navigateToSection('about')} 
-              className="text-white hover:text-[#F26E50] transition-colors"
+            <Link 
+              to="/about" 
+              className={cn(
+                "text-white hover:text-[#F26E50] transition-colors",
+                location.pathname === '/about' && "text-[#F26E50]"
+              )}
             >
               About
-            </button>
+            </Link>
             
             <button 
               onClick={() => navigateToSection('testimonials')} 
@@ -238,12 +241,16 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
               
-              <button 
-                onClick={() => navigateToSection('about')} 
-                className="block w-full text-left text-lg text-white hover:text-[#F26E50] transition-colors"
+              <Link 
+                to="/about" 
+                className={cn(
+                  "block w-full text-left text-lg text-white hover:text-[#F26E50] transition-colors",
+                  location.pathname === '/about' && "text-[#F26E50]"
+                )}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </button>
+              </Link>
               
               <button 
                 onClick={() => navigateToSection('testimonials')} 

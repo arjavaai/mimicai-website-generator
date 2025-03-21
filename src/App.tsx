@@ -24,6 +24,7 @@ import SaasProducts from "./components/services/SaasProducts";
 import RagImplementation from "./components/services/RagImplementation";
 import LLMFinetune from "./components/services/LLMFinetune";
 import WebsiteDevelopment from "./components/services/WebsiteDevelopment";
+import Chatbot from './components/Chatbot';
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
           </Routes>
         </main>
         <Footer />
+        <Chatbot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
