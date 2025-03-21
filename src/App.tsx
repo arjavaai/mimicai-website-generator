@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
+import ScrollToTop from './components/ScrollToTop';
 
 // Service Pages
 import AIVideoAds from "./components/services/AIVideoAds";
@@ -32,6 +33,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <main>
           <Routes>

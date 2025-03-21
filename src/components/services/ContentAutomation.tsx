@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Bot, FileText, Sparkles, Repeat, Layers, Zap, Clock } from 'lucide-react';
+import { Video, Mic, Edit, Search, Upload, Image, Calendar, Users, Repeat, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -13,110 +13,50 @@ const ContentAutomation = () => {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#F26E50] to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Content <span className="text-[#F26E50]">Automation</span> at Scale
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Streamline your content creation process with AI. Generate high-quality, SEO-optimized content for blogs, social media, and marketing materials in seconds.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
-                Try It Free
-              </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-md">
-                See Examples
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      
-      {/* Demo Section */}
-      <section className="py-20 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <motion.div 
+              className="lg:w-1/2"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
             >
-              <h2 className="text-3xl font-bold mb-6">See Our AI in Action</h2>
-              <p className="text-gray-300 mb-6">
-                Watch how our content automation platform transforms a simple prompt into fully-formed, engaging content in seconds.
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                AI <span className="text-[#F26E50]">Content Automation</span> for Personal Branding
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Scale your personal brand with AI-powered content. We clone both your voice AND visual appearance to create consistent, high-quality videos while you focus on what matters most.
               </p>
-              
-              <div className="space-y-6">
-                {[
-                  {
-                    icon: <Clock className="text-[#F26E50]" />,
-                    title: "Save 10+ hours per week",
-                    description: "Focus on strategy while AI handles content creation"
-                  },
-                  {
-                    icon: <Repeat className="text-[#F26E50]" />,
-                    title: "Consistent brand voice",
-                    description: "Train the AI on your brand guidelines and tone"
-                  },
-                  {
-                    icon: <Layers className="text-[#F26E50]" />,
-                    title: "Multi-format output",
-                    description: "Generate blog posts, social captions, emails, and more"
-                  }
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="mt-1">{feature.icon}</div>
-                    <div>
-                      <h3 className="font-semibold text-white">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="flex flex-wrap gap-4">
+                <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
+                  Get Started
+                </Button>
+                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-md">
+                  View Samples
+                </Button>
               </div>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+            <motion.div 
+              className="lg:w-1/2"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50] to-purple-600 rounded-xl blur opacity-30"></div>
-              <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <div className="ml-2 text-sm text-gray-400">AI Content Generator</div>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="bg-zinc-800 rounded-lg p-4">
-                    <p className="text-sm text-gray-400 mb-2">Prompt:</p>
-                    <p className="text-white">Write a blog post about the benefits of AI in marketing</p>
-                  </div>
-                  
-                  <div className="flex justify-center">
-                    <Sparkles className="text-[#F26E50] animate-pulse" size={24} />
-                  </div>
-                  
-                  <div className="bg-zinc-800/50 rounded-lg p-4">
-                    <p className="text-sm text-gray-400 mb-2">Generated Content:</p>
-                    <h4 className="text-lg font-bold text-white mb-2">5 Ways AI is Revolutionizing Modern Marketing</h4>
-                    <p className="text-gray-300 text-sm">
-                      In today's fast-paced digital landscape, artificial intelligence has emerged as a game-changer for marketing professionals. From personalized customer experiences to data-driven insights, AI tools are helping brands connect with their audience more effectively than ever before...
-                    </p>
-                    <div className="mt-4 flex gap-2">
-                      <span className="bg-[#F26E50]/20 text-[#F26E50] text-xs py-1 px-2 rounded">SEO Optimized</span>
-                      <span className="bg-[#F26E50]/20 text-[#F26E50] text-xs py-1 px-2 rounded">Engaging</span>
-                      <span className="bg-[#F26E50]/20 text-[#F26E50] text-xs py-1 px-2 rounded">Factual</span>
+              <div className="relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50] to-purple-600 rounded-xl blur opacity-30"></div>
+                <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Content Automation" 
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex items-end">
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        <span className="text-sm font-medium">AI-Generated Content</span>
+                      </div>
+                      <h3 className="text-xl font-bold">Your Brand, Amplified</h3>
                     </div>
                   </div>
                 </div>
@@ -126,7 +66,139 @@ const ContentAutomation = () => {
         </div>
       </section>
       
-      {/* Features Section */}
+      {/* How It Works Section - Enhanced with SVGs and animations */}
+      <section className="py-20 bg-zinc-900/50 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#F26E50]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold mb-4">How Our Content Automation Works</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A simple 3-step process to multiply your content output without additional time investment
+            </p>
+          </motion.div>
+          
+          <div className="relative max-w-5xl mx-auto">
+            {/* Connecting line */}
+            <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-[#F26E50]/50 via-purple-500/50 to-[#F26E50]/50 transform -translate-y-1/2 hidden md:block"></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              {/* Step 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:border-[#F26E50]/30 transition-all duration-300"
+              >
+                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
+                  <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50"></div>
+                  <div className="relative">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
+                      <path d="M15 12.5V16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 15.5V19.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 13.5V17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M17.9999 2H5.99994C4.89537 2 3.99994 2.89543 3.99994 4V6C3.99994 7.10457 4.89537 8 5.99994 8H17.9999C19.1045 8 19.9999 7.10457 19.9999 6V4C19.9999 2.89543 19.1045 2 17.9999 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3.99994 13V20C3.99994 21.1046 4.89537 22 5.99994 22H17.9999C19.1045 22 19.9999 21.1046 19.9999 20V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="bg-[#F26E50]/10 text-[#F26E50] text-sm font-medium rounded-full px-3 py-1 inline-block mb-4">Step 1</div>
+                <h3 className="text-xl font-bold mb-3 text-center">Record Base Content</h3>
+                <p className="text-gray-300 text-center">
+                  Provide us with 4-5 minute videos that capture your authentic style, voice, and mannerisms.
+                </p>
+              </motion.div>
+              
+              {/* Step 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:border-[#F26E50]/30 transition-all duration-300 md:mt-16"
+              >
+                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
+                  <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="relative">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
+                      <path d="M21 16V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.0799 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.0799 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V16Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 4V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 12L21 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3 12L12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="bg-[#F26E50]/10 text-[#F26E50] text-sm font-medium rounded-full px-3 py-1 inline-block mb-4">Step 2</div>
+                <h3 className="text-xl font-bold mb-3 text-center">AI Cloning & Production</h3>
+                <p className="text-gray-300 text-center">
+                  We use AI to clone both your voice and visual appearance, creating multiple pieces of content that look and sound exactly like you.
+                </p>
+              </motion.div>
+              
+              {/* Step 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:border-[#F26E50]/30 transition-all duration-300"
+              >
+                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
+                  <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: '1s' }}></div>
+                  <div className="relative">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
+                      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3.6 9H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3.6 15H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 3C10.1008 5.2129 9 8.4935 9 12C9 15.5065 10.1008 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 3C13.8992 5.2129 15 8.4935 15 12C15 15.5065 13.8992 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="bg-[#F26E50]/10 text-[#F26E50] text-sm font-medium rounded-full px-3 py-1 inline-block mb-4">Step 3</div>
+                <h3 className="text-xl font-bold mb-3 text-center">Distribution & Growth</h3>
+                <p className="text-gray-300 text-center">
+                  We handle posting, optimization, and analytics to grow your audience across platforms.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Results indicator */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="mt-16 max-w-3xl mx-auto bg-gradient-to-r from-black to-zinc-900 border border-[#F26E50]/20 rounded-lg p-6 text-center"
+          >
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
+                <path d="M16 8L8 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 8L16 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-xl font-bold">The Result: 10-30× Content Output</span>
+            </div>
+            <p className="text-gray-300">
+              Transform a single recording session into weeks of consistent, high-quality content across multiple platforms.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Services Included Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -136,56 +208,164 @@ const ContentAutomation = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold mb-4">Powerful Features</h2>
+            <h2 className="text-4xl font-bold mb-4">Comprehensive Service Package</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our content automation platform is packed with features to help you create better content faster.
+              Everything you need to maintain a consistent content presence without the time investment
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Bot className="w-10 h-10 text-[#F26E50]" />,
-                title: "AI Content Generation",
-                description: "Create blog posts, social media content, product descriptions, and more with a few clicks."
+                icon: <Users className="w-10 h-10 text-[#F26E50]" />,
+                title: "Account Management",
+                description: "We handle all aspects of your content platforms, from setup to optimization."
               },
               {
-                icon: <FileText className="w-10 h-10 text-[#F26E50]" />,
-                title: "Content Templates",
-                description: "Choose from dozens of pre-built templates for different content types and industries."
+                icon: <Search className="w-10 h-10 text-[#F26E50]" />,
+                title: "Content Research",
+                description: "Identifying trending topics and relevant content ideas for maximum engagement."
               },
               {
-                icon: <Sparkles className="w-10 h-10 text-[#F26E50]" />,
-                title: "Style Customization",
-                description: "Adjust tone, style, and formatting to match your brand voice perfectly."
+                icon: <Edit className="w-10 h-10 text-[#F26E50]" />,
+                title: "Script Writing",
+                description: "Professional scripts tailored to your voice, style, and audience preferences."
               },
               {
-                icon: <Repeat className="w-10 h-10 text-[#F26E50]" />,
-                title: "Bulk Generation",
-                description: "Create multiple pieces of content simultaneously for different channels."
+                icon: <Video className="w-10 h-10 text-[#F26E50]" />,
+                title: "Video Editing",
+                description: "High-quality editing with graphics, transitions, and visual enhancements."
               },
               {
-                icon: <Layers className="w-10 h-10 text-[#F26E50]" />,
-                title: "Content Calendar",
-                description: "Schedule and organize your content with our built-in calendar system."
+                icon: <Mic className="w-10 h-10 text-[#F26E50]" />,
+                title: "Audio & Video Cloning",
+                description: "Advanced AI technology that replicates both your voice and visual appearance for videos that are indistinguishable from ones you record yourself."
               },
               {
-                icon: <Zap className="w-10 h-10 text-[#F26E50]" />,
-                title: "One-Click Publishing",
-                description: "Publish directly to WordPress, social media, and other platforms."
+                icon: <Image className="w-10 h-10 text-[#F26E50]" />,
+                title: "Thumbnail Creation",
+                description: "Eye-catching thumbnails designed to maximize click-through rates."
               }
-            ].map((feature, index) => (
+            ].map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zinc-900/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:border-[#F26E50]/30 transition-all duration-300"
+                className="bg-zinc-900/50 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:border-[#F26E50]/30 transition-all duration-300"
               >
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <div className="mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Pricing Section */}
+      <section className="py-20 bg-zinc-900/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold mb-4">Pricing Plans</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan to scale your content creation
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Starter",
+                price: "₹30,000",
+                feature: "10 Videos per Month",
+                popular: false
+              },
+              {
+                title: "Growth",
+                price: "₹50,000",
+                feature: "20 Videos per Month",
+                popular: true
+              },
+              {
+                title: "Scale",
+                price: "₹60,000",
+                feature: "30 Videos per Month",
+                popular: false
+              }
+            ].map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`bg-black/40 backdrop-blur-sm border ${plan.popular ? 'border-[#F26E50]/50 scale-105' : 'border-white/10'} rounded-lg overflow-hidden relative ${plan.popular ? 'lg:scale-105' : ''}`}
+              >
+                {plan.popular && (
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#F26E50] to-purple-600"></div>
+                )}
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-gray-400">/month</span>
+                  </div>
+                  <div className="bg-[#F26E50]/10 rounded-lg p-3 mb-6">
+                    <span className="text-[#F26E50] font-medium">{plan.feature}</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Account Management
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Content Research
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Script Writing
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Professional Editing
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Voice & Video Cloning
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Custom Thumbnails
+                    </li>
+                  </ul>
+                  <Button asChild className={`w-full ${plan.popular ? 'bg-[#F26E50] hover:bg-[#E05D40]' : 'bg-zinc-800 hover:bg-zinc-700'} text-white`}>
+                    <Link to="/contact">Select Plan</Link>
+                  </Button>
+                </div>
+                <div className="bg-zinc-900 p-4 text-center text-sm">
+                  <span className="text-gray-400">6-month minimum commitment</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -202,12 +382,12 @@ const ContentAutomation = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Content Creation?</h2>
+              <h2 className="text-4xl font-bold mb-6">Ready to Scale Your Personal Brand?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses saving time and resources with our AI content automation platform.
+                Let us handle your content creation while you focus on what you do best. Get started today with a consultation.
               </p>
               <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
-                <Link to="/contact">Get Started Today</Link>
+                <Link to="/contact">Schedule a Demo</Link>
               </Button>
             </motion.div>
           </div>
