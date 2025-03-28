@@ -1,164 +1,140 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import React, { SetStateAction } from 'react';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { items } from '@/components/website/constant';
 
-const ProjectShowcase = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
-
-  const handleScroll = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setShowLeftArrow(scrollLeft > 0);
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const { clientWidth } = scrollRef.current;
-      const scrollAmount = direction === 'left' ? -clientWidth / 2 : clientWidth / 2;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
-  // Project data
-  const projects = [
-    {
-      id: 1,
-      title: 'Interior Visualisation',
-      subtitle: 'Visualise Your Home & Cost Estimation',
-      image: '/lovable-uploads/interior-visualization.jpg',
-      bgColor: 'from-zinc-900 to-black',
-      textColor: 'text-white'
+const article = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      delayChildren: 0.2,
+      staggerChildren: 0.1, // Stagger duration for children
     },
-    {
-      id: 2,
-      title: 'E MOTORAD',
-      subtitle: 'M.S. Dhoni sings "Bole Jo Koyal"',
-      image: '/lovable-uploads/e-motorad.jpg',
-      bgColor: 'from-zinc-900 to-black',
-      textColor: 'text-white'
-    },
-    {
-      id: 3,
-      title: 'Influencer',
-      subtitle: 'Connect with Your Face & Voice',
-      image: '/lovable-uploads/influencer.jpg',
-      bgColor: 'from-zinc-900 to-black',
-      textColor: 'text-white'
-    },
-    {
-      id: 4,
-      title: 'Mirzapur S3 Launch',
-      subtitle: 'Deepfake & Lip-sync Campaign',
-      image: '/lovable-uploads/mirzapur.jpg',
-      bgColor: 'from-zinc-900 to-black',
-      textColor: 'text-white'
-    },
-    {
-      id: 5,
-      title: 'AI Realistic Avatar',
-      subtitle: 'Digital Twin for Your Brand',
-      image: '/lovable-uploads/ai-avatar.jpg',
-      bgColor: 'from-zinc-900 to-black',
-      textColor: 'text-white'
-    },
-  ];
-
-  return (
-    <section className="py-20 bg-black relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl font-bold mb-4">Our Recent Projects</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore some of our innovative AI solutions that have transformed businesses
-          </p>
-        </motion.div>
-      </div>
-
-      <div className="relative">
-        {/* Left Arrow */}
-        {showLeftArrow && (
-          <button 
-            onClick={() => scroll('left')}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft size={24} />
-          </button>
-        )}
-
-        {/* Right Arrow */}
-        {showRightArrow && (
-          <button 
-            onClick={() => scroll('right')}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full"
-            aria-label="Scroll right"
-          >
-            <ChevronRight size={24} />
-          </button>
-        )}
-
-        {/* Scrollable container */}
-        <div 
-          ref={scrollRef}
-          onScroll={handleScroll}
-          className="flex overflow-x-auto hide-scrollbar pb-8 px-4 snap-x snap-mandatory"
-          style={{ scrollbarWidth: 'none' }}
-        >
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-              className="min-w-[300px] sm:min-w-[350px] md:min-w-[400px] h-[450px] mx-3 rounded-xl overflow-hidden flex-shrink-0 snap-center border border-zinc-800"
-            >
-              <div className={`w-full h-full bg-gradient-to-b ${project.bgColor} p-5 flex flex-col relative`}>
-                <div className="mb-4">
-                  <h3 className={`text-xl font-bold ${project.textColor}`}>{project.title}</h3>
-                  <p className="text-gray-400 text-sm mt-1">{project.subtitle}</p>
-                </div>
-                
-                <div className="relative flex-grow w-full overflow-hidden rounded-lg">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    onError={(e) => {
-                      // Fallback for missing images
-                      const target = e.target as HTMLImageElement;
-                      target.src = 'https://placehold.co/400x300/1f1f1f/ffffff?text=' + encodeURIComponent(project.title);
-                    }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Custom CSS for hiding scrollbar */}
-      <style jsx>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
-    </section>
-  );
+  },
 };
 
-export default ProjectShowcase;
+type item = {
+  id: number;
+  url: string;
+  title: string;
+  description: string;
+  tags?: string[];
+};
+interface GaleryProps {
+  items: item[];
+  setIndex: React.Dispatch<SetStateAction<number>>;
+  index: number | undefined;
+}
+function Gallery({ items, setIndex, index }: GaleryProps) {
+  return (
+    <>
+      {/* Desktop Gallery */}
+      <div className='hidden md:flex w-full max-w-6xl mx-auto gap-2 justify-center pb-20 pt-10'>
+        {items.slice(0, 5).map((item: item, i: number) => {
+          return (
+            <motion.div
+              whileTap={{ scale: 0.95 }}
+              className={`rounded-xl relative ${
+                index === i ? 'w-[450px]' : 'w-[80px]'
+              } h-[400px] flex-shrink-0 transition-[width] ease-in-out duration-500 origin-center bg-black border border-zinc-800 overflow-hidden`}
+              key={i}
+              onClick={() => {
+                setIndex(i);
+              }}
+              onMouseEnter={() => {
+                setIndex(i);
+              }}
+            >
+              <motion.img
+                src={item?.url}
+                alt={item?.title}
+                className={`${
+                  index === i ? 'opacity-100' : 'opacity-50'
+                } w-full rounded-xl h-full object-cover`}
+              />
+              {/* Gradient overlay for all items */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30 rounded-xl"></div>
+              <AnimatePresence mode='wait'>
+                {index === i && (
+                  <motion.article
+                    variants={article}
+                    initial='hidden'
+                    animate='show'
+                    className='absolute flex rounded-xl flex-col justify-end h-full w-full top-0 p-6 space-y-2 overflow-hidden'
+                  >
+                    <motion.h1
+                      variants={article}
+                      className='text-3xl font-semibold text-white'
+                    >
+                      {item?.title}
+                    </motion.h1>
+                    <motion.p variants={article} className='text-white/80 text-lg'>
+                      {item?.description}
+                    </motion.p>
+                  </motion.article>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* Mobile Gallery */}
+      <div className='md:hidden w-full px-4 mx-auto pb-16 pt-6'>
+        <div className='flex flex-col gap-6'>
+          {items.slice(0, 5).map((item: item, i: number) => {
+            return (
+              <motion.div
+                whileTap={{ scale: 0.98 }}
+                className='rounded-xl relative h-[250px] bg-black border border-zinc-800 overflow-hidden'
+                key={i}
+              >
+                <motion.img
+                  src={item?.url}
+                  alt={item?.title}
+                  className='w-full rounded-xl h-full object-cover'
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30 rounded-xl"></div>
+                <motion.article
+                  className='absolute flex rounded-xl flex-col justify-end h-full w-full top-0 p-5 space-y-2 overflow-hidden'
+                >
+                  <h1 className='text-2xl font-semibold text-white'>
+                    {item?.title}
+                  </h1>
+                  <p className='text-white/80 text-sm'>
+                    {item?.description}
+                  </p>
+                </motion.article>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default function index() {
+  const [index, setIndex] = useState(2);
+
+  return (
+    <div className='relative bg-black text-white'>
+      <div className="w-full py-10 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-start">
+            <div className="border-l-4 border-yellow-500 pl-4 mb-4 md:mb-6">
+              <p className="text-lg font-medium">WE'VE GOT YOU COVERED</p>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">We Build. <span className="italic font-light">With purpose.</span></h1>
+          </div>
+        </div>
+      </div>
+      <Gallery items={items} index={index} setIndex={setIndex} />
+    </div>
+  );
+}
