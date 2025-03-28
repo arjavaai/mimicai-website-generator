@@ -4,51 +4,57 @@ import { ChevronsRight, Heart } from 'lucide-react';
 const services = [
   {
     id: 1,
-    title: 'AI Agents',
-    role: 'Intelligent Automation',
-    description: 'Custom AI agents that can automate tasks, answer questions, and provide intelligent assistance for your business needs.',
-    imageUrl: 'https://images.unsplash.com/photo-1677442135136-760c813a6626?q=80&w=800&auto=format&fit=crop',
-    color: '#c34c32'
-  },
-  {
-    id: 2,
-    title: 'AI Workflows',
-    role: 'Process Optimization',
-    description: 'Streamline your business processes with intelligent AI workflows that automate complex tasks and decision-making.',
-    imageUrl: 'https://images.unsplash.com/photo-1633613286991-611fe299c4be?q=80&w=800&auto=format&fit=crop',
-    color: '#2563eb'
-  },
-  {
-    id: 3,
-    title: 'Corporate/College Workshops',
-    role: 'AI Education & Training',
-    description: 'Comprehensive workshops to train your team or students on the latest AI technologies and implementation strategies.',
-    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop',
-    color: '#059669'
-  },
-  {
-    id: 4,
-    title: 'RAG Implementation',
-    role: 'Retrieval-Augmented Generation',
-    description: 'Implement state-of-the-art RAG systems to enhance your AI applications with accurate and contextual information retrieval.',
-    imageUrl: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=800&auto=format&fit=crop',
-    color: '#7c3aed'
-  },
-  {
-    id: 5,
-    title: 'Website Development',
+    title: 'Web Development',
     role: 'Modern Web Solutions',
     description: 'Create stunning, responsive websites with the latest technologies and AI-enhanced features for optimal user experience.',
     imageUrl: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800&auto=format&fit=crop',
-    color: '#e11d48'
+    color: '#e11d48',
+    path: '/services/website-development'
   },
   {
-    id: 6,
+    id: 2,
+    title: 'AI Ads [Video Ads]',
+    role: 'Dynamic Video Marketing',
+    description: 'Create compelling video advertisements using AI-generated visuals, voices, and personalized content for your marketing campaigns.',
+    imageUrl: 'https://images.unsplash.com/photo-1626379953822-baec19c3accd?q=80&w=800&auto=format&fit=crop',
+    color: '#f59e0b',
+    path: '/services/ai-video-ads'
+  },
+  {
+    id: 3,
     title: 'Content Automation',
     role: 'AI-Powered Content Creation',
     description: 'Automate your content creation process with AI tools that generate high-quality, engaging content for your audience.',
     imageUrl: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop',
-    color: '#0891b2'
+    color: '#0891b2',
+    path: '/services/content-automation'
+  },
+  {
+    id: 4,
+    title: 'AI Agents',
+    role: 'Intelligent Automation',
+    description: 'Custom AI agents that can automate tasks, answer questions, and provide intelligent assistance for your business needs.',
+    imageUrl: 'https://images.unsplash.com/photo-1677442135136-760c813a6626?q=80&w=800&auto=format&fit=crop',
+    color: '#c34c32',
+    path: '/services/ai-agents'
+  },
+  {
+    id: 5,
+    title: 'AI Workflows',
+    role: 'Process Optimization',
+    description: 'Streamline your business processes with intelligent AI workflows that automate complex tasks and decision-making.',
+    imageUrl: 'https://images.unsplash.com/photo-1633613286991-611fe299c4be?q=80&w=800&auto=format&fit=crop',
+    color: '#2563eb',
+    path: '/services/ai-workflows'
+  },
+  {
+    id: 6,
+    title: 'Corporate/College Workshops',
+    role: 'AI Education & Training',
+    description: 'Comprehensive workshops to train your team or students on the latest AI technologies and implementation strategies.',
+    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop',
+    color: '#059669',
+    path: '/services/corporate-workshops'
   }
 ];
 
@@ -79,9 +85,9 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
           <p className='text-sm'>
             {service.description}
           </p>
-          <button className='p-1.5 bg-black flex items-center gap-1 rounded-md text-white text-sm'>
+          <a href={service.path} className='p-1.5 bg-black flex items-center gap-1 rounded-md text-white text-sm w-fit'>
             Learn More <ChevronsRight className="h-4 w-4" />
-          </button>
+          </a>
         </div>
       </article>
       
@@ -95,9 +101,9 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
         
         {/* Mobile-only button */}
         <div className='sm:hidden mt-2'>
-          <button className='p-1.5 bg-black flex items-center gap-1 rounded-md text-white text-sm'>
+          <a href={service.path} className='p-1.5 bg-black flex items-center gap-1 rounded-md text-white text-sm w-fit'>
             Learn More <ChevronsRight className="h-4 w-4" />
-          </button>
+          </a>
         </div>
       </article>
     </div>
@@ -127,7 +133,7 @@ function ServicesSection() {
         </div>
         
         {/* Desktop view: grid layout */}
-        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 justify-items-center">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

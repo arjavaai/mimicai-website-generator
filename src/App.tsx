@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -13,6 +14,7 @@ import Footer from "./components/Footer";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import ScrollToTop from './components/ScrollToTop';
+import LoadingScreen from './components/LoadingScreen';
 
 // Service Pages
 import AIVideoAds from "./components/services/AIVideoAds";
@@ -29,42 +31,59 @@ import Chatbot from './components/Chatbot';
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            
-            {/* Service Routes */}
-            <Route path="/services/ai-video-ads" element={<AIVideoAds />} />
-            <Route path="/services/content-automation" element={<ContentAutomation />} />
-            <Route path="/services/ai-product-photography" element={<AIProductPhotography />} />
-            <Route path="/services/ai-agents" element={<AIAgents />} />
-            <Route path="/services/ai-workflows" element={<AIWorkflows />} />
-            <Route path="/services/saas-products" element={<SaasProducts />} />
-            <Route path="/services/rag-implementation" element={<RagImplementation />} />
-            <Route path="/services/llm-finetune" element={<LLMFinetune />} />
-            <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-            <Route path="/services/corporate-workshops" element={<CorporateWorkshops />} />
-            
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-        <Chatbot />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulate initial loading
+  useEffect(() => {
+    // Preload critical resources if needed
+    const preloadResources = async () => {
+      // You can add actual resource preloading here if needed
+      // For now, we're just using the loading animation
+    };
+
+    preloadResources();
+    // Loading state is managed by the LoadingScreen component
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
+        <BrowserRouter>
+          <ScrollToTop />
+          {!isLoading && <Navbar />}
+          <main>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/ai-video-ads" element={<AIVideoAds />} />
+              <Route path="/services/content-automation" element={<ContentAutomation />} />
+              <Route path="/services/ai-product-photography" element={<AIProductPhotography />} />
+              <Route path="/services/ai-agents" element={<AIAgents />} />
+              <Route path="/services/ai-workflows" element={<AIWorkflows />} />
+              <Route path="/services/saas-products" element={<SaasProducts />} />
+              <Route path="/services/rag-implementation" element={<RagImplementation />} />
+              <Route path="/services/llm-finetune" element={<LLMFinetune />} />
+              <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+              <Route path="/services/corporate-workshops" element={<CorporateWorkshops />} />
+              
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          {!isLoading && <Footer />}
+          <Chatbot />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

@@ -1,0 +1,94 @@
+/* Smooth animations and transitions CSS optimizations */
+
+/* Apply hardware acceleration to animated elements */
+.animate-gpu,
+.motion-safe,
+.framer-motion-div,
+.spline-scene-container {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+}
+
+/* Optimize animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reduce-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize animations for low-end devices */
+.low-end-device .animate-gpu,
+.low-end-device .motion-safe,
+.low-end-device .framer-motion-div,
+.low-end-device .spline-scene-container {
+  animation-duration: 0.5s !important;
+  transition-duration: 0.5s !important;
+  transition-timing-function: ease-out !important;
+}
+
+/* Smoother scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize image rendering */
+img {
+  image-rendering: auto;
+}
+
+/* Optimize transitions */
+.transition-optimized {
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optimize loading animations */
+@keyframes optimized-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.optimized-fade-in {
+  animation: optimized-fade-in 0.5s ease-out forwards;
+}
+
+/* Fix for content jumps during page load */
+.content-wrapper {
+  min-height: 100vh;
+}
+
+/* Optimize Spline scene containers */
+.spline-container {
+  contain: content;
+  content-visibility: auto;
+}
+
+/* Optimize for GPU rendering */
+.gpu-accelerated {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Prevent layout shifts */
+[data-spline-placeholder] {
+  min-height: 300px;
+}
+
+/* Optimize animations for mobile devices */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    transition-duration: 0.3s !important;
+    animation-duration: 0.3s !important;
+  }
+}

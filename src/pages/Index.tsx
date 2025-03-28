@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
-import ProductsSection from '../components/ProductsSection';
 import ClientSuccessStories from '../components/ClientSuccessStories';
 import FAQSection from '../components/FAQSection';
 import CtaBanner from '../components/CtaBanner';
@@ -47,14 +46,10 @@ const Index = () => {
       </AnimatedSection>
 
       <AnimatedSection delay={0.5}>
-        <ProductsSection />
-      </AnimatedSection>
-
-      <AnimatedSection delay={0.6}>
         <FAQSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.7}>
+      <AnimatedSection delay={0.6}>
         <CtaBanner />
       </AnimatedSection>
     </motion.div>

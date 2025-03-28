@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X, MessageCircle, HelpCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -48,13 +48,12 @@ const Navbar = () => {
   };
 
   const services = [
+    { name: 'Web Development', path: '/services/website-development' },
+    { name: 'AI Ads [Video Ads]', path: '/services/ai-video-ads' },
+    { name: 'Content Automation', path: '/services/content-automation' },
     { name: 'AI Agents', path: '/services/ai-agents' },
     { name: 'AI Workflows', path: '/services/ai-workflows' },
     { name: 'Corporate/College Workshops', path: '/services/corporate-workshops' },
-    { name: 'RAG Implementation', path: '/services/rag-implementation' },
-    { name: 'Website Development', path: '/services/website-development' },
-    { name: 'Content Automation', path: '/services/content-automation' },
-    { name: 'AI Video Ads', path: '/services/ai-video-ads' },
   ];
 
   return (
@@ -62,24 +61,19 @@ const Navbar = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
         isScrolled 
-          ? 'bg-black/90 backdrop-blur-md border-white/10 py-3' 
-          : 'bg-transparent border-transparent py-5'
+          ? 'bg-black/90 backdrop-blur-md border-white/10 py-4' 
+          : 'bg-transparent border-transparent py-6'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="mr-2">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="3" fill="#F26E50" />
-                <circle cx="19" cy="12" r="2" fill="#F26E50" opacity="0.7" />
-                <circle cx="5" cy="12" r="2" fill="#F26E50" opacity="0.7" />
-                <circle cx="12" cy="5" r="2" fill="#F26E50" opacity="0.7" />
-                <circle cx="12" cy="19" r="2" fill="#F26E50" opacity="0.7" />
-              </svg>
-            </div>
-            <span className="text-2xl font-bold text-white">Three<span className="text-[#F26E50]">Atoms</span></span>
+            <img 
+              src="/Threeatoms_navlogo.png" 
+              alt="ThreeAtoms Logo" 
+              className="h-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -87,7 +81,7 @@ const Navbar = () => {
             <Link 
               to="/" 
               className={cn(
-                "text-white hover:text-[#F26E50] transition-colors",
+                "text-white hover:text-[#F26E50] transition-colors font-medium text-lg",
                 location.pathname === '/' && "text-[#F26E50]"
               )}
             >
@@ -98,7 +92,7 @@ const Navbar = () => {
             <div className="relative group">
               <button 
                 className={cn(
-                  "flex items-center text-white group-hover:text-[#F26E50] transition-colors",
+                  "flex items-center text-white group-hover:text-[#F26E50] transition-colors font-medium text-lg",
                   location.pathname.includes('/services') && "text-[#F26E50]"
                 )}
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
@@ -106,7 +100,6 @@ const Navbar = () => {
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
                 Services
-                <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               
               <div 
@@ -137,7 +130,7 @@ const Navbar = () => {
             <Link 
               to="/about" 
               className={cn(
-                "text-white hover:text-[#F26E50] transition-colors",
+                "text-white hover:text-[#F26E50] transition-colors font-medium text-lg",
                 location.pathname === '/about' && "text-[#F26E50]"
               )}
             >
@@ -146,39 +139,38 @@ const Navbar = () => {
             
             <button 
               onClick={() => navigateToSection('testimonials')} 
-              className="flex items-center text-white hover:text-[#F26E50] transition-colors"
+              className="text-white hover:text-[#F26E50] transition-colors font-medium text-lg"
             >
-              <MessageCircle className="w-4 h-4 mr-1" />
               Testimonials
             </button>
             
             <button 
               onClick={() => navigateToSection('faq')} 
-              className="flex items-center text-white hover:text-[#F26E50] transition-colors"
+              className="text-white hover:text-[#F26E50] transition-colors font-medium text-lg"
             >
-              <HelpCircle className="w-4 h-4 mr-1" />
               FAQ
             </button>
+            
+            <Link to="/contact">
+              <Button 
+                className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-2.5 rounded-md text-base"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button 
-              asChild
-              className="bg-[#F26E50] hover:bg-[#E05D40] text-white"
-            >
-              <Link to="/contact">Contact Us</Link>
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-white p-2"
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -186,13 +178,13 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-black/95 backdrop-blur-md border-b border-white/10"
+            className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/10"
           >
-            <div className="px-4 py-6 space-y-6">
+            <div className="px-4 py-6 space-y-4">
               <Link 
                 to="/" 
                 className={cn(
-                  "block text-lg text-white hover:text-[#F26E50] transition-colors",
+                  "block py-2 text-white hover:text-[#F26E50] transition-colors",
                   location.pathname === '/' && "text-[#F26E50]"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
@@ -200,18 +192,19 @@ const Navbar = () => {
                 Home
               </Link>
               
-              {/* Mobile Services Dropdown */}
+              {/* Services accordion */}
               <div>
                 <button 
-                  className={cn(
-                    "flex items-center justify-between w-full text-lg text-white hover:text-[#F26E50] transition-colors",
-                    location.pathname.includes('/services') && "text-[#F26E50]",
-                    servicesDropdownOpen && "text-[#F26E50]"
-                  )}
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  className={cn(
+                    "flex items-center justify-between w-full py-2 text-white hover:text-[#F26E50] transition-colors",
+                    location.pathname.includes('/services') && "text-[#F26E50]"
+                  )}
                 >
                   <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                  <span className={`transform transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
                 </button>
                 
                 <AnimatePresence>
@@ -221,7 +214,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="mt-2 pl-4 border-l border-white/10 space-y-3"
+                      className="pl-4 space-y-2 mt-2"
                     >
                       {services.map((service, index) => (
                         <Link
@@ -244,7 +237,7 @@ const Navbar = () => {
               <Link 
                 to="/about" 
                 className={cn(
-                  "block w-full text-left text-lg text-white hover:text-[#F26E50] transition-colors",
+                  "block py-2 text-white hover:text-[#F26E50] transition-colors",
                   location.pathname === '/about' && "text-[#F26E50]"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
@@ -254,26 +247,29 @@ const Navbar = () => {
               
               <button 
                 onClick={() => navigateToSection('testimonials')} 
-                className="flex items-center w-full text-left text-lg text-white hover:text-[#F26E50] transition-colors"
+                className="block w-full text-left py-2 text-white hover:text-[#F26E50] transition-colors"
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
                 Testimonials
               </button>
               
               <button 
                 onClick={() => navigateToSection('faq')} 
-                className="flex items-center w-full text-left text-lg text-white hover:text-[#F26E50] transition-colors"
+                className="block w-full text-left py-2 text-white hover:text-[#F26E50] transition-colors"
               >
-                <HelpCircle className="w-4 h-4 mr-2" />
                 FAQ
               </button>
               
-              <Button 
-                asChild
-                className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white mt-4"
+              <Link 
+                to="/contact"
+                className="block mt-4"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
-              </Button>
+                <Button 
+                  className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white py-3 rounded-md"
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

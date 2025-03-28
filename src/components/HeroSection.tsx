@@ -32,11 +32,12 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-0 right-0 px-6 py-10 bg-gradient-to-t from-black via-black/80 to-transparent">
           <div className="max-w-md mx-auto">
             <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
-              Interactive 3D
+              Unlock AI
             </h1>
             <p className="mt-4 text-neutral-300 text-lg text-center">
-              Bring your UI to life with beautiful 3D scenes. Create immersive experiences 
-              that capture attention and enhance your design.
+              Integrate AI with ease,<br/>
+              Empower your business and life,<br/>
+              See the change unfold.
             </p>
           </div>
         </div>
@@ -48,11 +49,12 @@ const HeroSection = () => {
         <div className="w-1/2 p-12 flex flex-col justify-center">
           <div className="max-w-md">
             <h1 className="text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-              Interactive 3D
+              Unlock AI
             </h1>
             <p className="mt-4 text-neutral-300 text-xl">
-              Bring your UI to life with beautiful 3D scenes. Create immersive experiences 
-              that capture attention and enhance your design.
+              Integrate AI with ease,<br/>
+              Empower your business and life,<br/>
+              See the change unfold.
             </p>
           </div>
         </div>
