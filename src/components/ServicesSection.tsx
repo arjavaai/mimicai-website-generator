@@ -11,7 +11,8 @@ import {
   Code, 
   Brain, 
   Settings,
-  Camera
+  Camera,
+  GraduationCap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -65,10 +66,10 @@ const services = [
     link: "/services/rag-implementation"
   },
   {
-    title: "LLM Finetune",
-    description: "Custom language model fine-tuning services",
-    icon: Brain,
-    link: "/services/llm-finetune"
+    title: "Corporate/College Workshops",
+    description: "AI training workshops for organizations and institutions",
+    icon: GraduationCap,
+    link: "/services/corporate-workshops"
   }
 ];
 

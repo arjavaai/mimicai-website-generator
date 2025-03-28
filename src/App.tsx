@@ -24,6 +24,7 @@ import SaasProducts from "./components/services/SaasProducts";
 import RagImplementation from "./components/services/RagImplementation";
 import LLMFinetune from "./components/services/LLMFinetune";
 import WebsiteDevelopment from "./components/services/WebsiteDevelopment";
+import CorporateWorkshops from "./components/services/CorporateWorkshops";
 import Chatbot from './components/Chatbot';
 
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/services/rag-implementation" element={<RagImplementation />} />
             <Route path="/services/llm-finetune" element={<LLMFinetune />} />
             <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+            <Route path="/services/corporate-workshops" element={<CorporateWorkshops />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

@@ -105,11 +105,7 @@ const ContentAutomation = () => {
                   <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50"></div>
                   <div className="relative">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                      <path d="M15 12.5V16.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 15.5V19.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 13.5V17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M17.9999 2H5.99994C4.89537 2 3.99994 2.89543 3.99994 4V6C3.99994 7.10457 4.89537 8 5.99994 8H17.9999C19.1045 8 19.9999 7.10457 19.9999 6V4C19.9999 2.89543 19.1045 2 17.9999 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M3.99994 13V20C3.99994 21.1046 4.89537 22 5.99994 22H17.9999C19.1045 22 19.9999 21.1046 19.9999 20V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2ZM12 20C7.5 20 4 17.5 4 12S7.5 4 12 4 20 7.5 20 12 17.5 20 12 20Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -132,10 +128,11 @@ const ContentAutomation = () => {
                   <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: '0.5s' }}></div>
                   <div className="relative">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                      <path d="M21 16V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.0799 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.0799 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V16Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 4V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 12L21 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M3 12L12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3.6 9H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3.6 15H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 3C10.1008 5.2129 9 8.4935 9 12C9 15.5065 10.1008 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 3C13.8992 5.2129 15 8.4935 15 12C15 15.5065 13.8992 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -158,11 +155,7 @@ const ContentAutomation = () => {
                   <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: '1s' }}></div>
                   <div className="relative">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M3.6 9H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M3.6 15H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 3C10.1008 5.2129 9 8.4935 9 12C9 15.5065 10.1008 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 3C13.8992 5.2129 15 8.4935 15 12C15 15.5065 13.8992 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2ZM12 20C7.5 20 4 17.5 4 12S7.5 4 12 4 20 7.5 20 12 17.5 20 12 20Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                 </div>
@@ -284,19 +277,16 @@ const ContentAutomation = () => {
             {[
               {
                 title: "Starter",
-                price: "₹30,000",
                 feature: "10 Videos per Month",
                 popular: false
               },
               {
                 title: "Growth",
-                price: "₹50,000",
                 feature: "20 Videos per Month",
                 popular: true
               },
               {
                 title: "Scale",
-                price: "₹60,000",
                 feature: "30 Videos per Month",
                 popular: false
               }
@@ -314,10 +304,6 @@ const ContentAutomation = () => {
                 )}
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-400">/month</span>
-                  </div>
                   <div className="bg-[#F26E50]/10 rounded-lg p-3 mb-6">
                     <span className="text-[#F26E50] font-medium">{plan.feature}</span>
                   </div>
@@ -364,7 +350,7 @@ const ContentAutomation = () => {
                   </Button>
                 </div>
                 <div className="bg-zinc-900 p-4 text-center text-sm">
-                  <span className="text-gray-400">6-month minimum commitment</span>
+                  <span className="text-gray-400">Contact us for custom pricing based on requirements</span>
                 </div>
               </motion.div>
             ))}
@@ -397,4 +383,4 @@ const ContentAutomation = () => {
   );
 };
 
-export default ContentAutomation; 
+export default ContentAutomation;

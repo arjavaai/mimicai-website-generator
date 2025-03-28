@@ -7,6 +7,7 @@ import ClientSuccessStories from '../components/ClientSuccessStories';
 import FAQSection from '../components/FAQSection';
 import CtaBanner from '../components/CtaBanner';
 import AnimatedSection from '../components/AnimatedSection';
+import ProjectShowcase from '../components/ProjectShowcase';
 
 const Index = () => {
   // Scroll to top on page load
@@ -34,22 +35,26 @@ const Index = () => {
       <HeroSection />
       
       <AnimatedSection delay={0.2}>
+        <ProjectShowcase />
+      </AnimatedSection>
+      
+      <AnimatedSection delay={0.3}>
         <ServicesSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.3}>
+      <AnimatedSection delay={0.4}>
         <ClientSuccessStories />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.4}>
+      <AnimatedSection delay={0.5}>
         <ProductsSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.5}>
+      <AnimatedSection delay={0.6}>
         <FAQSection />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.6}>
+      <AnimatedSection delay={0.7}>
         <CtaBanner />
       </AnimatedSection>
     </motion.div>

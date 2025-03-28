@@ -153,10 +153,6 @@ const WebsiteDevelopment = () => {
                   <Globe className="w-8 h-8 text-[#F26E50]" />
                   <h3 className="text-2xl font-bold">Static Business Website</h3>
                 </div>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold">₹15,000</span>
-                  <span className="text-gray-400"> - ₹30,000</span>
-                </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -205,7 +201,7 @@ const WebsiteDevelopment = () => {
                   <Link to="/contact">Get Started</Link>
                 </Button>
                 <p className="text-sm text-gray-400 mt-4 text-center">
-                  Additional pages at ₹2,000 each
+                  Contact us for custom pricing based on requirements
                 </p>
               </div>
             </motion.div>
@@ -223,10 +219,6 @@ const WebsiteDevelopment = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <Layout className="w-8 h-8 text-[#F26E50]" />
                   <h3 className="text-2xl font-bold">Dynamic Business Website</h3>
-                </div>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold">₹20,000</span>
-                  <span className="text-gray-400"> - ₹35,000</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2">
@@ -270,7 +262,7 @@ const WebsiteDevelopment = () => {
                   <Link to="/contact">Most Popular</Link>
                 </Button>
                 <p className="text-sm text-gray-400 mt-4 text-center">
-                  Additional pages at ₹2,000 each
+                  Contact us for custom pricing based on requirements
                 </p>
               </div>
             </motion.div>
@@ -287,10 +279,6 @@ const WebsiteDevelopment = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <ShoppingCart className="w-8 h-8 text-[#F26E50]" />
                   <h3 className="text-2xl font-bold">E-Commerce Website</h3>
-                </div>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold">₹50,000</span>
-                  <span className="text-gray-400"> - ₹80,000</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2">
@@ -339,6 +327,9 @@ const WebsiteDevelopment = () => {
                 <Button asChild className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white">
                   <Link to="/contact">Get Started</Link>
                 </Button>
+                <p className="text-sm text-gray-400 mt-4 text-center">
+                  Contact us for custom pricing based on requirements
+                </p>
               </div>
             </motion.div>
           </div>
@@ -375,9 +366,6 @@ const WebsiteDevelopment = () => {
                   <p className="text-gray-300 mb-4">
                     Comprehensive web applications with advanced functionality and database integration
                   </p>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold">₹80,000+</span>
-                  </div>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-center gap-2">
                       <svg className="w-5 h-5 text-[#F26E50]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -413,6 +401,9 @@ const WebsiteDevelopment = () => {
                   <Button asChild className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white">
                     <Link to="/contact">Discuss Your Project</Link>
                   </Button>
+                  <p className="text-sm text-gray-400 mt-4 text-center">
+                    Contact us for custom pricing based on requirements
+                  </p>
                 </motion.div>
 
                 {/* Custom Website Solutions Card */}
@@ -468,6 +459,9 @@ const WebsiteDevelopment = () => {
                   <Button asChild className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white">
                     <Link to="/contact">Share Your Requirements</Link>
                   </Button>
+                  <p className="text-sm text-gray-400 mt-4 text-center">
+                    Contact us for custom pricing based on requirements
+                  </p>
                 </motion.div>
               </div>
             </div>
@@ -507,11 +501,6 @@ const WebsiteDevelopment = () => {
               <p className="text-gray-300 mb-4">
                 24/7 automated customer support with intelligent responses
               </p>
-              <div className="mb-6">
-                <span className="text-2xl font-bold">₹2,000</span>
-                <span className="text-gray-400"> - ₹3,000</span>
-                <span className="text-gray-400">/month</span>
-              </div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-[#F26E50] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -535,6 +524,9 @@ const WebsiteDevelopment = () => {
               <Button asChild className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white">
                 <Link to="/contact">Add to Website</Link>
               </Button>
+              <p className="text-sm text-gray-400 mt-4 text-center">
+                Contact us for custom pricing based on requirements
+              </p>
             </motion.div>
 
             {/* Content Generation */}
@@ -552,11 +544,6 @@ const WebsiteDevelopment = () => {
               <p className="text-gray-300 mb-4">
                 Automated content creation for blogs, product descriptions, and more
               </p>
-              <div className="mb-6">
-                <span className="text-2xl font-bold">₹5,000</span>
-                <span className="text-gray-400"> - ₹10,000</span>
-                <span className="text-gray-400">/month</span>
-              </div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-[#F26E50] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -580,6 +567,9 @@ const WebsiteDevelopment = () => {
               <Button asChild className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white">
                 <Link to="/contact">Add to Website</Link>
               </Button>
+              <p className="text-sm text-gray-400 mt-4 text-center">
+                Contact us for custom pricing based on requirements
+              </p>
             </motion.div>
 
             {/* Personalization Engine */}
@@ -597,11 +587,6 @@ const WebsiteDevelopment = () => {
               <p className="text-gray-300 mb-4">
                 Tailored user experiences based on behavior and preferences
               </p>
-              <div className="mb-6">
-                <span className="text-2xl font-bold">₹8,000</span>
-                <span className="text-gray-400"> - ₹15,000</span>
-                <span className="text-gray-400">/month</span>
-              </div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start gap-2">
                   <svg className="w-5 h-5 text-[#F26E50] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -625,6 +610,9 @@ const WebsiteDevelopment = () => {
               <Button asChild className="w-full bg-[#F26E50] hover:bg-[#E05D40] text-white">
                 <Link to="/contact">Add to Website</Link>
               </Button>
+              <p className="text-sm text-gray-400 mt-4 text-center">
+                Contact us for custom pricing based on requirements
+              </p>
             </motion.div>
           </div>
         </div>
@@ -654,7 +642,7 @@ const WebsiteDevelopment = () => {
                 </Button>
               </div>
               <p className="text-sm text-gray-400 mt-6">
-                Full stack applications with AI integration start from ₹80,000
+                Full stack applications with AI integration - contact us for pricing
               </p>
             </motion.div>
           </div>

@@ -1,0 +1,9 @@
+The following image files need to be added to this directory for the ProjectShowcase component:
+
+1. interior-visualization.jpg - An image showing interior design visualization
+2. e-motorad.jpg - An image related to E MOTORAD with M.S. Dhoni
+3. influencer.jpg - An image related to influencer marketing
+4. mirzapur.jpg - An image related to Mirzapur S3 launch
+5. ai-avatar.jpg - An image showing AI realistic avatar
+
+Please replace these placeholders with actual images to complete the showcase section.

@@ -50,7 +50,7 @@ const Navbar = () => {
   const services = [
     { name: 'AI Agents', path: '/services/ai-agents' },
     { name: 'AI Workflows', path: '/services/ai-workflows' },
-    { name: 'LLM Fine-tuning', path: '/services/llm-finetune' },
+    { name: 'Corporate/College Workshops', path: '/services/corporate-workshops' },
     { name: 'RAG Implementation', path: '/services/rag-implementation' },
     { name: 'Website Development', path: '/services/website-development' },
     { name: 'Content Automation', path: '/services/content-automation' },

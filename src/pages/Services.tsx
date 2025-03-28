@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -138,17 +137,17 @@ const Services = () => {
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/b152e232-e849-448d-9e67-d56eb8bf01d6.png" 
-                  alt="AI Training & Workshops" 
+                  alt="Corporate & College Workshops" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">AI Training & Workshops</h3>
+                <h3 className="text-xl font-bold mb-4">Corporate & College Workshops</h3>
                 <p className="text-gray-300 mb-6">
-                  Educational programs designed to empower your team with the knowledge and skills to leverage AI effectively.
+                  Specialized AI training workshops for organizations and educational institutions.
                 </p>
-                <a href="/services/ai-training" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/corporate-workshops" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
