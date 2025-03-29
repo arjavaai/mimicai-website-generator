@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 const ServicesList = () => {
@@ -16,7 +15,7 @@ const ServicesList = () => {
       id: 2,
       number: "02",
       title: "Networking",
-      color: "text-arolax-orange",
+      color: "text-threeAtoms-orange",
       description: "Network models into existing systems or software applications whether you breath rebranding."
     },
     {
@@ -50,12 +49,12 @@ const ServicesList = () => {
   ];
   
   return (
-    <section className="py-20 bg-arolax-black">
+    <section className="py-20 bg-threeAtoms-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ai featured services<br />
-            by arolax
+            by threeAtoms
           </h2>
         </div>
         
@@ -77,19 +76,19 @@ const ServicesList = () => {
           </div>
           
           <div className="lg:col-span-2 flex items-center">
-            <div className="w-full h-[450px] bg-arolax-darkgray/40 rounded-lg overflow-hidden relative">
+            <div className="w-full h-[450px] bg-threeAtoms-darkgray/40 rounded-lg overflow-hidden relative">
               <img 
                 src="/lovable-uploads/9eeb8a6b-442e-4d02-980f-67bc02e6542d.png" 
                 alt="AI Service Visualization" 
                 className="w-full h-full object-cover mix-blend-luminosity opacity-50"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               
               <div className="absolute bottom-10 left-10 right-10">
-                <div className="bg-arolax-black/70 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                <div className="bg-threeAtoms-black/70 backdrop-blur-sm rounded-lg p-6 border border-white/10">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                      <div className="w-5 h-5 rounded-full bg-arolax-orange"></div>
+                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                      <div className="w-5 h-5 rounded-full bg-threeAtoms-orange"></div>
                     </div>
                     <h4 className="text-xl font-bold text-white">
                       {services.find(s => s.id === activeService)?.title}

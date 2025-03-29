@@ -16,8 +16,8 @@ export const items = [
   },
   {
     id: 3,
-    url: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1374&auto=format&fit=crop',
-    title: 'Influencer',
+    url: 'public/thumbnailslabs.png',
+    title: 'Thumbnails Labs',
     description: 'Connect with Your Face & Voice',
     tags: ['AI', 'Personalization']
   },

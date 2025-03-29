@@ -9,7 +9,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-arolax-black text-white pt-28">
+    <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-20">
@@ -23,21 +23,21 @@ const Services = () => {
         <div className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/b152e232-e849-448d-9e67-d56eb8bf01d6.png" 
                   alt="AI Consultation" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">AI Consultation</h3>
                 <p className="text-gray-300 mb-6">
                   Expert guidance on integrating AI into your business strategy, with personalized roadmaps for implementation.
                 </p>
-                <a href="/services/ai-consultation" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/ai-consultation" className="text-threeAtoms-orange hover:text-threeAtoms-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -45,21 +45,21 @@ const Services = () => {
             </div>
             
             {/* Service 2 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/50d23781-4daf-4098-a63c-20647a378ade.png" 
                   alt="Custom AI Solutions" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Custom AI Solutions</h3>
                 <p className="text-gray-300 mb-6">
                   Tailored AI applications designed to address your specific business challenges and opportunities.
                 </p>
-                <a href="/services/custom-ai" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/custom-ai" className="text-threeAtoms-orange hover:text-threeAtoms-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -67,21 +67,21 @@ const Services = () => {
             </div>
             
             {/* Service 3 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/6d7cd367-1130-48e4-bc8f-c991c8bbb84d.png" 
                   alt="Machine Learning Development" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Machine Learning</h3>
                 <p className="text-gray-300 mb-6">
                   Advanced machine learning models that learn from your data to automate processes and provide insights.
                 </p>
-                <a href="/services/machine-learning" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/machine-learning" className="text-threeAtoms-orange hover:text-threeAtoms-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -89,21 +89,21 @@ const Services = () => {
             </div>
             
             {/* Service 4 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/a1c03d43-3865-4b3e-8b46-b7527e81fbff.png" 
                   alt="Natural Language Processing" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Natural Language Processing</h3>
                 <p className="text-gray-300 mb-6">
                   Systems that understand, interpret, and generate human language for chatbots, content analysis, and more.
                 </p>
-                <a href="/services/nlp" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/nlp" className="text-threeAtoms-orange hover:text-threeAtoms-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -111,21 +111,21 @@ const Services = () => {
             </div>
             
             {/* Service 5 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/ce0161e2-e665-45e9-9b53-0e65faa0da4e.png" 
                   alt="Computer Vision" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Computer Vision</h3>
                 <p className="text-gray-300 mb-6">
                   AI systems that analyze and understand visual data from images and videos for object detection, classification, and more.
                 </p>
-                <a href="/services/computer-vision" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/computer-vision" className="text-threeAtoms-orange hover:text-threeAtoms-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -133,21 +133,21 @@ const Services = () => {
             </div>
             
             {/* Service 6 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden transition-transform hover:-translate-y-2">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/b152e232-e849-448d-9e67-d56eb8bf01d6.png" 
                   alt="Corporate & College Workshops" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-arolax-black to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-threeAtoms-black to-transparent"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Corporate & College Workshops</h3>
                 <p className="text-gray-300 mb-6">
                   Specialized AI training workshops for organizations and educational institutions.
                 </p>
-                <a href="/services/corporate-workshops" className="text-arolax-orange hover:text-arolax-orange/80 inline-flex items-center">
+                <a href="/services/corporate-workshops" className="text-threeAtoms-orange hover:text-threeAtoms-orange/80 inline-flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -157,13 +157,13 @@ const Services = () => {
         </div>
         
         {/* Why Choose Us */}
-        <div className="mb-20 bg-arolax-darkgray rounded-lg p-10">
-          <h2 className="text-3xl font-bold mb-10 text-center">Why Choose Arolax</h2>
+        <div className="mb-20 bg-threeAtoms-darkgray rounded-lg p-10">
+          <h2 className="text-3xl font-bold mb-10 text-center">Why Choose ThreeAtoms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
             <div className="flex items-start space-x-4">
               <div className="mt-1 flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <Check className="h-3 w-3 text-arolax-orange" />
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <Check className="h-3 w-3 text-threeAtoms-orange" />
                 </div>
               </div>
               <div>
@@ -176,8 +176,8 @@ const Services = () => {
             
             <div className="flex items-start space-x-4">
               <div className="mt-1 flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <Check className="h-3 w-3 text-arolax-orange" />
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <Check className="h-3 w-3 text-threeAtoms-orange" />
                 </div>
               </div>
               <div>
@@ -190,8 +190,8 @@ const Services = () => {
             
             <div className="flex items-start space-x-4">
               <div className="mt-1 flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <Check className="h-3 w-3 text-arolax-orange" />
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <Check className="h-3 w-3 text-threeAtoms-orange" />
                 </div>
               </div>
               <div>
@@ -204,8 +204,8 @@ const Services = () => {
             
             <div className="flex items-start space-x-4">
               <div className="mt-1 flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <Check className="h-3 w-3 text-arolax-orange" />
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <Check className="h-3 w-3 text-threeAtoms-orange" />
                 </div>
               </div>
               <div>
@@ -226,7 +226,7 @@ const Services = () => {
           </p>
           <Button 
             asChild
-            className="rounded-full bg-arolax-orange hover:bg-arolax-orange/90 text-white px-8 py-6 text-lg"
+            className="rounded-full bg-threeAtoms-orange hover:bg-threeAtoms-orange/90 text-white px-8 py-6 text-lg"
           >
             <a href="/contact">Get Started</a>
           </Button>

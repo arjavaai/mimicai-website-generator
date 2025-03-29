@@ -9,11 +9,11 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-arolax-black text-white pt-28">
+    <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Arolax</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">About ThreeAtoms</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             We're a team of AI specialists dedicated to transforming businesses through innovative solutions.
           </p>
@@ -31,14 +31,14 @@ const About = () => {
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-gray-300 mb-4">
-              At Arolax, our mission is to democratize AI technology, making it accessible and practical for businesses of all sizes. We believe in the transformative power of artificial intelligence and are committed to harnessing it in ways that create tangible value.
+              At ThreeAtoms, our mission is to democratize AI technology, making it accessible and practical for businesses of all sizes. We believe in the transformative power of artificial intelligence and are committed to harnessing it in ways that create tangible value.
             </p>
             <p className="text-gray-300 mb-6">
               We're not just building algorithms – we're building solutions that solve real-world problems, enhance human capabilities, and drive business innovation.
             </p>
             <Button 
               asChild
-              className="w-fit rounded-full bg-arolax-orange hover:bg-arolax-orange/90 text-white group"
+              className="w-fit rounded-full bg-threeAtoms-orange hover:bg-threeAtoms-orange/90 text-white group"
             >
               <a href="/services">
                 Our Services
@@ -53,22 +53,22 @@ const About = () => {
           <div className="flex flex-col justify-center order-2 lg:order-1">
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-300 mb-4">
-              Founded in 2020, Arolax began with a simple vision: to bridge the gap between cutting-edge AI research and practical business applications. Our founders, having worked at leading tech companies, recognized that many businesses were struggling to implement AI effectively.
+              Founded in 2020, ThreeAtoms began with a simple vision: to bridge the gap between cutting-edge AI research and practical business applications. Our founders, having worked at leading tech companies, recognized that many businesses were struggling to implement AI effectively.
             </p>
             <p className="text-gray-300 mb-6">
               What started as a small consultancy has grown into a comprehensive AI solutions provider, helping businesses across industries harness the power of artificial intelligence to solve complex problems and drive growth.
             </p>
             <div className="flex space-x-4">
               <div className="text-center">
-                <p className="text-4xl font-bold text-arolax-orange">100+</p>
+                <p className="text-4xl font-bold text-threeAtoms-orange">100+</p>
                 <p className="text-sm text-gray-300">Projects Completed</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-arolax-orange">50+</p>
+                <p className="text-4xl font-bold text-threeAtoms-orange">50+</p>
                 <p className="text-sm text-gray-300">Happy Clients</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-arolax-orange">3</p>
+                <p className="text-4xl font-bold text-threeAtoms-orange">3</p>
                 <p className="text-sm text-gray-300">Global Offices</p>
               </div>
             </div>
@@ -87,7 +87,7 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/bb198ef3-d7fe-41f5-bb95-64dbde5bc0d3.png" 
                 alt="Team Member 1" 
@@ -95,7 +95,7 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Alex Johnson</h3>
-                <p className="text-arolax-orange mb-4">CEO & Founder</p>
+                <p className="text-threeAtoms-orange mb-4">CEO & Founder</p>
                 <p className="text-gray-300">
                   AI researcher with over 15 years of experience in machine learning and neural networks.
                 </p>
@@ -103,7 +103,7 @@ const About = () => {
             </div>
             
             {/* Team Member 2 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/43efa4ab-c28a-4efc-b8a9-5883c06baa70.png" 
                 alt="Team Member 2" 
@@ -111,7 +111,7 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Sophia Chen</h3>
-                <p className="text-arolax-orange mb-4">CTO</p>
+                <p className="text-threeAtoms-orange mb-4">CTO</p>
                 <p className="text-gray-300">
                   Former lead engineer at Google AI, specializing in computer vision and deep learning.
                 </p>
@@ -119,7 +119,7 @@ const About = () => {
             </div>
             
             {/* Team Member 3 */}
-            <div className="bg-arolax-darkgray rounded-lg overflow-hidden">
+            <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/16b136d6-9e3c-439d-b3a8-da0f5fcb88e5.png" 
                 alt="Team Member 3" 
@@ -127,7 +127,7 @@ const About = () => {
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Marcus Williams</h3>
-                <p className="text-arolax-orange mb-4">Lead AI Architect</p>
+                <p className="text-threeAtoms-orange mb-4">Lead AI Architect</p>
                 <p className="text-gray-300">
                   Specialist in natural language processing and conversational AI systems.
                 </p>
@@ -141,9 +141,9 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Value 1 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center mb-6">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10">
+              <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mb-6">
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
               </div>
               <h3 className="text-xl font-bold mb-4">Innovation</h3>
               <p className="text-gray-300">
@@ -152,9 +152,9 @@ const About = () => {
             </div>
             
             {/* Value 2 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center mb-6">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10">
+              <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mb-6">
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
               </div>
               <h3 className="text-xl font-bold mb-4">Integrity</h3>
               <p className="text-gray-300">
@@ -163,9 +163,9 @@ const About = () => {
             </div>
             
             {/* Value 3 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center mb-6">
-                <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10">
+              <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mb-6">
+                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
               </div>
               <h3 className="text-xl font-bold mb-4">Collaboration</h3>
               <p className="text-gray-300">
@@ -180,10 +180,10 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-12 text-center">Our Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Achievement 1 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10 flex">
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
               <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
                 </div>
               </div>
               <div>
@@ -195,10 +195,10 @@ const About = () => {
             </div>
             
             {/* Achievement 2 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10 flex">
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
               <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
                 </div>
               </div>
               <div>
@@ -210,10 +210,10 @@ const About = () => {
             </div>
             
             {/* Achievement 3 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10 flex">
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
               <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
                 </div>
               </div>
               <div>
@@ -225,10 +225,10 @@ const About = () => {
             </div>
             
             {/* Achievement 4 */}
-            <div className="p-8 bg-arolax-darkgray rounded-lg border border-white/10 flex">
+            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
               <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-arolax-orange"></div>
+                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
                 </div>
               </div>
               <div>
@@ -242,7 +242,7 @@ const About = () => {
         </div>
         
         {/* Call to Action */}
-        <div className="mb-20 bg-gradient-to-r from-arolax-orange/20 to-arolax-darkgray p-12 rounded-2xl text-center">
+        <div className="mb-20 bg-gradient-to-r from-threeAtoms-orange/20 to-threeAtoms-darkgray p-12 rounded-2xl text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Let's discuss how our AI solutions can address your unique challenges and drive growth for your business.
@@ -250,7 +250,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
               asChild
-              className="rounded-full bg-arolax-orange hover:bg-arolax-orange/90 text-white group"
+              className="rounded-full bg-threeAtoms-orange hover:bg-threeAtoms-orange/90 text-white group"
             >
               <a href="/contact">
                 Contact Us

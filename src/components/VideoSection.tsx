@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Play } from 'lucide-react';
 
@@ -6,7 +5,7 @@ const VideoSection = () => {
   const [playing, setPlaying] = useState(false);
   
   return (
-    <section className="py-20 bg-arolax-black relative">
+    <section className="py-20 bg-threeAtoms-black relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-[600px] rounded-lg overflow-hidden">
           <img 
@@ -14,14 +13,14 @@ const VideoSection = () => {
             alt="AI Technology Video" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-arolax-black/30"></div>
+          <div className="absolute inset-0 bg-threeAtoms-black/30"></div>
           
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center max-w-3xl px-4">
               <div className="flex justify-center mb-10">
                 <button 
                   onClick={() => setPlaying(!playing)}
-                  className="w-20 h-20 rounded-full bg-arolax-orange flex items-center justify-center hover:bg-arolax-orange/90 transition-all transform hover:scale-105"
+                  className="w-20 h-20 rounded-full bg-threeAtoms-orange flex items-center justify-center hover:bg-threeAtoms-orange/90 transition-all transform hover:scale-105"
                 >
                   <Play className="w-8 h-8 text-white" fill="white" />
                 </button>
@@ -34,7 +33,7 @@ const VideoSection = () => {
           </div>
           
           {playing && (
-            <div className="absolute inset-0 bg-arolax-black/90 flex items-center justify-center z-10">
+            <div className="absolute inset-0 bg-threeAtoms-black/90 flex items-center justify-center z-10">
               <div className="w-full max-w-4xl">
                 <div className="relative pb-[56.25%]">
                   <iframe 

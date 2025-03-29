@@ -7,7 +7,7 @@ const services = [
     title: 'Web Development',
     role: 'Modern Web Solutions',
     description: 'Create stunning, responsive websites with the latest technologies and AI-enhanced features for optimal user experience.',
-    imageUrl: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/web-devlopment.jpg',
     color: '#e11d48',
     path: '/services/website-development'
   },
@@ -16,7 +16,7 @@ const services = [
     title: 'AI Ads [Video Ads]',
     role: 'Dynamic Video Marketing',
     description: 'Create compelling video advertisements using AI-generated visuals, voices, and personalized content for your marketing campaigns.',
-    imageUrl: 'https://images.unsplash.com/photo-1626379953822-baec19c3accd?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/ads.png',
     color: '#f59e0b',
     path: '/services/ai-video-ads'
   },
@@ -25,7 +25,7 @@ const services = [
     title: 'Content Automation',
     role: 'AI-Powered Content Creation',
     description: 'Automate your content creation process with AI tools that generate high-quality, engaging content for your audience.',
-    imageUrl: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/content.jpg',
     color: '#0891b2',
     path: '/services/content-automation'
   },
@@ -34,7 +34,7 @@ const services = [
     title: 'AI Agents',
     role: 'Intelligent Automation',
     description: 'Custom AI agents that can automate tasks, answer questions, and provide intelligent assistance for your business needs.',
-    imageUrl: 'https://images.unsplash.com/photo-1677442135136-760c813a6626?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/agent.png',
     color: '#c34c32',
     path: '/services/ai-agents'
   },
@@ -43,7 +43,7 @@ const services = [
     title: 'AI Workflows',
     role: 'Process Optimization',
     description: 'Streamline your business processes with intelligent AI workflows that automate complex tasks and decision-making.',
-    imageUrl: 'https://images.unsplash.com/photo-1633613286991-611fe299c4be?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/ai-workflow.jpg',
     color: '#2563eb',
     path: '/services/ai-workflows'
   },
@@ -52,7 +52,7 @@ const services = [
     title: 'Corporate/College Workshops',
     role: 'AI Education & Training',
     description: 'Comprehensive workshops to train your team or students on the latest AI technologies and implementation strategies.',
-    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/college.jpg',
     color: '#059669',
     path: '/services/corporate-workshops'
   }
@@ -121,15 +121,13 @@ function ServicesSection() {
           </p>
         </div>
         
-        {/* Mobile view: single column with horizontal scroll for cards */}
-        <div className="sm:hidden overflow-x-auto pb-6 -mx-4 px-4">
-          <div className="flex space-x-4 w-max">
-            {services.map((service) => (
-              <div key={service.id} className="w-[280px] flex-shrink-0">
-                <ServiceCard service={service} />
-              </div>
-            ))}
-          </div>
+        {/* Mobile view: single column with vertical scroll for cards */}
+        <div className="sm:hidden flex flex-col space-y-4 w-full justify-center">
+          {services.map((service) => (
+            <div key={service.id} className="w-full flex justify-center">
+              <ServiceCard service={service} />
+            </div>
+          ))}
         </div>
         
         {/* Desktop view: grid layout */}

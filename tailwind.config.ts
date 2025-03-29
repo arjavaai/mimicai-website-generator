@@ -52,7 +52,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				arolax: {
+				threeAtoms: {
 					orange: '#F26E50',
 					black: '#121212',
 					darkgray: '#1E1E1E',

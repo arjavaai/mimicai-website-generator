@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Send, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,7 +16,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-arolax-black text-white pt-28">
+    <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-20">
@@ -41,7 +40,7 @@ const Contact = () => {
                     id="name" 
                     name="name" 
                     required 
-                    className="w-full px-4 py-3 bg-arolax-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-arolax-orange text-white"
+                    className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white"
                     placeholder="John Doe"
                   />
                 </div>
@@ -54,7 +53,7 @@ const Contact = () => {
                     id="email" 
                     name="email" 
                     required 
-                    className="w-full px-4 py-3 bg-arolax-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-arolax-orange text-white"
+                    className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -69,7 +68,7 @@ const Contact = () => {
                   id="subject" 
                   name="subject" 
                   required 
-                  className="w-full px-4 py-3 bg-arolax-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-arolax-orange text-white"
+                  className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white"
                   placeholder="How can we help you?"
                 />
               </div>
@@ -83,14 +82,14 @@ const Contact = () => {
                   name="message" 
                   rows={6} 
                   required 
-                  className="w-full px-4 py-3 bg-arolax-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-arolax-orange text-white resize-none"
+                  className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white resize-none"
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>
               
               <Button 
                 type="submit"
-                className="w-full bg-arolax-orange hover:bg-arolax-orange/90 text-white py-3 rounded-lg flex items-center justify-center space-x-2"
+                className="w-full bg-threeAtoms-orange hover:bg-threeAtoms-orange/90 text-white py-3 rounded-lg flex items-center justify-center space-x-2"
               >
                 <span>Send Message</span>
                 <Send className="h-4 w-4" />
@@ -100,14 +99,14 @@ const Contact = () => {
           
           {/* Contact Information */}
           <div>
-            <div className="bg-arolax-darkgray border border-white/10 rounded-lg p-8 mb-8">
+            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-8 mb-8">
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-1">
-                    <div className="w-10 h-10 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                      <MapPin className="h-5 w-5 text-arolax-orange" />
+                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                      <MapPin className="h-5 w-5 text-threeAtoms-orange" />
                     </div>
                   </div>
                   <div>
@@ -122,8 +121,8 @@ const Contact = () => {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-1">
-                    <div className="w-10 h-10 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-arolax-orange" />
+                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                      <Phone className="h-5 w-5 text-threeAtoms-orange" />
                     </div>
                   </div>
                   <div>
@@ -137,15 +136,15 @@ const Contact = () => {
                 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-1">
-                    <div className="w-10 h-10 rounded-full bg-arolax-orange/20 flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-arolax-orange" />
+                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                      <Mail className="h-5 w-5 text-threeAtoms-orange" />
                     </div>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email Us</h3>
                     <p className="text-gray-300">
-                      info@arolax.com<br />
-                      support@arolax.com
+                      info@threeAtoms.com<br />
+                      support@threeAtoms.com
                     </p>
                   </div>
                 </div>
@@ -172,28 +171,28 @@ const Contact = () => {
         <div className="mb-20">
           <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-arolax-darkgray border border-white/10 rounded-lg p-6">
+            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-3">What industries do you work with?</h3>
               <p className="text-gray-300">
                 We work with clients across various industries including healthcare, finance, e-commerce, manufacturing, and more. Our AI solutions are adaptable to any industry's unique challenges.
               </p>
             </div>
             
-            <div className="bg-arolax-darkgray border border-white/10 rounded-lg p-6">
+            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-3">How long does a typical AI project take?</h3>
               <p className="text-gray-300">
                 Project timelines vary based on complexity and scope. Simple projects may be completed in a few weeks, while more complex implementations may take several months. We'll provide a detailed timeline during consultation.
               </p>
             </div>
             
-            <div className="bg-arolax-darkgray border border-white/10 rounded-lg p-6">
+            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-3">Do I need technical knowledge to work with you?</h3>
               <p className="text-gray-300">
                 No technical expertise is required from your end. We handle all technical aspects while ensuring you understand the process and can effectively use the final solution.
               </p>
             </div>
             
-            <div className="bg-arolax-darkgray border border-white/10 rounded-lg p-6">
+            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
               <h3 className="text-xl font-bold mb-3">What kind of support do you provide after project completion?</h3>
               <p className="text-gray-300">
                 We offer ongoing technical support, maintenance, and optimization services to ensure your AI solution continues to perform optimally and evolves with your business needs.

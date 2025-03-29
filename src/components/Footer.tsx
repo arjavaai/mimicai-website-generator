@@ -14,7 +14,7 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-arolax-black pt-12 pb-6 border-t border-white/10">
+    <footer className="bg-threeAtoms-black pt-12 pb-6 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Logo and company info */}
@@ -115,14 +115,14 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="w-full py-2 px-3 pr-10 bg-arolax-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-arolax-orange text-white text-sm"
+                className="w-full py-2 px-3 pr-10 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white text-sm"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <button 
                 type="submit" 
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-arolax-orange hover:text-arolax-orange/80 transition-colors"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-threeAtoms-orange hover:text-threeAtoms-orange/80 transition-colors"
               >
                 <Send size={16} />
               </button>

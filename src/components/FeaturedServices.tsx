@@ -1,10 +1,9 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const FeaturedServices = () => {
   return (
-    <section className="py-20 bg-arolax-black relative overflow-hidden">
+    <section className="py-20 bg-threeAtoms-black relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left side with image */}
@@ -16,16 +15,16 @@ const FeaturedServices = () => {
                 className="w-full h-[500px] object-cover rounded-lg"
               />
               
-              <div className="absolute bottom-6 left-6 bg-arolax-darkgray/80 backdrop-blur-sm rounded-lg p-4">
+              <div className="absolute bottom-6 left-6 bg-threeAtoms-darkgray/80 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-white">
                   <h3 className="font-bold mb-1">Ai powered by</h3>
-                  <p className="text-lg font-bold">Arolax</p>
+                  <p className="text-lg font-bold">ThreeAtoms</p>
                 </div>
               </div>
               
               <Button 
                 asChild
-                className="absolute bottom-6 right-6 rounded-full bg-arolax-darkgray/80 backdrop-blur-sm hover:bg-arolax-darkgray text-white border border-white/10 group"
+                className="absolute bottom-6 right-6 rounded-full bg-threeAtoms-darkgray/80 backdrop-blur-sm hover:bg-threeAtoms-darkgray text-white border border-white/10 group"
               >
                 <a href="/demo">
                   Try example now
