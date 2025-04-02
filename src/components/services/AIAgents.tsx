@@ -25,11 +25,11 @@ const AIAgents = () => {
             <p className="text-xl text-gray-300 mb-8">
               Automate tasks, enhance customer service, and streamline operations with intelligent AI agents tailored to your specific business needs.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap gap-4">
               <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
                 Explore Solutions
               </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-md">
+              <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-6 py-3 rounded-md">
                 Schedule Demo
               </Button>
             </div>

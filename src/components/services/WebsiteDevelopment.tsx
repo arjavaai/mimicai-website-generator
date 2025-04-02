@@ -30,7 +30,7 @@ const WebsiteDevelopment = () => {
                 <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
                   Start Your Project
                 </Button>
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-md">
+                <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-6 py-3 rounded-md">
                   View Portfolio
                 </Button>
               </div>
@@ -637,7 +637,7 @@ const WebsiteDevelopment = () => {
                 <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-3">
                   <Link to="/contact">Request a Quote</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-3">
+                <Button asChild variant="outline" className="border-[#F26E50] text-[#F26E50] hover:bg-[#F26E50]/10 px-8 py-3">
                   <Link to="/contact">Schedule a Consultation</Link>
                 </Button>
               </div>

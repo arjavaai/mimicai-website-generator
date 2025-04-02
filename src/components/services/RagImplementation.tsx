@@ -30,7 +30,7 @@ const RagImplementation = () => {
                 <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
                   Explore Solutions
                 </Button>
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-md">
+                <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-6 py-3 rounded-md">
                   Technical Details
                 </Button>
               </div>
@@ -199,32 +199,38 @@ const RagImplementation = () => {
               {
                 icon: <FileText className="w-10 h-10 text-[#F26E50]" />,
                 title: "Reduced Hallucinations",
-                description: "Minimize AI fabrications by grounding responses in your verified data sources."
+                description: "Minimize AI fabrications by grounding responses in your verified data sources.",
+                color: "#F26E50"
               },
               {
                 icon: <Database className="w-10 h-10 text-[#F26E50]" />,
                 title: "Proprietary Knowledge",
-                description: "Leverage your organization's unique data and expertise in AI responses."
+                description: "Leverage your organization's unique data and expertise in AI responses.",
+                color: "#F26E50"
               },
               {
                 icon: <Zap className="w-10 h-10 text-[#F26E50]" />,
                 title: "Enhanced Accuracy",
-                description: "Deliver precise information that's relevant to your specific business context."
+                description: "Deliver precise information that's relevant to your specific business context.",
+                color: "#F26E50"
               },
               {
                 icon: <Server className="w-10 h-10 text-[#F26E50]" />,
                 title: "Data Security",
-                description: "Keep sensitive information within your control while still utilizing AI capabilities."
+                description: "Keep sensitive information within your control while still utilizing AI capabilities.",
+                color: "#F26E50"
               },
               {
                 icon: <Bot className="w-10 h-10 text-[#F26E50]" />,
                 title: "Customized AI Experience",
-                description: "Create AI interactions that reflect your brand voice and domain expertise."
+                description: "Create AI interactions that reflect your brand voice and domain expertise.",
+                color: "#F26E50"
               },
               {
                 icon: <BarChart className="w-10 h-10 text-[#F26E50]" />,
                 title: "Measurable Improvements",
-                description: "Track and quantify the enhanced performance of your AI systems."
+                description: "Track and quantify the enhanced performance of your AI systems.",
+                color: "#F26E50"
               }
             ].map((benefit, index) => (
               <motion.div

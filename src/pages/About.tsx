@@ -31,10 +31,10 @@ const About = () => {
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-gray-300 mb-4">
-              At ThreeAtoms, our mission is to democratize AI technology, making it accessible and practical for businesses of all sizes. We believe in the transformative power of artificial intelligence and are committed to harnessing it in ways that create tangible value.
+              At ThreeAtoms, our mission is to make advanced AI solutions accessible and practical for businesses of all sizes. We bridge the gap between cutting-edge AI technology and real-world business applications, delivering solutions that create measurable value and competitive advantage.
             </p>
             <p className="text-gray-300 mb-6">
-              We're not just building algorithms – we're building solutions that solve real-world problems, enhance human capabilities, and drive business innovation.
+              We're committed to demystifying AI and empowering organizations to harness its transformative potential. Through our expertise in generative AI, machine learning, and content automation, we help businesses innovate, optimize operations, and deliver exceptional customer experiences.
             </p>
             <Button 
               asChild
@@ -53,23 +53,23 @@ const About = () => {
           <div className="flex flex-col justify-center order-2 lg:order-1">
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-300 mb-4">
-              Founded in 2020, ThreeAtoms began with a simple vision: to bridge the gap between cutting-edge AI research and practical business applications. Our founders, having worked at leading tech companies, recognized that many businesses were struggling to implement AI effectively.
+              Founded in 2023, ThreeAtoms emerged from a shared vision to democratize AI technology for businesses of all sizes. Our founders, with their diverse expertise in GenAI, machine learning, and digital marketing, recognized the immense potential of AI to transform businesses but saw that many organizations struggled to implement it effectively.
             </p>
             <p className="text-gray-300 mb-6">
-              What started as a small consultancy has grown into a comprehensive AI solutions provider, helping businesses across industries harness the power of artificial intelligence to solve complex problems and drive growth.
+              What began as a collaborative venture has rapidly evolved into a comprehensive AI solutions provider. We're proud to help businesses across industries leverage cutting-edge AI technologies to solve complex problems, enhance customer experiences, and drive sustainable growth in the digital age.
             </p>
             <div className="flex space-x-4">
               <div className="text-center">
-                <p className="text-4xl font-bold text-threeAtoms-orange">100+</p>
+                <p className="text-4xl font-bold text-threeAtoms-orange">50+</p>
                 <p className="text-sm text-gray-300">Projects Completed</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-threeAtoms-orange">50+</p>
+                <p className="text-4xl font-bold text-threeAtoms-orange">30+</p>
                 <p className="text-sm text-gray-300">Happy Clients</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl font-bold text-threeAtoms-orange">3</p>
-                <p className="text-sm text-gray-300">Global Offices</p>
+                <p className="text-sm text-gray-300">Team Members</p>
               </div>
             </div>
           </div>
@@ -90,14 +90,14 @@ const About = () => {
             <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/bb198ef3-d7fe-41f5-bb95-64dbde5bc0d3.png" 
-                alt="Team Member 1" 
+                alt="Jayanth Atipamula" 
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">Alex Johnson</h3>
+                <h3 className="text-xl font-bold mb-1">Jayanth Atipamula</h3>
                 <p className="text-threeAtoms-orange mb-4">CEO & Founder</p>
                 <p className="text-gray-300">
-                  AI researcher with over 15 years of experience in machine learning and neural networks.
+                  GenAI Developer and Meta ADS Expert with a passion for innovative AI solutions.
                 </p>
               </div>
             </div>
@@ -106,14 +106,14 @@ const About = () => {
             <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/43efa4ab-c28a-4efc-b8a9-5883c06baa70.png" 
-                alt="Team Member 2" 
+                alt="Vamshi Sudula" 
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">Sophia Chen</h3>
-                <p className="text-threeAtoms-orange mb-4">CTO</p>
+                <h3 className="text-xl font-bold mb-1">Vamshi Sudula</h3>
+                <p className="text-threeAtoms-orange mb-4">CTO & Co-founder</p>
                 <p className="text-gray-300">
-                  Former lead engineer at Google AI, specializing in computer vision and deep learning.
+                  AI & GenAI Specialist, AI Tutor, PAN India GenAI Buildathon Winner, Machine Learning & Data Science Expert.
                 </p>
               </div>
             </div>
@@ -122,14 +122,14 @@ const About = () => {
             <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
                 src="/lovable-uploads/16b136d6-9e3c-439d-b3a8-da0f5fcb88e5.png" 
-                alt="Team Member 3" 
+                alt="Arthisha Doma" 
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">Marcus Williams</h3>
-                <p className="text-threeAtoms-orange mb-4">Lead AI Architect</p>
+                <h3 className="text-xl font-bold mb-1">Arthisha Doma</h3>
+                <p className="text-threeAtoms-orange mb-4">CMO & Co-founder</p>
                 <p className="text-gray-300">
-                  Specialist in natural language processing and conversational AI systems.
+                  AI Tutor, Content Creation Expert, AI Tools Specialist, and Social Media Management Professional.
                 </p>
               </div>
             </div>

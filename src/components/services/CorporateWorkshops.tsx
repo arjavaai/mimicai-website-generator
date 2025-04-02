@@ -30,8 +30,8 @@ const CorporateWorkshops = () => {
                 <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
                   Book a Workshop
                 </Button>
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-md">
-                  Learn More
+                <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-6 py-3 rounded-md">
+                  View Curriculum
                 </Button>
               </div>
             </motion.div>
@@ -501,7 +501,7 @@ const CorporateWorkshops = () => {
               <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 rounded-md text-lg">
                 Book a Consultation
               </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-md text-lg">
+              <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-8 py-4 rounded-md text-lg">
                 Download Brochure
               </Button>
             </div>

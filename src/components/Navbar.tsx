@@ -95,7 +95,12 @@ const Navbar = () => {
                   "flex items-center text-white group-hover:text-[#F26E50] transition-colors font-medium text-lg",
                   location.pathname.includes('/services') && "text-[#F26E50]"
                 )}
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                onClick={() => {
+                  setServicesDropdownOpen(!servicesDropdownOpen);
+                  if (location.pathname === '/') {
+                    navigateToSection('services');
+                  }
+                }}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
@@ -195,7 +200,12 @@ const Navbar = () => {
               {/* Services accordion */}
               <div>
                 <button 
-                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  onClick={() => {
+                    setServicesDropdownOpen(!servicesDropdownOpen);
+                    if (location.pathname === '/') {
+                      navigateToSection('services');
+                    }
+                  }}
                   className={cn(
                     "flex items-center justify-between w-full py-2 text-white hover:text-[#F26E50] transition-colors",
                     location.pathname.includes('/services') && "text-[#F26E50]"

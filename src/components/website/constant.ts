@@ -16,7 +16,7 @@ export const items = [
   },
   {
     id: 3,
-    url: 'public/thumbnailslabs.png',
+    url: '/thumbnailslabs.png',
     title: 'Thumbnails Labs',
     description: 'Connect with Your Face & Voice',
     tags: ['AI', 'Personalization']

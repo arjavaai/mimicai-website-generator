@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
+import { ArrowRight, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="bg-threeAtoms-black pt-12 pb-6 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Logo and company info */}
           <div>
             <Link to="/" className="inline-block mb-4">
@@ -30,16 +30,13 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://x.com/threeatoms_com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="http://instagram.com/threeatoms_com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/threeatoms" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>
@@ -104,6 +101,28 @@ const Footer = () => {
             </ul>
           </div>
           
+          {/* Legal */}
+          <div>
+            <h3 className="text-base font-bold text-white mb-4">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/refund-policy" className="text-gray-400 hover:text-white transition-colors">
+                  Refund Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
           {/* Newsletter */}
           <div>
             <h3 className="text-base font-bold text-white mb-4">Newsletter</h3>
@@ -135,15 +154,6 @@ const Footer = () => {
           <p className="text-gray-500 mb-2 md:mb-0 text-xs">
             &copy; 2024 ThreeAtoms AI Solutions
           </p>
-          
-          <div className="flex space-x-4 text-xs">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

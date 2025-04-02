@@ -123,7 +123,7 @@ export default function index() {
   const [index, setIndex] = useState(2);
 
   return (
-    <div className='relative bg-black text-white'>
+    <div id="services" className='relative bg-black text-white'>
       <div className="w-full py-10 md:py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-start">

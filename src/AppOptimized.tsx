@@ -18,6 +18,11 @@ const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Chatbot = lazy(() => import('./components/Chatbot'));
 
+// Legal pages
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
+
 // Lazy load service pages
 const AIVideoAds = lazy(() => import("./components/services/AIVideoAds"));
 const ContentAutomation = lazy(() => import("./components/services/ContentAutomation"));
@@ -99,6 +104,11 @@ const App = () => {
                   <Route path="/about" element={<About />} />
                   <Route path="/services" element={<Services />} />
                   <Route path="/contact" element={<Contact />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                  <Route path="/refund-policy" element={<RefundPolicy />} />
                   
                   {/* Service Routes */}
                   <Route path="/services/ai-video-ads" element={<AIVideoAds />} />
