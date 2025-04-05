@@ -2,10 +2,19 @@ import { motion } from 'framer-motion';
 import { Video, Play, Film, Zap, BarChart, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 
 const AIVideoAds = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="AI-Powered Video Ads That Convert | ThreeAtoms"
+        description="Create stunning, high-converting video advertisements with our cutting-edge AI technology. No expensive production crews needed."
+        keywords="AI video ads, video advertising, AI-generated ads, marketing videos, conversion optimization, video production, AI marketing"
+        url="https://threeatoms.com/services/ai-video-ads"
+        canonical="https://threeatoms.com/services/ai-video-ads/"
+      />
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}
@@ -189,7 +198,7 @@ const AIVideoAds = () => {
           
           <div className="mt-12 text-center">
             <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
-              <Link to="/contact">Schedule a Demo</Link>
+              <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule a Demo</a>
             </Button>
           </div>
         </div>

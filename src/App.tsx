@@ -15,6 +15,7 @@ import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import ScrollToTop from './components/ScrollToTop';
 import LoadingScreen from './components/LoadingScreen';
+import RouteTransition from './components/RouteTransition';
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundPolicy from "./pages/RefundPolicy";
@@ -58,35 +59,39 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           {!isLoading && <Navbar />}
-          <main>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-              
-              {/* Legal Pages */}
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-              <Route path="/refund-policy" element={<RefundPolicy />} />
-              
-              {/* Service Routes */}
-              <Route path="/services/ai-video-ads" element={<AIVideoAds />} />
-              <Route path="/services/content-automation" element={<ContentAutomation />} />
-              <Route path="/services/ai-product-photography" element={<AIProductPhotography />} />
-              <Route path="/services/ai-agents" element={<AIAgents />} />
-              <Route path="/services/ai-workflows" element={<AIWorkflows />} />
-              <Route path="/services/saas-products" element={<SaasProducts />} />
-              <Route path="/services/rag-implementation" element={<RagImplementation />} />
-              <Route path="/services/llm-finetune" element={<LLMFinetune />} />
-              <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-              <Route path="/services/corporate-workshops" element={<CorporateWorkshops />} />
-              
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+          <main className="relative">
+            <RouteTransition>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                
+                {/* Legal Pages */}
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+                
+                {/* Service Routes */}
+                <Route path="/services/ai-video-ads" element={<AIVideoAds />} />
+                <Route path="/services/content-automation" element={<ContentAutomation />} />
+                <Route path="/services/ai-product-photography" element={<AIProductPhotography />} />
+                <Route path="/services/ai-agents" element={<AIAgents />} />
+                <Route path="/services/ai-workflows" element={<AIWorkflows />} />
+                <Route path="/services/saas-products" element={<SaasProducts />} />
+                <Route path="/services/rag-implementation" element={<RagImplementation />} />
+                <Route path="/services/llm-finetune" element={<LLMFinetune />} />
+                <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+                <Route path="/services/corporate-workshops" element={<CorporateWorkshops />} />
+                
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </RouteTransition>
           </main>
-          {!isLoading && <Footer />}
+          <div className="footer-wrapper relative z-[45]">
+            {!isLoading && <Footer />}
+          </div>
           <Chatbot />
         </BrowserRouter>
       </TooltipProvider>

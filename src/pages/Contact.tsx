@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
-import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Send, Phone, Mail, ArrowRight, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   // Scroll to top on page load
@@ -8,198 +10,304 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
   
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  
+  // Field focus states
+  const [focusedField, setFocusedField] = useState<string | null>(null);
+  
   // Form handling
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted');
+    console.log('Form submitted', formData);
     // Form submission logic would go here
   };
 
   return (
-    <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-white pt-28 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] opacity-20"></div>
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F26E50]/10 rounded-full blur-[100px]"></div>
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px]"></div>
+      
+      <SEO 
+        title="Contact ThreeAtoms | Get in Touch for AI Solutions"
+        description="Contact ThreeAtoms for custom AI solutions. Schedule a consultation to discuss your project needs and how our AI expertise can benefit your business."
+        keywords="contact ThreeAtoms, AI consulting, schedule consultation, AI development, custom AI solutions"
+        url="https://threeatoms.com/contact"
+        canonical="https://threeatoms.com/contact/"
+      />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Page Header */}
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Get In Touch</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Have a question or want to work with us? We'd love to hear from you.
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Your Name
-                  </label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    required 
-                    className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required 
-                    className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white"
-                    placeholder="john@example.com"
-                  />
-                </div>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50] to-purple-600 rounded-xl blur opacity-20"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+                <h2 className="text-2xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 to-neutral-300">Send Us a Message</h2>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="relative">
+                      <label 
+                        htmlFor="name" 
+                        className={`absolute left-3 transition-all duration-200 ${
+                          focusedField === 'name' || formData.name 
+                            ? '-top-2.5 text-xs bg-black px-1 text-[#F26E50]' 
+                            : 'top-3 text-gray-400'
+                        }`}
+                      >
+                        Your Name
+                      </label>
+                      <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        value={formData.name}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('name')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-lg focus:outline-none focus:border-[#F26E50] text-white transition-all duration-200"
+                      />
+                    </div>
+                    <div className="relative">
+                      <label 
+                        htmlFor="email" 
+                        className={`absolute left-3 transition-all duration-200 ${
+                          focusedField === 'email' || formData.email 
+                            ? '-top-2.5 text-xs bg-black px-1 text-[#F26E50]' 
+                            : 'top-3 text-gray-400'
+                        }`}
+                      >
+                        Email Address
+                      </label>
+                      <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        value={formData.email}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('email')}
+                        onBlur={() => setFocusedField(null)}
+                        className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-lg focus:outline-none focus:border-[#F26E50] text-white transition-all duration-200"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <label 
+                      htmlFor="subject" 
+                      className={`absolute left-3 transition-all duration-200 ${
+                        focusedField === 'subject' || formData.subject 
+                          ? '-top-2.5 text-xs bg-black px-1 text-[#F26E50]' 
+                          : 'top-3 text-gray-400'
+                      }`}
+                    >
+                      Subject
+                    </label>
+                    <input 
+                      type="text" 
+                      id="subject" 
+                      name="subject" 
+                      required 
+                      value={formData.subject}
+                      onChange={handleChange}
+                      onFocus={() => setFocusedField('subject')}
+                      onBlur={() => setFocusedField(null)}
+                      className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-lg focus:outline-none focus:border-[#F26E50] text-white transition-all duration-200"
+                    />
+                  </div>
+                  
+                  <div className="relative">
+                    <label 
+                      htmlFor="message" 
+                      className={`absolute left-3 transition-all duration-200 ${
+                        focusedField === 'message' || formData.message 
+                          ? '-top-2.5 text-xs bg-black px-1 text-[#F26E50]' 
+                          : 'top-3 text-gray-400'
+                      }`}
+                    >
+                      Message
+                    </label>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      rows={6} 
+                      required 
+                      value={formData.message}
+                      onChange={handleChange}
+                      onFocus={() => setFocusedField('message')}
+                      onBlur={() => setFocusedField(null)}
+                      className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-lg focus:outline-none focus:border-[#F26E50] text-white resize-none transition-all duration-200"
+                    ></textarea>
+                  </div>
+                  
+                  <Button 
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-[#F26E50] to-[#F26E50]/80 hover:from-[#F26E50]/90 hover:to-[#F26E50]/70 text-white py-4 rounded-lg flex items-center justify-center gap-2 transition-all group"
+                  >
+                    <span>Send Message</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </form>
               </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject
-                </label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  name="subject" 
-                  required 
-                  className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white"
-                  placeholder="How can we help you?"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows={6} 
-                  required 
-                  className="w-full px-4 py-3 bg-threeAtoms-darkgray border border-white/10 rounded-lg focus:outline-none focus:ring-1 focus:ring-threeAtoms-orange text-white resize-none"
-                  placeholder="Tell us about your project..."
-                ></textarea>
-              </div>
-              
-              <Button 
-                type="submit"
-                className="w-full bg-threeAtoms-orange hover:bg-threeAtoms-orange/90 text-white py-3 rounded-lg flex items-center justify-center space-x-2"
-              >
-                <span>Send Message</span>
-                <Send className="h-4 w-4" />
-              </Button>
-            </form>
-          </div>
+            </div>
+          </motion.div>
           
           {/* Contact Information */}
-          <div>
-            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-8 mb-8">
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                      <MapPin className="h-5 w-5 text-threeAtoms-orange" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Visit Us</h3>
-                    <p className="text-gray-300">
-                      1234 Tech Park Drive<br />
-                      Toronto, Ontario M5V 2A1<br />
-                      Canada
-                    </p>
-                  </div>
-                </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="relative h-full">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-[#F26E50] rounded-xl blur opacity-20"></div>
+              <div className="relative bg-black/60 backdrop-blur-sm border border-white/10 rounded-xl p-8 h-full">
+                <h2 className="text-2xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 to-neutral-300">Contact Information</h2>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-threeAtoms-orange" />
+                <div className="space-y-8">
+                  <motion.div 
+                    className="flex items-start space-x-4"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-12 h-12 rounded-full bg-[#F26E50]/20 flex items-center justify-center">
+                        <Phone className="h-5 w-5 text-[#F26E50]" />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                    <p className="text-gray-300">
-                      +1 (555) 123-4567<br />
-                      Monday-Friday, 9am-6pm ET
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-threeAtoms-orange" />
+                    <div>
+                      <h3 className="text-lg font-medium mb-1">Call Us</h3>
+                      <p className="text-gray-300">
+                        +1 (555) 123-4567<br />
+                        Monday-Friday, 9am-6pm ET
+                      </p>
                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Email Us</h3>
-                    <p className="text-gray-300">
-                      info@threeAtoms.com<br />
-                      support@threeAtoms.com
-                    </p>
-                  </div>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="flex items-start space-x-4"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-12 h-12 rounded-full bg-[#F26E50]/20 flex items-center justify-center">
+                        <MessageSquare className="h-5 w-5 text-[#F26E50]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium mb-1">WhatsApp</h3>
+                      <p className="text-gray-300">
+                        Message us on WhatsApp<br />
+                        <a 
+                          href="https://wa.me/15551234567" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#F26E50] hover:underline inline-flex items-center gap-1 transition-all"
+                        >
+                          +1 (555) 123-4567
+                          <ArrowRight className="h-3 w-3" />
+                        </a>
+                      </p>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div 
+                    className="flex items-start space-x-4"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <div className="w-12 h-12 rounded-full bg-[#F26E50]/20 flex items-center justify-center">
+                        <Mail className="h-5 w-5 text-[#F26E50]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium mb-1">Email Us</h3>
+                      <p className="text-gray-300">
+                        info@threeAtoms.com<br />
+                        support@threeAtoms.com
+                      </p>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
-            
-            {/* Map or Image */}
-            <div className="rounded-lg overflow-hidden h-[300px] relative">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2683310174047!2d-79.38456092392789!3d43.64833397901652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN%20Tower!5e0!3m2!1sen!2sca!4v1687871895921!5m2!1sen!2sca" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }}
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location"
-              ></iframe>
-            </div>
-          </div>
+          </motion.div>
         </div>
         
         {/* FAQ Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+        <motion.div 
+          className="mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-neutral-50 to-neutral-400">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3">What industries do you work with?</h3>
-              <p className="text-gray-300">
-                We work with clients across various industries including healthcare, finance, e-commerce, manufacturing, and more. Our AI solutions are adaptable to any industry's unique challenges.
-              </p>
-            </div>
-            
-            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3">How long does a typical AI project take?</h3>
-              <p className="text-gray-300">
-                Project timelines vary based on complexity and scope. Simple projects may be completed in a few weeks, while more complex implementations may take several months. We'll provide a detailed timeline during consultation.
-              </p>
-            </div>
-            
-            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3">Do I need technical knowledge to work with you?</h3>
-              <p className="text-gray-300">
-                No technical expertise is required from your end. We handle all technical aspects while ensuring you understand the process and can effectively use the final solution.
-              </p>
-            </div>
-            
-            <div className="bg-threeAtoms-darkgray border border-white/10 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3">What kind of support do you provide after project completion?</h3>
-              <p className="text-gray-300">
-                We offer ongoing technical support, maintenance, and optimization services to ensure your AI solution continues to perform optimally and evolves with your business needs.
-              </p>
-            </div>
+            {[
+              {
+                question: "What industries do you work with?",
+                answer: "We work with clients across various industries including healthcare, finance, e-commerce, manufacturing, and more. Our AI solutions are adaptable to any industry's unique challenges."
+              },
+              {
+                question: "How long does a typical AI project take?",
+                answer: "Project timelines vary based on complexity and scope. Simple projects may be completed in a few weeks, while more complex implementations may take several months. We'll provide a detailed timeline during consultation."
+              },
+              {
+                question: "Do I need technical knowledge to work with you?",
+                answer: "No technical expertise is required from your end. We handle all technical aspects while ensuring you understand the process and can effectively use the final solution."
+              },
+              {
+                question: "What kind of support do you provide after project completion?",
+                answer: "We offer ongoing technical support, maintenance, and optimization services to ensure your AI solution continues to perform optimally and evolves with your business needs."
+              }
+            ].map((faq, index) => (
+              <motion.div 
+                key={index}
+                className="relative group"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50]/30 to-purple-600/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative bg-black/60 backdrop-blur-sm border border-white/10 hover:border-white/20 rounded-xl p-6 transition-all">
+                  <h3 className="text-xl font-bold mb-3">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

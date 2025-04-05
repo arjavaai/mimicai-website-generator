@@ -2,10 +2,19 @@ import { motion } from 'framer-motion';
 import { Bot, Cpu, Zap, MessageSquare, BarChart, Settings, Users, Brain, Workflow } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 
 const AIAgents = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="Custom AI Agents for Business | ThreeAtoms"
+        description="Transform your business operations with our custom AI agents. Automate tasks, enhance customer service, and streamline operations with intelligent AI solutions."
+        keywords="AI agents, business automation, custom AI, intelligent automation, AI assistants, virtual agents, AI for business"
+        url="https://threeatoms.com/services/ai-agents"
+        canonical="https://threeatoms.com/services/ai-agents/"
+      />
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}
@@ -30,7 +39,7 @@ const AIAgents = () => {
                 Explore Solutions
               </Button>
               <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-6 py-3 rounded-md">
-                Schedule Demo
+                <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule Demo</a>
               </Button>
             </div>
           </motion.div>
@@ -261,7 +270,7 @@ const AIAgents = () => {
                 Let's discuss how our custom AI agents can help you automate processes, improve customer experiences, and drive growth.
               </p>
               <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
-                <Link to="/contact">Schedule a Consultation</Link>
+                <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
               </Button>
             </motion.div>
           </div>

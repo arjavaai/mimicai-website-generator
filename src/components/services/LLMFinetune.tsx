@@ -424,7 +424,7 @@ const LLMFinetune = () => {
                 Let's discuss how our LLM fine-tuning services can give your business a competitive edge with AI tailored specifically to your needs.
               </p>
               <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
-                <Link to="/contact">Schedule a Consultation</Link>
+                <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
               </Button>
             </motion.div>
           </div>

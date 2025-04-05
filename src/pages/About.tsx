@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 const About = () => {
   // Scroll to top on page load
@@ -10,6 +12,13 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
+      <SEO 
+        title="About ThreeAtoms | Our AI Expertise & Team"
+        description="Learn about ThreeAtoms, our mission, team, and how we help businesses implement AI solutions to transform operations and drive growth."
+        keywords="about ThreeAtoms, AI expertise, AI team, artificial intelligence company, technology leaders, AI consultants"
+        url="https://threeatoms.com/about"
+        canonical="https://threeatoms.com/about/"
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-20">

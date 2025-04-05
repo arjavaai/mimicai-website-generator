@@ -1,6 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
 
 const Services = () => {
   // Scroll to top on page load
@@ -10,6 +13,13 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
+      <SEO 
+        title="AI Services & Solutions | ThreeAtoms"
+        description="Explore our comprehensive AI services including LLM fine-tuning, RAG implementation, AI agents, content automation, and web development."
+        keywords="AI services, artificial intelligence solutions, LLM fine-tuning, RAG implementation, AI agents, content automation, website development"
+        url="https://threeatoms.com/services"
+        canonical="https://threeatoms.com/services/"
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-20">

@@ -28,7 +28,7 @@ const CorporateWorkshops = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md">
-                  Book a Workshop
+                  <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Book a Workshop</a>
                 </Button>
                 <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-6 py-3 rounded-md">
                   View Curriculum
@@ -245,7 +245,7 @@ const CorporateWorkshops = () => {
                   </li>
                 </ul>
                 <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md w-full">
-                  Request Corporate Workshop
+                  <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Request Corporate Workshop</a>
                 </Button>
               </div>
             </motion.div>
@@ -301,7 +301,7 @@ const CorporateWorkshops = () => {
                   </li>
                 </ul>
                 <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-3 rounded-md w-full">
-                  Request Academic Workshop
+                  <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Request Academic Workshop</a>
                 </Button>
               </div>
             </motion.div>
@@ -499,7 +499,7 @@ const CorporateWorkshops = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 rounded-md text-lg">
-                Book a Consultation
+                <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Book a Consultation</a>
               </Button>
               <Button className="bg-transparent hover:bg-[#F26E50]/10 text-[#F26E50] border border-[#F26E50] hover:border-[#F26E50] px-8 py-4 rounded-md text-lg">
                 Download Brochure

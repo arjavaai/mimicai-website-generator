@@ -31,10 +31,10 @@ const HeroSection = () => {
         {/* Text overlay at bottom with gradient background */}
         <div className="absolute bottom-0 left-0 right-0 px-6 py-10 bg-gradient-to-t from-black via-black/80 to-transparent">
           <div className="max-w-md mx-auto">
-            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
+            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
               Unlock AI
             </h1>
-            <p className="mt-4 text-neutral-300 text-lg text-center">
+            <p className="mt-4 text-neutral-300 text-xl text-center">
               Integrate AI with ease,<br/>
               Empower your business and life,<br/>
               See the change unfold.
@@ -48,10 +48,10 @@ const HeroSection = () => {
         {/* Text content */}
         <div className="w-1/2 p-12 flex flex-col justify-center">
           <div className="max-w-md">
-            <h1 className="text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+            <h1 className="text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
               Unlock AI
             </h1>
-            <p className="mt-4 text-neutral-300 text-xl">
+            <p className="mt-4 text-neutral-300 text-2xl">
               Integrate AI with ease,<br/>
               Empower your business and life,<br/>
               See the change unfold.

@@ -637,8 +637,8 @@ const WebsiteDevelopment = () => {
                 <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-3">
                   <Link to="/contact">Request a Quote</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-[#F26E50] text-[#F26E50] hover:bg-[#F26E50]/10 px-8 py-3">
-                  <Link to="/contact">Schedule a Consultation</Link>
+                <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
+                  <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
                 </Button>
               </div>
               <p className="text-sm text-gray-400 mt-6">

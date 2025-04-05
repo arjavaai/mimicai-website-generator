@@ -96,7 +96,7 @@ const CtaBanner = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-[#121212] relative overflow-hidden">
+    <section className="py-16 bg-[#121212] relative overflow-hidden z-[40]">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] opacity-30"></div>
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#F26E50] to-transparent"></div>
@@ -119,10 +119,10 @@ const CtaBanner = () => {
               </p>
               <div className="w-full">
                 <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-6 py-5 text-base md:text-lg rounded-lg flex items-center w-full md:w-auto justify-center">
-                  <Link to="/contact" className="flex items-center">
+                  <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     <Calendar className="mr-2 h-5 w-5" />
                     <span className="whitespace-nowrap">Schedule a meeting</span>
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>

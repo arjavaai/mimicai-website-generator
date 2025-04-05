@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import LoadingScreen from './LoadingScreen';
 
 interface RouteTransitionProps {
   children: ReactNode;
@@ -15,6 +16,7 @@ const RouteTransition = ({ children }: RouteTransitionProps) => {
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransitionStage] = useState('fadeIn');
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Skip animation on first render
@@ -25,6 +27,7 @@ const RouteTransition = ({ children }: RouteTransitionProps) => {
 
     if (location.pathname !== displayLocation.pathname) {
       setTransitionStage('fadeOut');
+      setIsLoading(true);
       
       // Scroll to top when navigating to a new page
       window.scrollTo(0, 0);
@@ -41,6 +44,11 @@ const RouteTransition = ({ children }: RouteTransitionProps) => {
       setTimeout(() => {
         setDisplayLocation(location);
         setTransitionStage('fadeIn');
+        
+        // Add a delay to simulate page loading
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1200); // Adjust timing to match the loading animation
       }, 300); // Match this with the CSS transition duration
     }
   }, [location, displayLocation, isFirstRender]);
@@ -59,23 +67,26 @@ const RouteTransition = ({ children }: RouteTransitionProps) => {
   const shouldAnimate = !prefersReducedMotion && !isLowEndDevice;
 
   return (
-    <motion.div
-      className="route-transition"
-      initial={shouldAnimate ? { opacity: 0 } : { opacity: 1 }}
-      animate={shouldAnimate 
-        ? { 
-            opacity: transitionStage === 'fadeIn' ? 1 : 0.5,
-            y: transitionStage === 'fadeIn' ? 0 : 20
-          } 
-        : { opacity: 1 }
-      }
-      transition={{
-        duration: shouldAnimate ? 0.3 : 0,
-        ease: 'easeInOut'
-      }}
-    >
-      {children}
-    </motion.div>
+    <>
+      {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
+      <motion.div
+        className="route-transition"
+        initial={shouldAnimate ? { opacity: 0 } : { opacity: 1 }}
+        animate={shouldAnimate 
+          ? { 
+              opacity: transitionStage === 'fadeIn' ? 1 : 0.5,
+              y: transitionStage === 'fadeIn' ? 0 : 20
+            } 
+          : { opacity: 1 }
+        }
+        transition={{
+          duration: shouldAnimate ? 0.3 : 0,
+          ease: 'easeInOut'
+        }}
+      >
+        {children}
+      </motion.div>
+    </>
   );
 };
 

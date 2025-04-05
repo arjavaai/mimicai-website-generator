@@ -2,10 +2,19 @@ import { motion } from 'framer-motion';
 import { Database, Search, FileText, Zap, Brain, Server, MessageSquare, BarChart, Bot, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 
 const RagImplementation = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="RAG Implementation Services | ThreeAtoms"
+        description="Enhance your AI applications with our Retrieval-Augmented Generation (RAG) implementation services. Connect your proprietary data to LLMs for accurate, contextual responses."
+        keywords="RAG implementation, retrieval augmented generation, AI knowledge base, contextual AI, LLM integration, information retrieval"
+        url="https://threeatoms.com/services/rag-implementation"
+        canonical="https://threeatoms.com/services/rag-implementation/"
+      />
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}
@@ -407,7 +416,7 @@ const RagImplementation = () => {
                 Let's discuss how our RAG implementation services can transform your AI applications with accurate, contextual, and reliable information.
               </p>
               <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
-                <Link to="/contact">Schedule a Consultation</Link>
+                <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
               </Button>
             </motion.div>
           </div>

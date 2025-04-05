@@ -2,10 +2,19 @@ import { motion } from 'framer-motion';
 import { Video, Mic, Edit, Search, Upload, Image, Calendar, Users, Repeat, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/SEO';
 
 const ContentAutomation = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="AI Content Automation for Personal Branding | ThreeAtoms"
+        description="Scale your personal brand with our AI-powered content automation. We clone your voice and visual appearance to create consistent, high-quality videos while you focus elsewhere."
+        keywords="content automation, AI video creation, personal branding, voice cloning, video cloning, AI content creation, brand scaling"
+        url="https://threeatoms.com/services/content-automation"
+        canonical="https://threeatoms.com/services/content-automation/"
+      />
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}
@@ -373,7 +382,7 @@ const ContentAutomation = () => {
                 Let us handle your content creation while you focus on what you do best. Get started today with a consultation.
               </p>
               <Button asChild className="bg-[#F26E50] hover:bg-[#E05D40] text-white px-8 py-4 text-lg rounded-md">
-                <Link to="/contact">Schedule a Demo</Link>
+                <a href="https://cal.com/threeatoms/30min" target="_blank" rel="noopener noreferrer">Schedule a Demo</a>
               </Button>
             </motion.div>
           </div>
