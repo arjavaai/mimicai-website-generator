@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Send, X, Loader2 } from 'lucide-react';
+import { ArrowUp, Loader2, X, MessageCircle, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
@@ -127,6 +127,7 @@ CONTACT INFORMATION:
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
@@ -143,11 +144,21 @@ How can I assist you today?`
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Scroll to bottom of messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+  // Focus input when expanded
+  useEffect(() => {
+    if (isExpanded) {
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 100);
+    }
+  }, [isExpanded]);
 
   // Handle sending a message
   const handleSendMessage = async () => {
@@ -284,14 +295,71 @@ User question: ${input}`
 
   return (
     <>
-      {/* Chatbot toggle button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#F26E50] text-white flex items-center justify-center shadow-lg hover:bg-[#E05D40] transition-colors"
-        aria-label="Toggle chatbot"
-      >
-        {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
-      </button>
+      {/* Centered ChatGPT-style floating input bar */}
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-auto">
+        <motion.div
+          initial={{ width: "200px" }}
+          animate={{ width: isExpanded ? "min(600px, 95vw)" : "200px" }}
+          transition={{ duration: 0.2 }}
+          onMouseEnter={() => setIsExpanded(true)}
+          onMouseLeave={() => !input && setIsExpanded(false)}
+          className={cn(
+            "relative bg-zinc-800/90 backdrop-blur-sm rounded-full border border-zinc-700 shadow-lg",
+            isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+          )}
+        >
+          {!isExpanded ? (
+            // Collapsed state
+            <div 
+              className="flex items-center gap-2 px-4 py-3 cursor-pointer"
+              onClick={() => setIsExpanded(true)}
+            >
+              <MessageCircle size={16} className="text-zinc-400" />
+              <span className="text-sm text-zinc-300 font-medium">Ask ThreeAtoms</span>
+              <div className="ml-auto">
+                <div className="w-6 h-6 rounded-full bg-zinc-700 flex items-center justify-center">
+                  <ChevronUp size={14} className="text-zinc-300" />
+                </div>
+              </div>
+            </div>
+          ) : (
+            // Expanded state
+            <div className="flex items-center px-3 py-2">
+              <div className="relative flex-1">
+                <Input
+                  ref={inputRef}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey && input.trim()) {
+                      e.preventDefault();
+                      setIsOpen(true);
+                      setIsExpanded(false);
+                      handleSendMessage();
+                    }
+                  }}
+                  placeholder="Message ThreeAtoms AI..."
+                  className="w-full border-none bg-transparent text-white pr-10 py-1 text-sm focus:ring-0 focus:outline-none placeholder:text-zinc-400"
+                />
+                <Button 
+                  onClick={() => {
+                    if (input.trim()) {
+                      setIsOpen(true);
+                      setIsExpanded(false);
+                      handleSendMessage();
+                    }
+                  }}
+                  disabled={isLoading || !input.trim()}
+                  size="icon"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 bg-transparent hover:bg-zinc-700 text-white p-1 h-8 w-8 rounded-full"
+                >
+                  <ArrowUp className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          )}
+        </motion.div>
+      </div>
       
       {/* Chatbot window */}
       <AnimatePresence>
@@ -301,26 +369,30 @@ User question: ${input}`
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 z-50 w-[350px] sm:w-[400px] h-[500px] bg-black/90 backdrop-blur-md border border-white/10 rounded-xl shadow-xl flex flex-col overflow-hidden"
+            className="fixed bottom-0 left-0 right-0 sm:bottom-24 sm:right-6 sm:left-auto z-50 mx-auto sm:mx-0 w-full sm:w-[400px] h-[85vh] sm:h-[500px] bg-zinc-900 border-t sm:border border-zinc-700 sm:rounded-xl shadow-xl flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="p-4 border-b border-white/10 bg-[#F26E50]/10">
+            <div className="p-3 border-b border-zinc-700 bg-zinc-800 flex items-center justify-between sticky top-0">
               <div className="flex items-center">
-                <div className="mr-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="3" fill="#F26E50" />
-                    <circle cx="19" cy="12" r="2" fill="#F26E50" opacity="0.7" />
-                    <circle cx="5" cy="12" r="2" fill="#F26E50" opacity="0.7" />
-                    <circle cx="12" cy="5" r="2" fill="#F26E50" opacity="0.7" />
-                    <circle cx="12" cy="19" r="2" fill="#F26E50" opacity="0.7" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-white">Three<span className="text-[#F26E50]">Atoms</span> AI</h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
+                  <circle cx="12" cy="12" r="3" fill="#19C37D" />
+                  <circle cx="19" cy="12" r="2" fill="#19C37D" opacity="0.6" />
+                  <circle cx="5" cy="12" r="2" fill="#19C37D" opacity="0.6" />
+                  <circle cx="12" cy="5" r="2" fill="#19C37D" opacity="0.6" />
+                  <circle cx="12" cy="19" r="2" fill="#19C37D" opacity="0.6" />
+                </svg>
+                <h3 className="text-sm font-medium text-white">ThreeAtoms AI</h3>
               </div>
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="text-zinc-400 hover:text-white"
+              >
+                <X size={18} />
+              </button>
             </div>
             
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto py-4 px-3 space-y-6 bg-zinc-900 overscroll-contain">
               {messages.map((message, index) => (
                 <div 
                   key={index} 
@@ -331,19 +403,19 @@ User question: ${input}`
                 >
                   <div 
                     className={cn(
-                      "max-w-[80%] rounded-lg p-3",
+                      "max-w-[85%] rounded-lg p-3",
                       message.role === 'user' 
-                        ? "bg-[#F26E50] text-white rounded-tr-none" 
-                        : "bg-gray-800 text-white rounded-tl-none"
+                        ? "bg-[#19C37D] text-white" 
+                        : "bg-zinc-800 text-white"
                     )}
                   >
-                    <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: formatMessage(message.content) }} />
+                    <div className="whitespace-pre-wrap text-sm" dangerouslySetInnerHTML={{ __html: formatMessage(message.content) }} />
                   </div>
                 </div>
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-gray-800 text-white rounded-lg rounded-tl-none p-3">
+                  <div className="bg-zinc-800 text-white rounded-lg p-3">
                     <Loader2 className="h-5 w-5 animate-spin" />
                   </div>
                 </div>
@@ -351,25 +423,28 @@ User question: ${input}`
               <div ref={messagesEndRef} />
             </div>
             
-            {/* Input */}
-            <div className="p-4 border-t border-white/10">
-              <div className="flex items-center space-x-2">
+            {/* Input - ChatGPT Style */}
+            <div className="p-3 border-t border-zinc-700 bg-zinc-800 sticky bottom-0">
+              <div className="relative">
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyPress}
-                  placeholder="Type your message..."
-                  className="flex-1 bg-gray-800 border-white/10 text-white"
+                  placeholder="Message ThreeAtoms AI..."
+                  className="w-full bg-zinc-700 border-zinc-600 text-white pr-10 py-3 rounded-md text-sm"
                   disabled={isLoading}
                 />
                 <Button 
                   onClick={handleSendMessage} 
                   disabled={isLoading || !input.trim()}
                   size="icon"
-                  className="bg-[#F26E50] hover:bg-[#E05D40] text-white"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 bg-transparent hover:bg-zinc-600 text-white p-1 h-8 w-8"
                 >
-                  <Send className="h-4 w-4" />
+                  <ArrowUp className="h-4 w-4" />
                 </Button>
+              </div>
+              <div className="mt-2 text-xs text-zinc-400 text-center">
+                ThreeAtoms AI can make mistakes. Consider checking important information.
               </div>
             </div>
           </motion.div>
