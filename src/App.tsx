@@ -11,8 +11,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
 import ScrollToTop from './components/ScrollToTop';
 import LoadingScreen from './components/LoadingScreen';
 import RouteTransition from './components/RouteTransition';

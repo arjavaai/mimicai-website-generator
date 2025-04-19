@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white pt-28 relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white pt-36 md:pt-40 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] opacity-20"></div>
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F26E50]/10 rounded-full blur-[100px]"></div>

@@ -12,7 +12,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-threeAtoms-black text-white pt-28">
+    <div className="min-h-screen bg-threeAtoms-black text-white pt-36 md:pt-40">
       <SEO 
         title="AI Services & Solutions | ThreeAtoms"
         description="Explore our comprehensive AI services including LLM fine-tuning, RAG implementation, AI agents, content automation, and web development."

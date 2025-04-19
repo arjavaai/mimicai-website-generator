@@ -32,7 +32,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div>
             <img 
-              src="/lovable-uploads/50d23781-4daf-4098-a63c-20647a378ade.png" 
+              src="our mission.png" 
               alt="Our Mission" 
               className="w-full h-[400px] object-cover rounded-lg"
             />
@@ -84,7 +84,7 @@ const About = () => {
           </div>
           <div className="order-1 lg:order-2">
             <img 
-              src="/lovable-uploads/43efa4ab-c28a-4efc-b8a9-5883c06baa70.png" 
+              src="our story.png" 
               alt="Our Story" 
               className="w-full h-[400px] object-cover rounded-lg"
             />
@@ -98,7 +98,7 @@ const About = () => {
             {/* Team Member 1 */}
             <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/bb198ef3-d7fe-41f5-bb95-64dbde5bc0d3.png" 
+                src="jayanth.jpg" 
                 alt="Jayanth Atipamula" 
                 className="w-full h-64 object-cover"
               />
@@ -114,7 +114,7 @@ const About = () => {
             {/* Team Member 2 */}
             <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/43efa4ab-c28a-4efc-b8a9-5883c06baa70.png" 
+                src="vamshi.png" 
                 alt="Vamshi Sudula" 
                 className="w-full h-64 object-cover"
               />
