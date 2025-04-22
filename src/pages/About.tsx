@@ -130,7 +130,7 @@ const About = () => {
             {/* Team Member 3 */}
             <div className="bg-threeAtoms-darkgray rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/16b136d6-9e3c-439d-b3a8-da0f5fcb88e5.png" 
+                src="arthisha.jpg" 
                 alt="Arthisha Doma" 
                 className="w-full h-64 object-cover"
               />
@@ -146,109 +146,312 @@ const About = () => {
         </div>
         
         {/* Our Values */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Values</h2>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <motion.h2 
+            className="text-4xl font-bold mb-12 text-center relative overflow-hidden"
+            initial={{ y: 20 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="relative inline-block">
+              Our Values
+              <motion.span
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+              />
+            </span>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Value 1 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mb-6">
-                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 relative overflow-hidden flex flex-col h-full"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mr-3">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      repeatType: "reverse" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
+                </div>
+                <h3 className="text-xl font-bold">Innovation</h3>
               </div>
-              <h3 className="text-xl font-bold mb-4">Innovation</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300 mt-0">
                 We continuously push the boundaries of what's possible with AI, always seeking new approaches and solutions.
               </p>
-            </div>
+            </motion.div>
             
             {/* Value 2 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mb-6">
-                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 relative overflow-hidden flex flex-col h-full"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mr-3">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      delay: 0.4,
+                      repeat: Infinity,
+                      repeatType: "reverse" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
+                </div>
+                <h3 className="text-xl font-bold">Integrity</h3>
               </div>
-              <h3 className="text-xl font-bold mb-4">Integrity</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300 mt-0">
                 We are committed to ethical AI practices, ensuring transparency, fairness, and accountability in everything we do.
               </p>
-            </div>
+            </motion.div>
             
             {/* Value 3 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10">
-              <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mb-6">
-                <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 relative overflow-hidden flex flex-col h-full"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center mr-3">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      delay: 0.8,
+                      repeat: Infinity,
+                      repeatType: "reverse" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
+                </div>
+                <h3 className="text-xl font-bold">Collaboration</h3>
               </div>
-              <h3 className="text-xl font-bold mb-4">Collaboration</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300 mt-0">
                 We believe in the power of partnership – working closely with our clients to understand their unique challenges.
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
         
         {/* Our Achievements */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Achievements</h2>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <motion.h2 
+            className="text-4xl font-bold mb-12 text-center relative overflow-hidden"
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="relative inline-block">
+              Our Achievements
+              <motion.span
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+              />
+            </span>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Achievement 1 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
-              <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 flex relative overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-tr from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="mr-4 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360]
+                    }}
+                    transition={{ 
+                      duration: 6, 
+                      repeat: Infinity,
+                      repeatType: "loop" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">AI Excellence Award 2023</h3>
-                <p className="text-gray-300">
-                  Recognized for our groundbreaking work in developing AI solutions that drive business transformation.
+                <h3 className="text-xl font-bold mb-1">GenAI Buildathon Winner</h3>
+                <p className="text-gray-300 m-0">
+                Recognized as a 100xEngineers Buildathon Winner in India's First GenAI Buildathon competing against 1,500+ participants.
+
                 </p>
               </div>
-            </div>
+            </motion.div>
             
             {/* Achievement 2 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
-              <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 flex relative overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-tr from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="mr-4 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360]
+                    }}
+                    transition={{ 
+                      duration: 6, 
+                      delay: 1,
+                      repeat: Infinity,
+                      repeatType: "loop" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Forbes AI 30 Under 30</h3>
-                <p className="text-gray-300">
-                  Our founder was recognized in Forbes' prestigious list of young innovators in artificial intelligence.
+                <h3 className="text-xl font-bold mb-1">Thumbnails Labs</h3>
+                <p className="text-gray-300 m-0">
+                Built a platform revolutionizing content creation by enabling creators to generate eye-catching thumbnails that drive engagement across YouTube and Instagram.
                 </p>
               </div>
-            </div>
+            </motion.div>
             
             {/* Achievement 3 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
-              <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 flex relative overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-tr from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="mr-4 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360]
+                    }}
+                    transition={{ 
+                      duration: 6, 
+                      delay: 2,
+                      repeat: Infinity,
+                      repeatType: "loop" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">500+ AI Models Deployed</h3>
-                <p className="text-gray-300">
-                  Successfully implemented over 500 AI models across various industries, from healthcare to finance.
+                <h3 className="text-xl font-bold mb-1">AI-Powered Products & Consulting Excellence</h3>
+                <p className="text-gray-300 m-0">
+                Built a portfolio of 50+ web applications, with 10 fully AI-powered tools and products. Our members are also actively serving as AI consultants at Invest4Edu, helping drive innovation in AI adoption.
                 </p>
               </div>
-            </div>
+            </motion.div>
             
             {/* Achievement 4 */}
-            <div className="p-8 bg-threeAtoms-darkgray rounded-lg border border-white/10 flex">
-              <div className="mr-6">
-                <div className="w-12 h-12 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-threeAtoms-orange"></div>
+            <motion.div 
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(255, 119, 0, 0.2)" }}
+              className="p-6 bg-gradient-to-b from-threeAtoms-darkgray to-black/80 rounded-lg border border-white/10 flex relative overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-tr from-threeAtoms-orange/10 to-transparent opacity-0"
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <div className="mr-4 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-threeAtoms-orange/20 flex items-center justify-center">
+                  <motion.div 
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 180, 360]
+                    }}
+                    transition={{ 
+                      duration: 6, 
+                      delay: 3,
+                      repeat: Infinity,
+                      repeatType: "loop" 
+                    }}
+                    className="w-5 h-5 rounded-full bg-threeAtoms-orange"
+                  ></motion.div>
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Industry Partnership Program</h3>
-                <p className="text-gray-300">
-                  Launched a collaborative program with leading universities to advance AI research and application.
+                <h3 className="text-xl font-bold mb-1">AI-Powered Content Creation</h3>
+                <p className="text-gray-300 m-0">
+                Built a strong presence in AI-focused content creation, with our members amassing 100K+ followers on Instagram. Additionally, we have successfully automated the Instagram content creation process using AI, streamlining engagement and innovation.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
         
         {/* Call to Action */}
         <div className="mb-20 bg-gradient-to-r from-threeAtoms-orange/20 to-threeAtoms-darkgray p-12 rounded-2xl text-center">

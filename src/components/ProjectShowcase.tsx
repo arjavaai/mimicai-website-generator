@@ -25,6 +25,7 @@ interface item {
   title: string;
   description: string;
   tags?: string[];
+  buttonText: string;
 }
 
 interface GaleryProps {
@@ -122,7 +123,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                       variants={article}
                       className="mt-4 w-fit px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-500 rounded-md text-white text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-1"
                     >
-                      View Project <span className="ml-1">→</span>
+                      {item.buttonText} <span className="ml-1">→</span>
                     </motion.button>
                   </motion.article>
                 )}
@@ -138,7 +139,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
           return (
             <motion.div
               whileTap={{ scale: 0.98 }}
-              className='relative w-full h-[250px] flex-shrink-0 rounded-xl border border-orange-500/30 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black overflow-hidden shadow-lg'
+              className='relative w-full h-[180px] flex-shrink-0 rounded-xl border border-orange-500/30 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black overflow-hidden shadow-lg'
               key={i}
             >
               <img
@@ -149,20 +150,10 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
               <div className='absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20 rounded-xl'></div>
               <div className='absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-orange-600 to-orange-500'></div>
               <article className='absolute flex flex-col justify-end h-full w-full top-0 p-6 space-y-2'>
-                <div className="flex gap-2 mb-1">
-                  {item.tags?.map((tag, idx) => (
-                    <span key={idx} className="px-2 py-0.5 text-xs rounded bg-orange-500/20 text-orange-300">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h1 className='text-2xl font-semibold text-white'>
+                <h1 className='text-xl font-semibold text-white'>
                   {item?.title}
                 </h1>
                 <p className='text-sm text-zinc-400'>{item?.description}</p>
-                <button className="mt-2 w-fit px-3 py-1.5 bg-gradient-to-r from-orange-600 to-orange-500 rounded-md text-white text-xs font-medium hover:opacity-90 transition-opacity flex items-center gap-1">
-                  View Project <span className="ml-1">→</span>
-                </button>
               </article>
             </motion.div>
           );

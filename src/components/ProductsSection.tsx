@@ -51,7 +51,7 @@ const ProductsSection = () => {
               <img 
                 src={product.image} 
                 alt={product.title} 
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-64 object-contain bg-white transition-transform duration-500 group-hover:scale-105"
               />
               
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20">

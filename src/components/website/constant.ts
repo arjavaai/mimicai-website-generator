@@ -2,37 +2,42 @@
 export const items = [
   {
     id: 1,
-    url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1470&auto=format&fit=crop',
-    title: 'Interior Visualisation',
-    description: 'Visualise Your Home & Cost Estimation',
-    tags: ['AI', 'Visualization']
+    url: '/investoai.png',
+    title: 'Investo AI',
+    description: 'Your Personal AI Investment Advisor',
+    tags: ['Finance', 'AI Assitant'],
+    buttonText: 'Investo AI'
   },
   {
     id: 2,
-    url: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1470&auto=format&fit=crop',
-    title: 'E MOTORAD',
-    description: 'M.S. Dhoni sings "Bole Jo Koyal"',
-    tags: ['Deepfake', 'Voice']
+    url: '/studentnest.png',
+    title: 'StudentNest',
+    description: 'Unlimited free AI tools for students"',
+    tags: ['Free AI tools'],
+    buttonText: 'StudentNest'
   },
   {
     id: 3,
     url: '/thumbnailslabs.png',
     title: 'Thumbnails Labs',
-    description: 'Connect with Your Face & Voice',
-    tags: ['AI', 'Personalization']
+    description: 'Viral Thumbnails in Seconds',
+    tags: ['AI', 'Personalization'],
+    buttonText: 'Thumbnails Labs'
   },
   {
     id: 4,
-    url: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1450&auto=format&fit=crop',
-    title: 'Mirzapur S3 Launch',
-    description: 'Deepfake & Lip-sync Campaign',
-    tags: ['Deepfake', 'Lip-sync']
+    url: '/recruitdo.png',
+    title: 'Recruit DO',
+    description: 'Create Your Perfect Resume & Cover Letter with AI in Seconds! ',
+    tags: ['AI Resume', 'Cover Letter'],
+    buttonText: 'Recruit DO'
   },
   {
     id: 5,
-    url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1470&auto=format&fit=crop',
+    url: 'Content_automation.png',
     title: 'AI Realistic Avatar',
     description: 'Digital Twin for Your Brand',
-    tags: ['AI', 'Avatar']
+    tags: ['AI', 'Avatar'],
+    buttonText: 'AI Realistic Avatar'
   }
 ];

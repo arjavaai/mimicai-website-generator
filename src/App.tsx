@@ -17,6 +17,8 @@ import RouteTransition from './components/RouteTransition';
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundPolicy from "./pages/RefundPolicy";
+import FloatingProgressBar from "./components/FloatingProgressBar";
+import { SmoothCursor } from "./components/ui/smooth-cursor";
 
 // Service Pages
 import AIVideoAds from "./components/services/AIVideoAds";
@@ -91,6 +93,8 @@ const App = () => {
             {!isLoading && <Footer />}
           </div>
           <Chatbot />
+          {!isLoading && <FloatingProgressBar />}
+          {!isLoading && <SmoothCursor />}
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

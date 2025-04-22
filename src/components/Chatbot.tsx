@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { setChatbotState } from './FloatingProgressBar';
 
 // Define message types
 interface Message {
@@ -159,6 +160,11 @@ How can I assist you today?`
       }, 100);
     }
   }, [isExpanded]);
+
+  // Update FloatingProgressBar visibility when chatbot state changes
+  useEffect(() => {
+    setChatbotState(isOpen);
+  }, [isOpen]);
 
   // Handle sending a message
   const handleSendMessage = async () => {
@@ -369,7 +375,7 @@ User question: ${input}`
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-0 left-0 right-0 sm:bottom-24 sm:right-6 sm:left-auto z-50 mx-auto sm:mx-0 w-full sm:w-[400px] h-[85vh] sm:h-[500px] bg-zinc-900 border-t sm:border border-zinc-700 sm:rounded-xl shadow-xl flex flex-col overflow-hidden"
+            className="fixed bottom-0 left-0 right-0 sm:right-6 sm:left-auto z-50 mx-auto sm:mx-0 w-full sm:w-[400px] h-[85vh] sm:h-[500px] bg-zinc-900 border-t sm:border border-zinc-700 sm:rounded-xl shadow-xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="p-3 border-b border-zinc-700 bg-zinc-800 flex items-center justify-between sticky top-0">
