@@ -15,7 +15,13 @@ interface Message {
 // Website context for the AI
 const websiteContext = `
 ABOUT THREE ATOMS:
-Three Atoms is an AI solutions company founded in 2020. We specialize in developing and implementing cutting-edge artificial intelligence solutions for businesses of all sizes. Our goal is to democratize AI technology, making it accessible and practical for businesses across industries.
+Three Atoms is an AI solutions company founded in 2025. We specialize in developing and implementing cutting-edge artificial intelligence solutions for businesses of all sizes. Our mission is to democratize AI technology, making it accessible and practical for businesses across industries. What began as a collaborative venture has rapidly evolved into a comprehensive AI solutions provider, helping businesses leverage cutting-edge AI technologies to solve complex problems, enhance customer experiences, and drive sustainable growth in the digital age.
+
+OUR ACHIEVEMENTS:
+- 50+ Web Applications Built: Created a portfolio of 50+ web applications, with 10 fully AI-powered tools and products
+- AI Consulting Excellence: Our members are actively serving as AI consultants at Invest4Edu
+- 100K+ Social Media Following: Built a strong presence in AI-focused content creation
+- Automated Content Creation: Successfully automated Instagram content creation processes using AI
 
 OUR SERVICES:
 
@@ -26,7 +32,12 @@ AI Agents are autonomous software entities powered by artificial intelligence th
 - Process and analyze data in real-time
 - Make decisions based on predefined rules and machine learning
 - Integrate with existing business systems and software
-We build AI agents tailored to your specific business needs, whether it's customer support, data processing, or internal operations automation.
+
+Our Implementation Process:
+- Discovery & Planning: We analyze your business needs and identify opportunities for AI agent implementation
+- Agent Design: We design the agent's capabilities, knowledge base, and integration points
+- Development & Training: We develop and train the agent using your data and business rules
+- Deployment & Optimization: We deploy the agent and continuously optimize its performance based on feedback
 
 2. AI WORKFLOWS:
 AI Workflows are end-to-end automated processes that leverage artificial intelligence to streamline operations. Our AI workflow solutions:
@@ -35,95 +46,76 @@ AI Workflows are end-to-end automated processes that leverage artificial intelli
 - Reduce manual intervention and human error
 - Provide real-time monitoring and analytics
 - Scale easily as your business grows
-We create custom AI workflows that integrate with your existing infrastructure to maximize efficiency and productivity.
 
-3. LLM FINE-TUNING:
-Large Language Model (LLM) Fine-tuning is the process of customizing pre-trained AI models for specific use cases. Our LLM fine-tuning services include:
-- Adapting models like GPT to understand industry-specific terminology
-- Training on your proprietary data for more relevant outputs
-- Optimizing for specific tasks (customer support, content creation, etc.)
-- Implementing guardrails and safety measures
-- Continuous improvement based on feedback and performance metrics
-We help businesses harness the power of large language models with customizations that make them truly effective for your unique needs.
+3. CONTENT AUTOMATION:
+Our AI Content Automation service helps scale your personal brand with AI-powered content. We clone both your voice AND visual appearance to create consistent, high-quality videos while you focus on what matters most.
 
-4. RAG IMPLEMENTATION:
-Retrieval-Augmented Generation (RAG) is a technique that enhances AI responses by combining the power of language models with information retrieval from your own data. Our RAG implementation services include:
-- Building knowledge bases from your documents and data
-- Creating efficient retrieval systems for accurate information access
-- Integrating retrieval with generation for contextually relevant responses
-- Implementing version control and update mechanisms
-- Setting up evaluation frameworks to measure accuracy and relevance
-We help you leverage your proprietary information to create AI systems that provide accurate, up-to-date, and contextually relevant responses.
+How Content Automation Works:
+- Step 1: Record Base Content - Provide us with 4-5 minute videos that capture your authentic style, voice, and mannerisms
+- Step 2: AI Cloning & Production - We use AI to clone both your voice and visual appearance, creating multiple pieces of content
+- Step 3: Distribution & Growth - We handle posting, optimization, and analytics to grow your audience across platforms
 
-5. WEBSITE DEVELOPMENT:
+The Result: 10-30× Content Output - Transform a single recording session into weeks of consistent, high-quality content.
+
+Our Content Automation Package Includes:
+- Account Management and Content Research
+- Script Writing and Professional Editing
+- Voice & Video Cloning
+- Custom Thumbnails
+
+Pricing Plans:
+- Starter: ₹30,000/month for 10 Videos per Month
+- Growth: ₹50,000/month for 20 Videos per Month
+- Scale: ₹60,000/month for 30 Videos per Month
+
+4. WEBSITE DEVELOPMENT:
 We create modern, responsive websites with integrated AI features that enhance user experience. Our website development services include:
 - Custom design and development tailored to your brand
 - AI-powered chatbots and virtual assistants
 - Personalized user experiences through AI recommendation systems
 - Automated content generation and optimization
 - Analytics and insights powered by AI
-Our websites combine cutting-edge design with powerful AI capabilities to create engaging and effective online presences.
 
-6. CONTENT AUTOMATION:
-Our AI Content Automation service helps scale your personal brand with AI-powered content. We clone both your voice AND visual appearance to create consistent, high-quality videos while you focus on what matters most.
+Types of websites we develop:
+- Corporate Sites
+- E-commerce Platforms
+- Educational Portals
+- Real Estate Websites
+- AI-Integrated Web Applications
 
-How Content Automation Works:
-Step 1: Record Base Content - Provide us with 4-5 minute videos that capture your authentic style, voice, and mannerisms.
-Step 2: AI Cloning & Production - We use AI to clone both your voice and visual appearance, creating multiple pieces of content that look and sound exactly like you.
-Step 3: Distribution & Growth - We handle posting, optimization, and analytics to grow your audience across platforms.
+Each website is custom-built with responsive design, SEO optimization, and performance in mind.
 
-The Result: 10-30× Content Output - Transform a single recording session into weeks of consistent, high-quality content across multiple platforms.
-
-Our Content Automation Package Includes:
-- Account Management: We handle all aspects of your content platforms, from setup to optimization.
-- Content Research: Identifying trending topics and relevant content ideas for maximum engagement.
-- Script Writing: Professional scripts tailored to your voice, style, and audience preferences.
-- Video Editing: High-quality editing with graphics, transitions, and visual enhancements.
-- Audio & Video Cloning: Advanced AI technology that replicates both your voice and visual appearance for videos that are indistinguishable from ones you record yourself.
-- Thumbnail Creation: Eye-catching thumbnails designed to maximize click-through rates.
-
-Pricing Plans:
-- Starter: ₹30,000/month for 10 Videos per Month
-- Growth: ₹50,000/month for 20 Videos per Month
-- Scale: ₹60,000/month for 30 Videos per Month
-All plans require a 6-month minimum commitment.
-
-7. AI VIDEO ADS:
+5. AI VIDEO ADS:
 We use AI to generate compelling video advertisements that engage audiences and drive conversions. Our AI Video Ads services include:
 - Concept development and scriptwriting
 - AI-generated visuals and animations
 - Voice synthesis and audio production
 - Personalization at scale for different audience segments
 - Performance tracking and optimization
+
 Our AI-powered video ads help businesses create high-quality marketing content efficiently and cost-effectively.
 
-COMPANY FACTS:
-- Founded: 2020
-- Projects Completed: 100+
-- Happy Clients: 50+
-- Global Offices: 3
-- Industries Served: Healthcare, Finance, Retail, Manufacturing, Education, and more
+6. CORPORATE/COLLEGE WORKSHOPS:
+We offer specialized workshops on AI technologies and implementation for both corporate teams and educational institutions. Our workshops provide hands-on experience and practical knowledge that participants can immediately apply.
 
-OUR TEAM:
-- Alex Johnson (CEO & Founder): AI researcher with over 15 years of experience in machine learning and neural networks.
-- Sophia Chen (CTO): Former lead engineer at Google AI, specializing in computer vision and deep learning.
-- Marcus Williams (Lead AI Architect): Specialist in natural language processing and conversational AI systems.
+FREQUENTLY ASKED QUESTIONS:
 
-OUR VALUES:
-- Innovation: We continuously push the boundaries of what's possible with AI, always seeking new approaches and solutions.
-- Integrity: We are committed to ethical AI practices, ensuring transparency, fairness, and accountability in everything we do.
-- Collaboration: We believe in the power of partnership – working closely with our clients to understand their unique challenges.
+Q: How can AI Agents help streamline my business operations?
+A: Our custom AI Agents can automate repetitive tasks, enhance customer service through intelligent chatbots, process data in real-time, make decisions based on predefined rules, and integrate with your existing business systems. They're tailored to your specific needs, whether for customer support, data processing, or internal operations, helping you save time and resources while improving efficiency.
 
-ACHIEVEMENTS:
-- AI Excellence Award 2023: Recognized for our groundbreaking work in developing AI solutions that drive business transformation.
-- Forbes AI 30 Under 30: Our founder was recognized in Forbes' prestigious list of young innovators in artificial intelligence.
-- 500+ AI Models Deployed: Successfully implemented over 500 AI models across various industries.
-- Industry Partnership Program: Launched a collaborative program with leading universities to advance AI research and application.
+Q: What makes Three Atoms' Content Automation service unique?
+A: Our AI Content Automation service clones both your voice AND visual appearance to create consistent, high-quality videos while you focus on what matters most. We handle the entire process from content research and scriptwriting to voice synthesis and video production, allowing you to transform a single recording session into weeks of content across multiple platforms—effectively scaling your personal brand with minimal time investment.
+
+Q: What types of websites can Three Atoms develop?
+A: We develop a wide range of websites including corporate sites, e-commerce platforms, educational portals, real estate websites, and AI-integrated web applications. Each website is custom-built with responsive design, SEO optimization, and performance in mind. We also offer AI enhancements like chatbots, personalized user experiences, and automated content generation to make your website stand out from competitors.
+
+Q: Do you offer ongoing support after implementing AI solutions?
+A: Yes, we provide comprehensive ongoing support for all our AI implementations. This includes regular maintenance, performance monitoring, updates to adapt to changing business needs, and technical support from our expert team. We also offer training for your staff to maximize the benefits of the AI solutions and can continuously optimize the systems based on feedback and performance metrics to ensure long-term success.
 
 CONTACT INFORMATION:
-- Email: info@threeatoms.com
-- Phone: (555) 123-4567
-- Address: 123 AI Innovation Street, Tech City, TC 12345
+- Email: contact@threeatoms.com, threeatoms.com@gmail.com
+- Phone: +91 7396149081 (Monday-Friday, 9am-6pm ET)
+- Website: https://threeatoms.com
 `;
 
 const Chatbot = () => {
@@ -310,7 +302,7 @@ User question: ${input}`
           onMouseEnter={() => setIsExpanded(true)}
           onMouseLeave={() => !input && setIsExpanded(false)}
           className={cn(
-            "relative bg-zinc-800/90 backdrop-blur-sm rounded-full border border-zinc-700 shadow-lg",
+            "relative bg-white/10 backdrop-blur-lg rounded-full border border-white/20 shadow-[0_4px_30px_rgba(0,0,0,0.1)]",
             isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
           )}
         >
@@ -320,11 +312,11 @@ User question: ${input}`
               className="flex items-center gap-2 px-4 py-3 cursor-pointer"
               onClick={() => setIsExpanded(true)}
             >
-              <MessageCircle size={16} className="text-zinc-400" />
-              <span className="text-sm text-zinc-300 font-medium">Ask ThreeAtoms</span>
+              <MessageCircle size={16} className="text-[#F26E50]" />
+              <span className="text-sm text-white font-medium drop-shadow-sm">Ask ThreeAtoms</span>
               <div className="ml-auto">
-                <div className="w-6 h-6 rounded-full bg-zinc-700 flex items-center justify-center">
-                  <ChevronUp size={14} className="text-zinc-300" />
+                <div className="w-6 h-6 rounded-full bg-[#F26E50]/20 flex items-center justify-center">
+                  <ChevronUp size={14} className="text-white" />
                 </div>
               </div>
             </div>
@@ -345,7 +337,7 @@ User question: ${input}`
                     }
                   }}
                   placeholder="Message ThreeAtoms AI..."
-                  className="w-full border-none bg-transparent text-white pr-10 py-1 text-sm focus:ring-0 focus:outline-none placeholder:text-zinc-400"
+                  className="w-full border-none bg-transparent text-white pr-10 py-1 text-sm focus:ring-0 focus:outline-none placeholder:text-white/60"
                 />
                 <Button 
                   onClick={() => {
@@ -375,30 +367,30 @@ User question: ${input}`
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-0 left-0 right-0 sm:right-6 sm:left-auto z-50 mx-auto sm:mx-0 w-full sm:w-[400px] h-[85vh] sm:h-[500px] bg-zinc-900 border-t sm:border border-zinc-700 sm:rounded-xl shadow-xl flex flex-col overflow-hidden"
+            className="fixed bottom-0 left-0 right-0 sm:right-6 sm:left-auto z-50 mx-auto sm:mx-0 w-full sm:w-[400px] h-[85vh] sm:h-[500px] bg-white/10 backdrop-blur-lg border border-white/20 sm:rounded-xl shadow-[0_4px_30px_rgba(0,0,0,0.2)] flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="p-3 border-b border-zinc-700 bg-zinc-800 flex items-center justify-between sticky top-0">
+            <div className="p-3 border-b border-white/20 bg-white/10 backdrop-blur-lg flex items-center justify-between sticky top-0">
               <div className="flex items-center">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
-                  <circle cx="12" cy="12" r="3" fill="#19C37D" />
-                  <circle cx="19" cy="12" r="2" fill="#19C37D" opacity="0.6" />
-                  <circle cx="5" cy="12" r="2" fill="#19C37D" opacity="0.6" />
-                  <circle cx="12" cy="5" r="2" fill="#19C37D" opacity="0.6" />
-                  <circle cx="12" cy="19" r="2" fill="#19C37D" opacity="0.6" />
+                  <circle cx="12" cy="12" r="3" fill="#F26E50" />
+                  <circle cx="19" cy="12" r="2" fill="#F26E50" opacity="0.6" />
+                  <circle cx="5" cy="12" r="2" fill="#F26E50" opacity="0.6" />
+                  <circle cx="12" cy="5" r="2" fill="#F26E50" opacity="0.6" />
+                  <circle cx="12" cy="19" r="2" fill="#F26E50" opacity="0.6" />
                 </svg>
-                <h3 className="text-sm font-medium text-white">ThreeAtoms AI</h3>
+                <h3 className="text-sm font-medium text-white drop-shadow-sm">ThreeAtoms AI</h3>
               </div>
               <button 
                 onClick={() => setIsOpen(false)}
-                className="text-zinc-400 hover:text-white"
+                className="text-white/70 hover:text-white transition-colors"
               >
                 <X size={18} />
               </button>
             </div>
             
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto py-4 px-3 space-y-6 bg-zinc-900 overscroll-contain">
+            <div className="flex-1 overflow-y-auto py-4 px-3 space-y-6 bg-transparent overscroll-contain">
               {messages.map((message, index) => (
                 <div 
                   key={index} 
@@ -411,8 +403,8 @@ User question: ${input}`
                     className={cn(
                       "max-w-[85%] rounded-lg p-3",
                       message.role === 'user' 
-                        ? "bg-[#19C37D] text-white" 
-                        : "bg-zinc-800 text-white"
+                        ? "bg-[#F26E50] text-white shadow-sm" 
+                        : "bg-white/20 backdrop-blur-sm text-white border border-white/10 shadow-sm"
                     )}
                   >
                     <div className="whitespace-pre-wrap text-sm" dangerouslySetInnerHTML={{ __html: formatMessage(message.content) }} />
@@ -421,35 +413,35 @@ User question: ${input}`
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-zinc-800 text-white rounded-lg p-3">
-                    <Loader2 className="h-5 w-5 animate-spin" />
+                  <div className="bg-white/20 backdrop-blur-sm text-white border border-white/10 rounded-lg p-3 shadow-sm">
+                    <Loader2 className="h-5 w-5 animate-spin text-[#F26E50]" />
                   </div>
                 </div>
               )}
               <div ref={messagesEndRef} />
             </div>
             
-            {/* Input - ChatGPT Style */}
-            <div className="p-3 border-t border-zinc-700 bg-zinc-800 sticky bottom-0">
+            {/* Input - Glass Style */}
+            <div className="p-3 border-t border-white/20 bg-white/10 backdrop-blur-lg sticky bottom-0">
               <div className="relative">
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyPress}
                   placeholder="Message ThreeAtoms AI..."
-                  className="w-full bg-zinc-700 border-zinc-600 text-white pr-10 py-3 rounded-md text-sm"
+                  className="w-full bg-white/10 border-white/20 text-white pr-10 py-3 rounded-full text-sm focus:border-[#F26E50]/50 focus:ring-[#F26E50]/30"
                   disabled={isLoading}
                 />
                 <Button 
                   onClick={handleSendMessage} 
                   disabled={isLoading || !input.trim()}
                   size="icon"
-                  className="absolute right-1 top-1/2 -translate-y-1/2 bg-transparent hover:bg-zinc-600 text-white p-1 h-8 w-8"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 bg-[#F26E50] hover:bg-[#E05D40] text-white p-1 h-8 w-8 rounded-full transition-colors"
                 >
                   <ArrowUp className="h-4 w-4" />
                 </Button>
               </div>
-              <div className="mt-2 text-xs text-zinc-400 text-center">
+              <div className="mt-2 text-xs text-white/60 text-center">
                 ThreeAtoms AI can make mistakes. Consider checking important information.
               </div>
             </div>

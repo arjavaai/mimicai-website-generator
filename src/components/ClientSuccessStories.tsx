@@ -4,32 +4,32 @@ import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    position: "CTO, TechVision Inc.",
-    company: "TechVision",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=250&auto=format&fit=crop",
-    quote: "The AI solutions provided by this team transformed our customer service operations. We've seen a 40% increase in customer satisfaction and reduced response times by 65%.",
+    name: "Avinash",
+    position: "Founder",
+    company: "AG X Factor Pvt Ltd",
+    image: "/timage1.jpg",
+    quote: "Three Atoms delivered a highly dynamic website for our service-based business. It's fast, responsive, and easy to update. The backend they created is super intuitive, saving us hours every week.",
     rating: 5,
-    industry: "SaaS"
+    industry: "Business Services"
   },
   {
-    name: "Michael Chen",
-    position: "Marketing Director, GrowthLabs",
-    company: "GrowthLabs",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=250&auto=format&fit=crop",
-    quote: "Their AI content generation tools have revolutionized our content strategy. We're producing 3x more content with half the team, and our engagement metrics have never been better.",
+    name: "Webbing Pro Technologies",
+    position: "Technology Partner",
+    company: "Webbing Pro",
+    image: "https://webbingprotechnologies.com/assets/images/team/anil.png",
+    quote: "We collaborated with Three Atoms for B2B website development, and we were genuinely impressed by their speed, precision, and the quality of the websites they delivered.",
     rating: 5,
-    industry: "Marketing"
+    industry: "Technology"
   },
   {
-    name: "Elena Rodriguez",
-    position: "CEO, FinTech Solutions",
-    company: "FinTech Solutions",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=250&auto=format&fit=crop",
-    quote: "Implementing their AI-powered analytics platform gave us insights we never thought possible. We've identified new market opportunities and optimized our product offerings accordingly.",
+    name: "Meenakshi",
+    position: "Director",
+    company: "Enterprise Solutions",
+    image: "/timage2.jpg",
+    quote: "The AI bot they created for our website answers customer questions instantly. It works even at night! Our support team now gets fewer calls and emails.",
     rating: 5,
-    industry: "Finance"
-  }
+    industry: "Enterprise"
+  },
 ];
 
 const ClientSuccessStories = () => {

@@ -48,8 +48,8 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                 index === i ? 'w-[450px]' : 'w-[90px]'
               } h-[450px] flex-shrink-0 transition-all ease-in-out duration-500 origin-center border overflow-hidden shadow-xl ${
                 index === i 
-                  ? 'border-orange-500/40 bg-gradient-to-b from-zinc-900 to-black' 
-                  : 'border-orange-500/20 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black'
+                  ? 'border-[#e86142]/40 bg-gradient-to-b from-zinc-900 to-black' 
+                  : 'border-[#e86142]/20 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black'
               }`}
               key={i}
               onClick={() => {
@@ -67,7 +67,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                 } w-full rounded-xl h-full object-cover transition-all duration-700`}
               />
               
-              {/* Gradient overlay with orange accent for expanded item */}
+              {/* Gradient overlay with coral accent for expanded item */}
               <div 
                 className={`absolute inset-0 rounded-xl ${
                   index === i 
@@ -75,11 +75,11 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                     : 'bg-gradient-to-t from-black/90 via-black/50 to-transparent'
                 }`}
               >
-                {/* Orange line accent for all items */}
+                {/* Coral line accent for all items */}
                 <div className={`absolute bottom-0 left-0 h-1 w-full ${
                   index === i 
-                    ? 'bg-gradient-to-r from-orange-600 to-orange-500' 
-                    : 'bg-gradient-to-r from-orange-600/40 to-orange-500/40'
+                    ? 'bg-gradient-to-r from-[#e86142] to-[#ef7857]' 
+                    : 'bg-gradient-to-r from-[#e86142]/40 to-[#ef7857]/40'
                 }`}></div>
 
                 {/* Title for collapsed cards */}
@@ -102,7 +102,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                   >
                     <motion.div variants={article} className="flex gap-2 mb-1">
                       {item.tags?.map((tag, idx) => (
-                        <span key={idx} className="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-300">
+                        <span key={idx} className="px-2 py-1 text-xs rounded bg-[#e86142]/20 text-[#ef7857]">
                           {tag}
                         </span>
                       ))}
@@ -121,7 +121,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                     </motion.p>
                     <motion.button
                       variants={article}
-                      className="mt-4 w-fit px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-500 rounded-md text-white text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-1"
+                      className="mt-4 w-fit px-4 py-2 bg-gradient-to-r from-[#e86142] to-[#ef7857] rounded-full text-white text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-1"
                     >
                       {item.buttonText} <span className="ml-1">→</span>
                     </motion.button>
@@ -139,7 +139,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
           return (
             <motion.div
               whileTap={{ scale: 0.98 }}
-              className='relative w-full h-[180px] flex-shrink-0 rounded-xl border border-orange-500/30 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black overflow-hidden shadow-lg'
+              className='relative w-full h-[180px] flex-shrink-0 rounded-xl border border-[#e86142]/30 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black overflow-hidden shadow-lg'
               key={i}
             >
               <img
@@ -148,7 +148,7 @@ function Gallery({ items, setIndex, index }: GaleryProps) {
                 className='w-full h-full object-cover rounded-xl opacity-80 brightness-110 contrast-110'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20 rounded-xl'></div>
-              <div className='absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-orange-600 to-orange-500'></div>
+              <div className='absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-[#e86142] to-[#ef7857]'></div>
               <article className='absolute flex flex-col justify-end h-full w-full top-0 p-6 space-y-2'>
                 <h1 className='text-xl font-semibold text-white'>
                   {item?.title}
@@ -168,15 +168,15 @@ export default function index() {
 
   return (
     <div id="services" className='relative bg-gradient-to-b from-zinc-900 to-black text-white'>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,108,13,0.08),transparent_40%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(232,97,66,0.08),transparent_40%)]"></div>
       <div className="w-full py-16 md:py-24 relative z-10">
         <div className="container mx-auto px-4">
           <div className="mb-16 max-w-7xl mx-auto">
             <div className="flex items-start mb-3">
-              <div className="w-1 h-6 bg-orange-500 mr-3 mt-1"></div>
+              <div className="w-1 h-6 bg-[#e86142] mr-3 mt-1"></div>
               <p className="text-lg font-medium">WE'VE GOT YOU COVERED</p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">We Build. <span className="italic font-light text-orange-500"> with Purpose </span></h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">We Build. <span className="italic font-light text-[#e86142]"> with Purpose </span></h1>
           </div>
         </div>
         <Gallery items={items} index={index} setIndex={setIndex} />

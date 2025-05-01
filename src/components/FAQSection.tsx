@@ -4,24 +4,25 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
-    question: "How can your AI Content Generator improve my marketing strategy?",
-    answer: "Our AI Content Generator creates high-quality, SEO-optimized content for blogs, social media, and marketing materials in seconds. It helps you maintain a consistent content schedule, scale your content production, and target specific audiences with tailored messaging—all while reducing your content creation costs by up to 70%."
+    question: "How can AI Agents help streamline my business operations?",
+    answer: "Our custom AI Agents can automate repetitive tasks, enhance customer service through intelligent chatbots, process data in real-time, make decisions based on predefined rules, and integrate with your existing business systems. They're tailored to your specific needs, whether for customer support, data processing, or internal operations, helping you save time and resources while improving efficiency."
   },
   {
-    question: "What makes your Smart Chatbot Platform different from other solutions?",
-    answer: "Our Smart Chatbot Platform is built with advanced contextual understanding capabilities that go beyond simple keyword matching. It can handle complex conversations, remember previous interactions, and seamlessly transfer to human agents when needed. The platform integrates with your existing systems and can be trained on your specific business data for truly personalized customer interactions."
+    question: "What makes Three Atoms' Content Automation service unique?",
+    answer: "Our AI Content Automation service clones both your voice AND visual appearance to create consistent, high-quality videos while you focus on what matters most. We handle the entire process from content research and scriptwriting to voice synthesis and video production, allowing you to transform a single recording session into weeks of content across multiple platforms—effectively scaling your personal brand with minimal time investment."
   },
   {
-    question: "Can your AI Image Generator create product photos for my e-commerce business?",
-    answer: "Absolutely! Our AI Image Generator excels at creating professional product photography for e-commerce. You can generate images in different settings, angles, and lighting conditions without expensive photo shoots. The system can maintain consistent brand aesthetics across all generated images and can even create lifestyle photos showing your products in use."
+    question: "What types of websites can Three Atoms develop?",
+    answer: "We develop a wide range of websites including corporate sites, e-commerce platforms, educational portals, real estate websites, and AI-integrated web applications. Each website is custom-built with responsive design, SEO optimization, and performance in mind. We also offer AI enhancements like chatbots, personalized user experiences, and automated content generation to make your website stand out from competitors."
+  },
+
+  {
+    question: "What is the process for creating AI Video Ads with Three Atoms?",
+    answer: "Our AI Video Ads process begins with understanding your brand and marketing goals. We then handle concept development and scriptwriting, create AI-generated visuals and animations, produce high-quality audio with voice synthesis, and personalize content for different audience segments. The result is professional, engaging video content that can be produced at scale, significantly reducing production time and costs compared to traditional methods."
   },
   {
-    question: "How does your Data Analysis Suite help identify business opportunities?",
-    answer: "Our Data Analysis Suite uses advanced AI algorithms to process and analyze your business data from multiple sources. It identifies patterns, trends, and correlations that humans might miss, providing actionable insights for business growth. The suite includes predictive analytics capabilities to forecast future trends and recommend strategic actions based on data-driven evidence."
-  },
-  {
-    question: "What kind of support do you provide during implementation of your Voice Recognition API?",
-    answer: "We provide comprehensive support throughout the implementation of our Voice Recognition API. This includes technical documentation, sample code, integration assistance, and dedicated support from our engineering team. We also offer custom training sessions for your developers and can help optimize the API for your specific use case to ensure maximum accuracy and performance."
+    question: "Do you offer ongoing support after implementing AI solutions?",
+    answer: "Yes, we provide comprehensive ongoing support for all our AI implementations. This includes regular maintenance, performance monitoring, updates to adapt to changing business needs, and technical support from our expert team. We also offer training for your staff to maximize the benefits of the AI solutions and can continuously optimize the systems based on feedback and performance metrics to ensure long-term success."
   }
 ];
 

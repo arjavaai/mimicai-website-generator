@@ -61,9 +61,11 @@ const services = [
 function ServiceCard({ service }: { service: typeof services[0] }) {
   return (
     <div 
-      className="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] h-full"
-      style={{ backgroundColor: service.color }}
+      className="rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] h-full bg-gradient-to-b from-white/30 to-white/10 backdrop-blur-lg border border-white/40 shadow-[0_4px_30px_rgba(255,255,255,0.15)] relative group"
+      style={{ background: 'linear-gradient(145deg, rgba(255,255,255,0.25) 0%, rgba(200,200,200,0.15) 50%, rgba(150,150,150,0.2) 100%)' }}
     >
+      {/* Shine effect overlay */}
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
       <div className="flex flex-col h-full">
         {/* Image Section */}
         <div className="relative h-48 overflow-hidden">
@@ -84,7 +86,7 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
           
           <a 
             href={service.path} 
-            className="mt-auto inline-flex items-center gap-1 bg-black/20 hover:bg-black/30 px-4 py-2 rounded-md text-white text-sm transition-colors self-start"
+            className="mt-auto inline-flex items-center gap-1 bg-gradient-to-r from-white/20 via-[#F26E50]/20 to-white/10 hover:from-white/30 hover:via-[#F26E50]/30 hover:to-white/20 px-4 py-2 rounded-full text-white text-sm transition-all self-start border border-[#F26E50]/30 shadow-sm hover:shadow-[#F26E50]/20 hover:text-[#F26E50]"
           >
             Learn More <ChevronsRight className="h-4 w-4" />
           </a>
@@ -129,7 +131,7 @@ function ServicesSection() {
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-orange-500 px-6 py-3 rounded-md text-white font-medium hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-white/20 via-[#F26E50]/40 to-white/20 hover:from-white/30 hover:via-[#F26E50]/50 hover:to-white/30 px-6 py-3 rounded-full text-white font-medium transition-all border border-[#F26E50]/30 shadow-md hover:shadow-[#F26E50]/20"
           >
             Get Started Today <ChevronsRight className="h-5 w-5" />
           </a>

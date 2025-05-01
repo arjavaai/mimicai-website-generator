@@ -62,7 +62,7 @@ const About = () => {
           <div className="flex flex-col justify-center order-2 lg:order-1">
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-300 mb-4">
-              Founded in 2023, ThreeAtoms emerged from a shared vision to democratize AI technology for businesses of all sizes. Our founders, with their diverse expertise in GenAI, machine learning, and digital marketing, recognized the immense potential of AI to transform businesses but saw that many organizations struggled to implement it effectively.
+              Founded in 2025, ThreeAtoms emerged from a shared vision to democratize AI technology for businesses of all sizes. Our founders, with their diverse expertise in GenAI, machine learning, and digital marketing, recognized the immense potential of AI to transform businesses but saw that many organizations struggled to implement it effectively.
             </p>
             <p className="text-gray-300 mb-6">
               What began as a collaborative venture has rapidly evolved into a comprehensive AI solutions provider. We're proud to help businesses across industries leverage cutting-edge AI technologies to solve complex problems, enhance customer experiences, and drive sustainable growth in the digital age.
@@ -469,16 +469,7 @@ const About = () => {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-            <Button 
-              asChild
-              variant="outline"
-              className="rounded-full border-white/20 text-white hover:bg-white/10 group"
-            >
-              <a href="/services">
-                Explore Our Services
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
+            
           </div>
         </div>
       </div>

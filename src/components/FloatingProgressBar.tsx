@@ -58,8 +58,8 @@ const FloatingProgressBar = () => {
             max={100}
             min={0}
             value={scrollProgress}
-            gaugePrimaryColor="#f97316"
-            gaugeSecondaryColor="#fed7aa"
+            gaugePrimaryColor="#e86142"
+            gaugeSecondaryColor="#e0e0e0"
           />
         </div>
       </div>

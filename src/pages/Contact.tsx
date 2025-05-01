@@ -209,7 +209,7 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-medium mb-1">Call Us</h3>
                       <p className="text-gray-300">
-                        +1 (555) 123-4567<br />
+                        +91 7396149081<br />
                         Monday-Friday, 9am-6pm ET
                       </p>
                     </div>
@@ -230,12 +230,12 @@ const Contact = () => {
                       <p className="text-gray-300">
                         Message us on WhatsApp<br />
                         <a 
-                          href="https://wa.me/15551234567" 
+                          href="https://wa.me/917396149081" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-[#F26E50] hover:underline inline-flex items-center gap-1 transition-all"
                         >
-                          +1 (555) 123-4567
+                          +91 7396149081
                           <ArrowRight className="h-3 w-3" />
                         </a>
                       </p>
@@ -255,8 +255,8 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-medium mb-1">Email Us</h3>
                       <p className="text-gray-300">
-                        info@threeAtoms.com<br />
-                        support@threeAtoms.com
+                        contact@threeatoms.com<br />
+                        threeatoms.com@gmail.com
                       </p>
                     </div>
                   </motion.div>

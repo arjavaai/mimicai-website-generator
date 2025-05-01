@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import ClientSuccessStories from '@/components/ClientSuccessStories';
 
 const Home = () => {
   // This ensures the page scrolls to top when navigating to home
@@ -60,25 +61,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - with ID for scrolling */}
-      <section id="testimonials" className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl mx-auto text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
-            <p className="text-xl text-gray-300">
-              Don't just take our word for it. Here's what our clients have to say about working with us.
-            </p>
-          </motion.div>
-          
-          {/* Testimonial cards would go here */}
-        </div>
-      </section>
+      {/* Testimonials Section */}
+      <ClientSuccessStories />
 
       {/* FAQ Section - with ID for scrolling */}
       <section id="faq" className="py-20 bg-zinc-900/50">
