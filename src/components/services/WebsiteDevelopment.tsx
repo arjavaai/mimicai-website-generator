@@ -44,12 +44,21 @@ const WebsiteDevelopment = () => {
             >
               <div className="relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50] to-purple-600 rounded-xl blur opacity-30"></div>
-                <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden p-6">
+                <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2000&auto=format&fit=crop" 
+                    src="/web.png" 
                     alt="Website Development" 
                     className="w-full h-auto rounded-lg"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex items-end">
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                        <span className="text-sm font-medium">Custom Web Solutions</span>
+                      </div>
+                      <h3 className="text-xl font-bold">Modern & Responsive Design</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

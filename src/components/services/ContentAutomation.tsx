@@ -30,7 +30,7 @@ const ContentAutomation = () => {
               transition={{ duration: 0.7 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                AI <span className="text-[#F26E50]">Content Automation</span> for Personal Branding
+                AI <span className="text-[#F26E50]">Content Automation</span> 
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Scale your personal brand with AI-powered content. We clone both your voice AND visual appearance to create consistent, high-quality videos while you focus on what matters most.
@@ -55,7 +55,7 @@ const ContentAutomation = () => {
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50] to-purple-600 rounded-xl blur opacity-30"></div>
                 <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop" 
+                    src="/content.png" 
                     alt="Content Automation" 
                     className="w-full h-auto rounded-lg"
                   />
@@ -112,10 +112,8 @@ const ContentAutomation = () => {
               >
                 <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
                   <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50"></div>
-                  <div className="relative">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                      <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2ZM12 20C7.5 20 4 17.5 4 12S7.5 4 12 4 20 7.5 20 12 17.5 20 12 20Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  <div className="relative flex items-center justify-center">
+                    <span className="text-[#F26E50] text-4xl font-bold">1</span>
                   </div>
                 </div>
                 <div className="bg-[#F26E50]/10 text-[#F26E50] text-sm font-medium rounded-full px-3 py-1 inline-block mb-4">Step 1</div>
@@ -135,14 +133,8 @@ const ContentAutomation = () => {
               >
                 <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
                   <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: '0.5s' }}></div>
-                  <div className="relative">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                      <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M3.6 9H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M3.6 15H20.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 3C10.1008 5.2129 9 8.4935 9 12C9 15.5065 10.1008 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 3C13.8992 5.2129 15 8.4935 15 12C15 15.5065 13.8992 18.7871 12 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  <div className="relative flex items-center justify-center">
+                    <span className="text-[#F26E50] text-4xl font-bold">2</span>
                   </div>
                 </div>
                 <div className="bg-[#F26E50]/10 text-[#F26E50] text-sm font-medium rounded-full px-3 py-1 inline-block mb-4">Step 2</div>
@@ -162,10 +154,8 @@ const ContentAutomation = () => {
               >
                 <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
                   <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: '1s' }}></div>
-                  <div className="relative">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                      <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2ZM12 20C7.5 20 4 17.5 4 12S7.5 4 12 4 20 7.5 20 12 17.5 20 12 20Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  <div className="relative flex items-center justify-center">
+                    <span className="text-[#F26E50] text-4xl font-bold">3</span>
                   </div>
                 </div>
                 <div className="bg-[#F26E50]/10 text-[#F26E50] text-sm font-medium rounded-full px-3 py-1 inline-block mb-4">Step 3</div>
@@ -177,26 +167,7 @@ const ContentAutomation = () => {
             </div>
           </div>
           
-          {/* Results indicator */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-16 max-w-3xl mx-auto bg-gradient-to-r from-black to-zinc-900 border border-[#F26E50]/20 rounded-lg p-6 text-center"
-          >
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#F26E50]">
-                <path d="M16 8L8 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M8 8L16 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span className="text-xl font-bold">The Result: 10-30× Content Output</span>
-            </div>
-            <p className="text-gray-300">
-              Transform a single recording session into weeks of consistent, high-quality content across multiple platforms.
-            </p>
-          </motion.div>
+         
         </div>
       </section>
       

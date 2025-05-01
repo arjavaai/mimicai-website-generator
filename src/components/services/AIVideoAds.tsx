@@ -56,7 +56,7 @@ const AIVideoAds = () => {
                 <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
                   <video 
                     className="w-full h-auto rounded-xl"
-                    poster="https://images.unsplash.com/photo-1574717024453-354056afd6fc?q=80&w=2070&auto=format&fit=crop"
+                    poster="/aiads.png"
                     controls
                   >
                     <source src="/videos/demo.mp4" type="video/mp4" />
@@ -159,16 +159,16 @@ const AIVideoAds = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                company: "TechGrowth",
-                industry: "SaaS",
-                result: "147% increase in click-through rate",
-                image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
+                company: "Cardbury",
+                industry: "Confectionery",
+                result: "20,000+ songs in launch weekend",
+                image: "https://www.financialexpress.com/wp-content/uploads/2024/01/Godrej-2024-01-31T140526.768.jpg?w=1024"
               },
               {
-                company: "FashionNova",
-                industry: "E-commerce",
-                result: "3.2x ROI on ad spend",
-                image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop"
+                company: "Nike",
+                industry: "Footwear",
+                result: "20% higher CTR",
+                image: "/nike.jpg"
               }
             ].map((study, index) => (
               <motion.div

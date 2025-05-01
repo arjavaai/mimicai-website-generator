@@ -46,7 +46,7 @@ const AIWorkflows = () => {
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#F26E50] to-purple-600 rounded-xl blur opacity-30"></div>
                 <div className="relative bg-black/80 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden p-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
+                    src="/workflow.png" 
                     alt="AI Workflow Automation" 
                     className="w-full h-auto rounded-lg"
                   />
@@ -135,19 +135,19 @@ const AIWorkflows = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
               {[
                 {
-                  step: "01",
+                  step: "1",
                   title: "Connect Systems",
                   description: "Integrate with your existing tools and data sources through our extensive API connections.",
                   icon: <Layers className="w-12 h-12 text-[#F26E50]" />
                 },
                 {
-                  step: "02",
+                  step: "2",
                   title: "Design Workflows",
                   description: "Use our visual workflow builder to create custom processes with AI-powered decision points.",
                   icon: <Workflow className="w-12 h-12 text-[#F26E50]" />
                 },
                 {
-                  step: "03",
+                  step: "3",
                   title: "Automate & Optimize",
                   description: "Deploy your workflows and continuously improve them with AI-driven insights.",
                   icon: <RefreshCw className="w-12 h-12 text-[#F26E50]" />
@@ -159,13 +159,13 @@ const AIWorkflows = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-zinc-900/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 relative"
+                  className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-8 hover:border-[#F26E50]/30 transition-all duration-300"
                 >
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-black border-4 border-[#F26E50] flex items-center justify-center md:block hidden">
-                    <span className="text-white font-bold">{step.step}</span>
-                  </div>
-                  <div className="text-center mb-6">
-                    {step.icon}
+                  <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#F26E50]/10 mb-6 mx-auto relative">
+                    <div className="absolute inset-0 rounded-full border-2 border-[#F26E50]/30 animate-ping opacity-50" style={{ animationDelay: `${index * 0.3}s` }}></div>
+                    <div className="relative flex items-center justify-center">
+                      <span className="text-[#F26E50] text-4xl font-bold">{index + 1}</span>
+                    </div>
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-center">{step.title}</h3>
                   <p className="text-gray-300 text-center">{step.description}</p>
