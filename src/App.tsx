@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import type { ReactNode, ComponentType } from "react";
 import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -33,9 +34,13 @@ import WebsiteDevelopment from "./components/services/WebsiteDevelopment";
 import CorporateWorkshops from "./components/services/CorporateWorkshops";
 import Chatbot from './components/Chatbot';
 
+interface AppProps {
+  Router?: ComponentType<{ children: ReactNode }>;
+}
+
 const queryClient = new QueryClient();
 
-const App = () => {
+const App = ({ Router = BrowserRouter }: AppProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   // Simulate initial loading
@@ -56,7 +61,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
-        <BrowserRouter>
+        <Router>
           <ScrollToTop />
           {!isLoading && <Navbar />}
           <main className="relative">
@@ -95,7 +100,7 @@ const App = () => {
           <Chatbot />
           {!isLoading && <FloatingProgressBar />}
           {!isLoading && <SmoothCursor />}
-        </BrowserRouter>
+        </Router>
       </TooltipProvider>
     </QueryClientProvider>
   );
