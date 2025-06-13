@@ -15,3 +15,21 @@ This repository contains the source code for the MimicAI website, featuring vari
 - Added numbered step indicators with animated rings
 - Updated image styling and responsiveness
 - Standardized component designs across all service pages
+
+## Server-Side Rendering
+
+This project now supports optional server-side rendering. During development you can start the SSR server with:
+
+```bash
+npm run dev:ssr
+```
+
+For a production build, generate both client and server bundles:
+
+```bash
+npm run build:ssr
+```
+
+The Express server in `server.js` will then serve the pre-rendered HTML.
+
+To keep the initial render fast, the Gemini-powered chatbot is lazy loaded a few seconds after the page becomes interactive.

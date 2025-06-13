@@ -46,13 +46,14 @@
     <link rel="stylesheet" href="/smooth-animations.css" />
     <link rel="preconnect" href="https://prod.spline.design" />
     <link rel="dns-prefetch" href="https://prod.spline.design" />
+    <!--head-outlet-->
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root"><!--ssr-outlet--></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/entry-client.tsx"></script>
     <script src="/performance-optimizations.js" defer></script>
   </body>
 </html>

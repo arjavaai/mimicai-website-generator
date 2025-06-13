@@ -3,7 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import type { ReactNode, ComponentType } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -31,12 +32,17 @@ import RagImplementation from "./components/services/RagImplementation";
 import LLMFinetune from "./components/services/LLMFinetune";
 import WebsiteDevelopment from "./components/services/WebsiteDevelopment";
 import CorporateWorkshops from "./components/services/CorporateWorkshops";
-import Chatbot from './components/Chatbot';
+const Chatbot = lazy(() => import('./components/Chatbot'));
+
+interface AppProps {
+  Router?: ComponentType<{ children: ReactNode }>;
+}
 
 const queryClient = new QueryClient();
 
-const App = () => {
+const App = ({ Router = BrowserRouter }: AppProps) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isChatbotLoaded, setIsChatbotLoaded] = useState(false);
 
   // Simulate initial loading
   useEffect(() => {
@@ -48,6 +54,12 @@ const App = () => {
 
     preloadResources();
     // Loading state is managed by the LoadingScreen component
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setTimeout(() => setIsChatbotLoaded(true), 3000);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -56,7 +68,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
-        <BrowserRouter>
+        <Router>
           <ScrollToTop />
           {!isLoading && <Navbar />}
           <main className="relative">
@@ -92,10 +104,14 @@ const App = () => {
           <div className="footer-wrapper relative z-[45]">
             {!isLoading && <Footer />}
           </div>
-          <Chatbot />
+          {isChatbotLoaded && (
+            <Suspense fallback={null}>
+              <Chatbot />
+            </Suspense>
+          )}
           {!isLoading && <FloatingProgressBar />}
           {!isLoading && <SmoothCursor />}
-        </BrowserRouter>
+        </Router>
       </TooltipProvider>
     </QueryClientProvider>
   );
