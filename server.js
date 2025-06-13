@@ -37,8 +37,9 @@ async function createServer() {
         render = (await import('./dist/server/entry-server.js')).render;
       }
 
-      const appHtml = await render(url);
-      const html = template.replace(`<!--ssr-outlet-->`, appHtml);
+      const { appHtml, headHtml } = await render(url);
+      let html = template.replace(`<!--ssr-outlet-->`, appHtml);
+      html = html.replace(`<!--head-outlet-->`, headHtml);
 
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
     } catch (e) {

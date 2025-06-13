@@ -31,3 +31,5 @@ npm run build:ssr
 ```
 
 The Express server in `server.js` will then serve the pre-rendered HTML.
+
+To keep the initial render fast, the Gemini-powered chatbot is lazy loaded a few seconds after the page becomes interactive.
