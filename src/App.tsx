@@ -41,11 +41,12 @@ interface AppProps {
 const queryClient = new QueryClient();
 
 const App = ({ Router = BrowserRouter }: AppProps) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isChatbotLoaded, setIsChatbotLoaded] = useState(false);
 
   // Simulate initial loading
   useEffect(() => {
+    setIsLoading(true); // Show loading screen
     // Preload critical resources if needed
     const preloadResources = async () => {
       // You can add actual resource preloading here if needed
@@ -55,9 +56,9 @@ const App = ({ Router = BrowserRouter }: AppProps) => {
     preloadResources();
     // Loading state is managed by the LoadingScreen component
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      setTimeout(() => setIsChatbotLoaded(true), 3000);
-    }, 2000);
+      setIsLoading(false); // Hide loading screen
+      setTimeout(() => setIsChatbotLoaded(true), 3000); // Existing logic for chatbot
+    }, 2000); // Existing delay
 
     return () => clearTimeout(timer);
   }, []);
@@ -70,7 +71,7 @@ const App = ({ Router = BrowserRouter }: AppProps) => {
         {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
         <Router>
           <ScrollToTop />
-          {!isLoading && <Navbar />}
+          <Navbar />
           <main className="relative">
             <RouteTransition>
               <Routes>
@@ -102,15 +103,15 @@ const App = ({ Router = BrowserRouter }: AppProps) => {
             </RouteTransition>
           </main>
           <div className="footer-wrapper relative z-[45]">
-            {!isLoading && <Footer />}
+            <Footer />
           </div>
           {isChatbotLoaded && (
             <Suspense fallback={null}>
               <Chatbot />
             </Suspense>
           )}
-          {!isLoading && <FloatingProgressBar />}
-          {!isLoading && <SmoothCursor />}
+          <FloatingProgressBar />
+          <SmoothCursor />
         </Router>
       </TooltipProvider>
     </QueryClientProvider>
