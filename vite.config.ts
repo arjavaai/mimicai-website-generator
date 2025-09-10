@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    outDir: 'dist/client',
     rollupOptions: {
       output: {
         manualChunks: undefined,
