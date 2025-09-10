@@ -1,11 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/((?!api|assets|_next|favicon.ico).*)",
+      "source": "/",
+      "destination": "/api/render"
+    },
+    {
+      "source": "/((?!api|assets|_next|favicon.ico|.*\\..*).*)",
       "destination": "/api/render"
     }
   ],
-  "buildCommand": "npm run build:vercel",
+  "buildCommand": "npm run build:vercel && mv dist/client/index.html dist/client/_index.html",
   "outputDirectory": "dist/client",
   "framework": "vite",
   "github": {

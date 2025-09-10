@@ -10,9 +10,11 @@ import ProjectShowcase from '../components/ProjectShowcase';
 import SEO from '../components/SEO';
 
 const Index = () => {
-  // Scroll to top on page load
+  // Scroll to top on page load (only in browser)
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   const containerVariants = {
@@ -25,10 +27,13 @@ const Index = () => {
     }
   };
 
+  // For SSR compatibility 
+  const shouldAnimate = typeof window !== 'undefined';
+
   return (
     <motion.div 
       className="min-h-screen bg-[#121212] text-white overflow-hidden"
-      initial="hidden"
+      initial={shouldAnimate ? "hidden" : "visible"}
       animate="visible"
       variants={containerVariants}
     >
