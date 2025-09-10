@@ -1,10 +1,4 @@
 {
-  "version": 2,
-  "functions": {
-    "api/render.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/((?!api|assets|_next|favicon.ico).*)",
