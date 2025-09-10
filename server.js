@@ -23,7 +23,7 @@ async function createServer() {
     app.use('/assets', express.static(path.resolve(__dirname, 'dist/client/assets')));
   }
 
-  app.use('*', async (req, res) => {
+  app.use(async (req, res) => {
     try {
       const url = req.originalUrl;
 

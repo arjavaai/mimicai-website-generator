@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import SEO from '@/components/SEO';
 
 const TermsAndConditions = () => {
   // Scroll to top on page load
@@ -8,6 +9,12 @@ const TermsAndConditions = () => {
 
   return (
     <div className="min-h-screen bg-threeAtoms-darkgray text-white pt-28">
+      <SEO 
+        title="Terms and Conditions - ThreeAtoms"
+        description="Read ThreeAtoms' terms and conditions for using our AI solutions and services. Understand your rights and obligations when working with our AI development team."
+        keywords="terms and conditions, legal terms, ThreeAtoms, AI services, user agreement, service terms, intellectual property"
+        canonical="https://threeatoms.com/terms-and-conditions/"
+      />
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-threeAtoms-black p-8 rounded-xl shadow-lg">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">Terms and Conditions</h1>

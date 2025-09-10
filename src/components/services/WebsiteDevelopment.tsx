@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { Globe, Code, Layout, Smartphone, Zap, Shield, Database, Bot, ShoppingCart, GraduationCap, Home, MessageSquare, BrainCircuit, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
 
 const WebsiteDevelopment = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="Custom Website Development Services - ThreeAtoms"
+        description="Professional website development services with AI integration. Custom responsive websites, e-commerce platforms, SaaS applications, and full-stack development solutions."
+        keywords="website development, custom websites, web development, responsive design, e-commerce development, full-stack development, AI website integration, web applications"
+        canonical="https://threeatoms.com/services/website-development/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}

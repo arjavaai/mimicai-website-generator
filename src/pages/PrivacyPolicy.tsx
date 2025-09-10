@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import SEO from '@/components/SEO';
 
 const PrivacyPolicy = () => {
   // Scroll to top on page load
@@ -8,6 +9,12 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-threeAtoms-darkgray text-white pt-28">
+      <SEO 
+        title="Privacy Policy - ThreeAtoms"
+        description="Learn how ThreeAtoms protects your privacy and handles your personal information. Read our comprehensive privacy policy for our AI solutions and services."
+        keywords="privacy policy, data protection, ThreeAtoms, AI services, privacy, data security, personal information"
+        canonical="https://threeatoms.com/privacy-policy/"
+      />
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-threeAtoms-black p-8 rounded-xl shadow-lg">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">Privacy Policy</h1>

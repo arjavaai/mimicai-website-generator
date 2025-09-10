@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { Brain, Code, Database, Zap, BarChart, Settings, ArrowRight, FileText, Server, Bot, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
 
 const LLMFinetune = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="LLM Fine-Tuning Services - ThreeAtoms"
+        description="Customize large language models for your specific domain and use cases. Expert LLM fine-tuning services to enhance AI performance and create competitive advantage."
+        keywords="LLM fine-tuning, language model customization, AI model training, custom AI models, machine learning, GPT fine-tuning, domain-specific AI, AI consulting"
+        canonical="https://threeatoms.com/services/llm-fine-tuning/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import SEO from '@/components/SEO';
 
 const RefundPolicy = () => {
   // Scroll to top on page load
@@ -8,6 +9,12 @@ const RefundPolicy = () => {
 
   return (
     <div className="min-h-screen bg-threeAtoms-darkgray text-white pt-28">
+      <SEO 
+        title="Refund Policy - ThreeAtoms"
+        description="Understand ThreeAtoms' refund policy for our AI solutions and services. Learn about refund eligibility, process, and terms for our custom AI projects."
+        keywords="refund policy, cancellation, ThreeAtoms, AI services, refund terms, service guarantee, customer satisfaction"
+        canonical="https://threeatoms.com/refund-policy/"
+      />
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto bg-threeAtoms-black p-8 rounded-xl shadow-lg">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">Refund Policy</h1>

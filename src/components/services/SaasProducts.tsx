@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { Code, Server, Globe, Shield, Zap, Users, BarChart, Layers, Cloud, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
 
 const SaasProducts = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="Custom SaaS Development Services - ThreeAtoms"
+        description="Build scalable, feature-rich SaaS products with expert development team. From concept to launch with modern technologies, cloud infrastructure, and AI integration."
+        keywords="SaaS development, software as a service, cloud applications, scalable software, custom SaaS, web applications, cloud development, SaaS platform development"
+        canonical="https://threeatoms.com/services/saas-products/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}

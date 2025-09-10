@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { Brain, Users, Lightbulb, Zap, BarChart, Settings, ArrowRight, FileText, GraduationCap, Building, BookOpen, PenTool } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
 
 const CorporateWorkshops = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="Corporate & College AI Workshops - ThreeAtoms"
+        description="Expert-led AI workshops for businesses and educational institutions. Empower your team with cutting-edge AI knowledge through customized training programs and hands-on learning."
+        keywords="AI workshops, corporate training, AI education, college workshops, AI literacy, business training, AI consulting, machine learning workshops, technology training"
+        canonical="https://threeatoms.com/services/corporate-workshops/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}

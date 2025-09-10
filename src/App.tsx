@@ -44,23 +44,22 @@ const App = ({ Router = BrowserRouter }: AppProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isChatbotLoaded, setIsChatbotLoaded] = useState(false);
 
-  // Simulate initial loading
+  // Only show loading screen on client side, not during SSR
   useEffect(() => {
-    setIsLoading(true); // Show loading screen
-    // Preload critical resources if needed
-    const preloadResources = async () => {
-      // You can add actual resource preloading here if needed
-      // For now, we're just using the loading animation
-    };
+    // Check if we're in browser environment
+    if (typeof window !== 'undefined') {
+      setIsLoading(true);
+      
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        setTimeout(() => setIsChatbotLoaded(true), 1000);
+      }, 1000); // Reduced delay for better UX
 
-    preloadResources();
-    // Loading state is managed by the LoadingScreen component
-    const timer = setTimeout(() => {
-      setIsLoading(false); // Hide loading screen
-      setTimeout(() => setIsChatbotLoaded(true), 3000); // Existing logic for chatbot
-    }, 2000); // Existing delay
-
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    } else {
+      // Server-side: no loading delay, load chatbot immediately for SEO
+      setIsChatbotLoaded(true);
+    }
   }, []);
 
   return (
@@ -68,7 +67,7 @@ const App = ({ Router = BrowserRouter }: AppProps) => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        {isLoading && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
+        {isLoading && typeof window !== 'undefined' && <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />}
         <Router>
           <ScrollToTop />
           <Navbar />

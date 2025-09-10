@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import ClientSuccessStories from '@/components/ClientSuccessStories';
+import SEO from '@/components/SEO';
 
 const Home = () => {
   // This ensures the page scrolls to top when navigating to home
@@ -12,6 +13,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="ThreeAtoms - AI Solutions | Transform Your Business with AI"
+        description="Empower your business with cutting-edge AI solutions. We build AI applications, websites, and services to transform your business and drive growth."
+        keywords="AI solutions, business transformation, AI applications, machine learning, artificial intelligence, business automation, AI consulting"
+        canonical="https://threeatoms.com/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 min-h-screen flex items-center">
         {/* Background elements */}

@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { Workflow, ArrowRight, Zap, RefreshCw, Clock, CheckCircle, Settings, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
 
 const AIWorkflows = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="AI-Powered Workflow Automation - ThreeAtoms"
+        description="Streamline your business processes with intelligent AI workflow automation. Eliminate repetitive tasks, increase efficiency, and scale operations with custom AI workflows."
+        keywords="AI workflow automation, business process automation, intelligent workflows, task automation, business efficiency, AI process optimization, workflow management"
+        canonical="https://threeatoms.com/services/ai-workflows/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}

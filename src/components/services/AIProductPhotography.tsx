@@ -2,10 +2,17 @@ import { motion } from 'framer-motion';
 import { Camera, Image, Sparkles, Layers, Palette, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
 
 const AIProductPhotography = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO 
+        title="AI Product Photography Studio - ThreeAtoms"
+        description="Create stunning product images with AI. Professional product photography without expensive photo shoots. Generate high-quality product images for e-commerce and marketing."
+        keywords="AI product photography, product images, e-commerce photography, AI image generation, product photo studio, professional product photos, automated photography"
+        canonical="https://threeatoms.com/services/ai-product-photography/"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}
